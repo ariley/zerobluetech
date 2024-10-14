@@ -6,11 +6,11 @@ Your markdown-exported Wordpress blog posts should be placed in: `pages/posts/`
 
 Please see this blog for details:
 
-👉 **[How to Convert a Wordpress blog to Astro Static Site Generator](https://blog.okturtles.org/2024/04/convert-wordpress-to-static-site/)**
+👉 **[How to Convert a Wordpress blog to Astro Static Site Generator](https://blog.okturtles.org/2024/10/convert-wordpress-to-static-site/)**
 
 ## How to use this project
 
-1. Follow the instructions in the [companion blog post](https://blog.okturtles.org/2024/04/convert-wordpress-to-static-site/) to export your Wordpress posts and content.
+1. Follow the instructions in the [companion blog post](https://blog.okturtles.org/2024/10/convert-wordpress-to-static-site/) to export your Wordpress posts and content.
 2. Clone or copy this project.
 3. Place your markdown-ified Wordpress posts in `src/posts`.
 4. Place your mirrored `wp-content` folder in `public/`. The most important subfolder of this is `wp-content/uploads`, which contains your pictures. You might or might not need the rest.
