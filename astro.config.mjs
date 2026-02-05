@@ -1,11 +1,14 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
+import netlify from '@astrojs/netlify'
 import remarkBreaks from 'remark-breaks' // improves support for newlines in markdown files
 import remarkGfm from 'remark-gfm' // support rendering tables in markdown files
 // twitter & youtube auto-embed via remark
 import remarkEmbedder from '@remark-embedder/core'
 import oembedTransformer from '@remark-embedder/transformer-oembed'
+
+import tailwindcss from '@tailwindcss/vite';
 
 const remarkEmbedPlugin = [remarkEmbedder.default, {
   transformers: [oembedTransformer.default],
@@ -24,9 +27,17 @@ const remarkEmbedPlugin = [remarkEmbedder.default, {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com', // CHANGE THIS TO YOUR HOMEPAGE!
-	integrations: [mdx(), sitemap()],
-	markdown: {
-		remarkPlugins: [remarkEmbedPlugin, remarkGfm, remarkBreaks]
-	}
+  site: 'https://zerobluetech.com',
+  output: 'static', // Can be changed to 'server' if you need API routes with Netlify
+  // Only use Netlify adapter in production builds
+  ...(process.env.NETLIFY === 'true' && { adapter: netlify() }),
+  integrations: [mdx(), sitemap()],
+
+  markdown: {
+      remarkPlugins: [remarkEmbedPlugin, remarkGfm, remarkBreaks]
+	},
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 })

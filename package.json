@@ -11,14 +11,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "2.2.2",
-    "@astrojs/rss": "4.0.5",
-    "@astrojs/sitemap": "3.1.2",
+    "@astrojs/mdx": "4.3.13",
+    "@astrojs/netlify": "6.6.4",
+    "@astrojs/rss": "4.0.15",
+    "@astrojs/sitemap": "3.7.0",
     "@remark-embedder/core": "3.0.2",
     "@remark-embedder/transformer-oembed": "3.0.0",
-    "astro": "4.5.12",
+    "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.1.18",
+    "aos": "2.3.4",
+    "astro": "5.17.1",
+    "astro-icon": "1.1.5",
     "entities": "4.5.0",
+    "nodemailer": "8.0.0",
     "remark-breaks": "4.0.0",
-    "remark-gfm": "4.0.0"
+    "remark-gfm": "4.0.0",
+    "tailwindcss": "4.1.18",
+    "theme-change": "2.5.0"
   }
 }

@@ -8,7 +8,8 @@ import { Debug } from 'astro/components'
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/config.ts'
 
 export async function getStaticPaths() {
-  const posts = sortedPosts(await Astro.glob('../../posts/*.{md,mdx}'))
+  const postImportResult = import.meta.glob('../../posts/*.{md,mdx}', { eager: true })
+  const posts = sortedPosts(Object.values(postImportResult))
   const authors = new Set()
   posts.forEach(post => {
     authors.add(urlifyToken(post.frontmatter.author))

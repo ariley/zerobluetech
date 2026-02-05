@@ -2,8 +2,11 @@
 import { sortedPosts } from '@/js/util.js'
 
 export async function getStaticPaths() {
-  const posts = sortedPosts(await Astro.glob('../posts/*.{md,mdx}'))
-  return posts.map(post => {
+  const postImportResult = import.meta.glob('../posts/*.{md,mdx}', { eager: true })
+  const posts = sortedPosts(Object.values(postImportResult))
+  // Filter out posts without permalinks (system pages)
+  const postsWithPermalinks = posts.filter(post => post.frontmatter.permalink)
+  return postsWithPermalinks.map(post => {
     return {
       params: {
         // these `.slice` calls are necessary and remove
