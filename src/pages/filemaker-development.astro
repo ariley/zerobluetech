@@ -1,0 +1,110 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<BaseHead title="FileMaker Development - ZeroBlue" description="Custom FileMaker development solutions tailored to your business needs" />
+	</head>
+	<body class="bg-gray-50 dark:bg-gray-900">
+		<Header />
+		<main class="max-w-7xl mx-auto px-4 py-12">
+			<!-- Hero Section -->
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Custom FileMaker Development</h1>
+				<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					Your business is unique. The software that runs your operations should be, too.
+				</p>
+			</div>
+
+			<!-- Agile Development Section -->
+			<section class="mb-16">
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Agile Development</h2>
+					<p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+						Your business is unique. The software that runs your operations should be, too, in order to best answer your needs. 
+						There are a lot of platforms to build databases on. We like FileMaker because it's agile. By using Custom FileMaker 
+						Development we can get you up and running in weeks instead of months. And we can always add more modules as your 
+						business expands or changes.
+					</p>
+				</div>
+			</section>
+
+			<!-- Services Grid -->
+			<section class="mb-16">
+				<h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Our Services</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Data Conversion -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+						<h3 class="text-xl font-semibold mb-3 text-primary">Data Conversion</h3>
+						<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+							<li>• Word documents converted into forms and merge letters</li>
+							<li>• Excel spreadsheets combined into one interconnected dataset</li>
+							<li>• Great looking reports and charts</li>
+							<li>• PDFs and other documents stored in the database</li>
+						</ul>
+					</div>
+
+					<!-- Calendar & Contact Syncing -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+						<h3 class="text-xl font-semibold mb-3 text-primary">Calendar and Contact Syncing</h3>
+						<p class="text-gray-700 dark:text-gray-300">
+							Add scheduling or a calendar to your solution with SeedCode or SoSimple Calendar. 
+							Integrate iCal with your FileMaker events using Zulu, so you can see your schedule on your iPhone, iPad, or Android device.
+						</p>
+					</div>
+
+					<!-- Mobile Data Access -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+						<h3 class="text-xl font-semibold mb-3 text-primary">Mobile Data Access</h3>
+						<p class="text-gray-700 dark:text-gray-300">
+							Access your data on-the-go with FileMaker Go. We can develop a database with FileMaker Go in mind 
+							or add layouts to an existing solution. We can also create mobile websites that connect to your FileMaker Solution.
+						</p>
+					</div>
+
+					<!-- Document Management -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+						<h3 class="text-xl font-semibold mb-3 text-primary">Document Management</h3>
+						<p class="text-gray-700 dark:text-gray-300">
+							Manage paper files by adding scanning, barcode scanning and/or SuperContainer or DocuBin to your solution 
+							to manage your files in FileMaker.
+						</p>
+					</div>
+
+					<!-- Starter Solutions -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+						<h3 class="text-xl font-semibold mb-3 text-primary">Starter Solutions</h3>
+						<p class="text-gray-700 dark:text-gray-300">
+							We use starter solutions based on the FOCUS framework to cut down on development time so you can start using 
+							your solution as soon as possible. We don't like to reinvent the wheel; we'd rather concentrate on your business practice.
+						</p>
+					</div>
+
+					<!-- Integration -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+						<h3 class="text-xl font-semibold mb-3 text-primary">Integration</h3>
+						<p class="text-gray-700 dark:text-gray-300">
+							We can integrate your solution with the web through ESS, with SQL, mySQL and Oracle. Or simply with WordPress.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="bg-gradient-to-r from-primary to-purple-600 rounded-lg shadow-xl p-12 text-center text-white">
+				<h2 class="text-3xl font-bold mb-4">Have a project in mind?</h2>
+				<p class="text-xl mb-8">Let's discuss how we can help your business grow with custom FileMaker solutions.</p>
+				<a href="/contact" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					Contact Us
+				</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+

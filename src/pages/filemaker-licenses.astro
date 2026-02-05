@@ -1,0 +1,87 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<BaseHead title="FileMaker Licenses - ZeroBlue" description="Get significant discounts on FileMaker licensing through our Business Alliance partnership" />
+	</head>
+	<body class="bg-gray-50 dark:bg-gray-900">
+		<Header />
+		<main class="max-w-7xl mx-auto px-4 py-12">
+			<!-- Hero Section -->
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">FileMaker Licensing</h1>
+				<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					As a member of the FileMaker Business Alliance, ZeroBlue can offer significant discounts on licensing for 5 or more copies.
+				</p>
+			</div>
+
+			<!-- Licensing Options -->
+			<section class="mb-16">
+				<div class="grid md:grid-cols-2 gap-8">
+					<!-- FileMaker Pro -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<h2 class="text-2xl font-bold mb-4 text-primary">FileMaker Pro</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							The essential database platform for teams. Create custom apps that work seamlessly across iPad, iPhone, Windows, Mac, and the web.
+						</p>
+						<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+							<li>✓ Cross-platform compatibility</li>
+							<li>✓ Drag-and-drop design</li>
+							<li>✓ Built-in templates</li>
+							<li>✓ Secure data sharing</li>
+						</ul>
+					</div>
+
+					<!-- FileMaker Server -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<h2 class="text-2xl font-bold mb-4 text-primary">FileMaker Server</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Securely share your custom apps with groups of users. Centralize data management and enable collaboration.
+						</p>
+						<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+							<li>✓ Centralized hosting</li>
+							<li>✓ Admin console</li>
+							<li>✓ Automated backups</li>
+							<li>✓ SSL encryption</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Volume Licensing -->
+			<section class="mb-16">
+				<div class="bg-gradient-to-r from-primary to-purple-600 rounded-lg shadow-xl p-8 text-white">
+					<h2 class="text-3xl font-bold mb-4">Volume Licensing Discounts</h2>
+					<p class="text-lg mb-6">
+						Purchase 5 or more licenses and save! As a FileMaker Business Alliance member, we can provide:
+					</p>
+					<ul class="space-y-2 text-lg">
+						<li>✓ Significant volume discounts</li>
+						<li>✓ Flexible licensing options</li>
+						<li>✓ Expert guidance on the right solution</li>
+						<li>✓ Ongoing support and training</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 text-center">
+				<h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Request a Quote</h2>
+				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+					Contact us today to discuss your licensing needs and get a custom quote.
+				</p>
+				<a href="/contact" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+					Get a Quote
+				</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+

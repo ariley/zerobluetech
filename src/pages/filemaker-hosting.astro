@@ -1,0 +1,100 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<BaseHead title="FileMaker Hosting - ZeroBlue" description="Reliable FileMaker hosting solutions with shared and dedicated options" />
+	</head>
+	<body class="bg-gray-50 dark:bg-gray-900">
+		<Header />
+		<main class="max-w-7xl mx-auto px-4 py-12">
+			<!-- Hero Section -->
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">FileMaker Hosting</h1>
+				<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					Secure, reliable hosting for your FileMaker solutions with flexible options to meet your needs.
+				</p>
+			</div>
+
+			<!-- Hosting Options -->
+			<section class="mb-16">
+				<div class="grid md:grid-cols-2 gap-8">
+					<!-- Shared Hosting -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<h2 class="text-2xl font-bold mb-4 text-primary">Shared Hosting</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-6">
+							Cost-effective hosting solution perfect for small to medium-sized databases.
+						</p>
+						<ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-6">
+							<li>✓ Mac Mini servers in Atlanta, GA</li>
+							<li>✓ Daily backups</li>
+							<li>✓ SSL encryption</li>
+							<li>✓ 99.9% uptime guarantee</li>
+							<li>✓ 24/7 monitoring</li>
+						</ul>
+					</div>
+
+					<!-- Dedicated Hosting -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+						<h2 class="text-2xl font-bold mb-4 text-primary">Dedicated Hosting</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-6">
+							Full server resources dedicated to your FileMaker solution for maximum performance.
+						</p>
+						<ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-6">
+							<li>✓ Dedicated Mac Mini server</li>
+							<li>✓ Custom configuration</li>
+							<li>✓ Priority support</li>
+							<li>✓ Enhanced security</li>
+							<li>✓ Scalable resources</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- SuperContainer Hosting -->
+			<section class="mb-16">
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">SuperContainer Hosting</h2>
+					<p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+						Shared or dedicated SuperContainer hosting on Linode servers for optimal file management and performance.
+					</p>
+					<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+						<li>✓ Fast file serving</li>
+						<li>✓ Reduced database size</li>
+						<li>✓ Multiple location options</li>
+						<li>✓ Automatic backups</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- RadFM Hosting -->
+			<section class="bg-gradient-to-r from-primary to-purple-600 rounded-lg shadow-xl p-12 text-center text-white mb-16">
+				<h2 class="text-3xl font-bold mb-4">Looking for Premium Hosting?</h2>
+				<p class="text-xl mb-8">
+					Check out RadFM for enterprise-grade FileMaker hosting solutions with advanced features and support.
+				</p>
+				<a href="https://radfm.cloud" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					Visit RadFM
+				</a>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 text-center">
+				<h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Ready to Get Started?</h2>
+				<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+					Contact us to discuss your hosting needs and find the perfect solution.
+				</p>
+				<a href="/contact" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+					Contact Us
+				</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+

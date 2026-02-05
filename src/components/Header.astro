@@ -6,13 +6,40 @@ import { SITE_TITLE } from '../config';
 <header class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between items-center py-4">
-			<h2 class="text-2xl font-bold text-primary dark:text-white">
+			<a href="/" class="text-2xl font-bold text-primary dark:text-white hover:opacity-80 transition-opacity">
 				{SITE_TITLE}
-			</h2>
-			<nav class="nav-links flex gap-6">
+			</a>
+			<nav class="nav-links flex items-center gap-6">
 				<HeaderLink href="/">Home</HeaderLink>
-				<HeaderLink href="/blog">Blog</HeaderLink>
+
+				<!-- FileMaker Dropdown -->
+				<div class="relative group">
+					<button class="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+						FileMaker
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+						</svg>
+					</button>
+					<div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+						<div class="py-2">
+							<a href="/filemaker-development" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary transition-colors">
+								FileMaker Development
+							</a>
+							<a href="/filemaker-licenses" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary transition-colors">
+								FileMaker Licenses
+							</a>
+							<a href="/filemaker-hosting" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary transition-colors">
+								FileMaker Hosting
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<HeaderLink href="/web-development">Web Development</HeaderLink>
+				<HeaderLink href="/portfolio">Portfolio</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
+				<HeaderLink href="/blog">Blog</HeaderLink>
+				<HeaderLink href="/contact">Contact</HeaderLink>
 			</nav>
 		</div>
 	</div>

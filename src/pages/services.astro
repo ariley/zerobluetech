@@ -1,0 +1,134 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<BaseHead title="Services - ZeroBlue" description="Comprehensive FileMaker, web, and mobile development services" />
+	</head>
+	<body class="bg-gray-50 dark:bg-gray-900">
+		<Header />
+		<main class="max-w-7xl mx-auto px-4 py-12">
+			<!-- Hero Section -->
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Our Services</h1>
+				<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					At ZeroBlue Technology Solutions, we shine at building solutions that do exactly what you need them to do.
+				</p>
+			</div>
+
+			<!-- Main Services Grid -->
+			<section class="mb-16">
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- FileMaker Development -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+						<div class="text-4xl mb-4">💾</div>
+						<h2 class="text-2xl font-bold mb-4 text-primary">FileMaker Development</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Your business is unique. The software that runs your operations should be, too, in order to best answer your specific needs.
+						</p>
+						<a href="/filemaker-development" class="text-primary hover:underline font-semibold">Learn More →</a>
+					</div>
+
+					<!-- Web Development -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+						<div class="text-4xl mb-4">🌐</div>
+						<h2 class="text-2xl font-bold mb-4 text-primary">Web Development</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							We create responsive WordPress or custom-coded CMS websites and web apps to manage all aspects of businesses.
+						</p>
+						<a href="/web-development" class="text-primary hover:underline font-semibold">Learn More →</a>
+					</div>
+
+					<!-- Mobile Development -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+						<div class="text-4xl mb-4">📱</div>
+						<h2 class="text-2xl font-bold mb-4 text-primary">Mobile Development</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Do you need to access your data from your truck or the train or your car? We create mobile applications for on-the-go access.
+						</p>
+						<a href="/filemaker-development" class="text-primary hover:underline font-semibold">Learn More →</a>
+					</div>
+
+					<!-- FileMaker Licensing -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+						<div class="text-4xl mb-4">📋</div>
+						<h2 class="text-2xl font-bold mb-4 text-primary">FileMaker Licensing</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							As a member of the FileMaker Business Alliance, ZeroBlue can offer significant discounts on licensing for 5 or more copies.
+						</p>
+						<a href="/filemaker-licenses" class="text-primary hover:underline font-semibold">Learn More →</a>
+					</div>
+
+					<!-- Web Hosting -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+						<div class="text-4xl mb-4">🌍</div>
+						<h2 class="text-2xl font-bold mb-4 text-primary">Web Hosting</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Scalable web hosting with email, 5GB storage space, daily backups for 7 days, Plesk client dashboard access, and webmail.
+						</p>
+						<a href="/contact" class="text-primary hover:underline font-semibold">Contact Us →</a>
+					</div>
+
+					<!-- FileMaker Hosting -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+						<div class="text-4xl mb-4">🖥️</div>
+						<h2 class="text-2xl font-bold mb-4 text-primary">FileMaker Hosting</h2>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							Shared and dedicated FileMaker hosting on Mac Minis in Atlanta, GA. Shared or dedicated SuperContainer hosting on Linode servers.
+						</p>
+						<a href="/filemaker-hosting" class="text-primary hover:underline font-semibold">Learn More →</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Why Choose Us -->
+			<section class="mb-16">
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+					<h2 class="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Why Choose ZeroBlue?</h2>
+					<div class="grid md:grid-cols-2 gap-8">
+						<div>
+							<h3 class="text-xl font-semibold mb-3 text-primary">Ease of Use</h3>
+							<p class="text-gray-700 dark:text-gray-300">
+								We design with an unwavering focus on ease of use paired with crisp interfaces that your team will love to use.
+							</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-3 text-primary">Passionate Team</h3>
+							<p class="text-gray-700 dark:text-gray-300">
+								We're passionate about what we do and take pride in our results. Your success is our success.
+							</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-3 text-primary">Custom Solutions</h3>
+							<p class="text-gray-700 dark:text-gray-300">
+								Every business is unique. We build solutions tailored to your specific needs and workflows.
+							</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-3 text-primary">Ongoing Support</h3>
+							<p class="text-gray-700 dark:text-gray-300">
+								We're here for you long after launch with maintenance, updates, and support when you need it.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="bg-gradient-to-r from-primary to-purple-600 rounded-lg shadow-xl p-12 text-center text-white">
+				<h2 class="text-3xl font-bold mb-4">Have a project in mind?</h2>
+				<p class="text-xl mb-8">Let's discuss how we can help your business grow.</p>
+				<a href="/contact" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+					Get Started
+				</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
