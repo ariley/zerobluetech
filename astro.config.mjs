@@ -27,9 +27,8 @@ const remarkEmbedPlugin = [remarkEmbedder.default, {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://zerobluetech.com',
-  output: 'static', // Can be changed to 'server' if you need API routes with Netlify
-  // Only use Netlify adapter in production builds
-  ...(process.env.NETLIFY === 'true' && { adapter: netlify() }),
+  output: 'static', // Static mode now supports API routes with adapter
+  adapter: netlify(),
   integrations: [
     mdx(),
     sitemap(),

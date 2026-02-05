@@ -63,21 +63,22 @@ import { SITE_TITLE } from '../config';
 					</div>
 				</div>
 
-				<!-- Contact Forms -->
+				<!-- Contact Form -->
 				<div>
 					<h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Send Us a Message</h2>
-					
+
 					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-						<form class="space-y-6">
+						<form id="contact-form" class="space-y-6">
 							<div>
 								<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 									Your Name (required)
 								</label>
-								<input 
-									type="text" 
-									id="name" 
-									name="name" 
+								<input
+									type="text"
+									id="name"
+									name="name"
 									required
+									placeholder="Jane Doe"
 									class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white"
 								>
 							</div>
@@ -86,35 +87,26 @@ import { SITE_TITLE } from '../config';
 								<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 									Your Email (required)
 								</label>
-								<input 
-									type="email" 
-									id="email" 
-									name="email" 
+								<input
+									type="email"
+									id="email"
+									name="email"
 									required
-									class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white"
-								>
-							</div>
-
-							<div>
-								<label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-									Phone
-								</label>
-								<input 
-									type="tel" 
-									id="phone" 
-									name="phone"
+									placeholder="janedoe@email.com"
 									class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white"
 								>
 							</div>
 
 							<div>
 								<label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-									Subject
+									Subject (required)
 								</label>
-								<input 
-									type="text" 
-									id="subject" 
+								<input
+									type="text"
+									id="subject"
 									name="subject"
+									required
+									placeholder="Let us know how we can help you"
 									class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white"
 								>
 							</div>
@@ -123,20 +115,26 @@ import { SITE_TITLE } from '../config';
 								<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 									Your Message
 								</label>
-								<textarea 
-									id="message" 
-									name="message" 
+								<textarea
+									id="message"
+									name="message"
 									rows="6"
+									placeholder="Tell us about your project..."
 									class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 dark:text-white"
 								></textarea>
 							</div>
 
-							<button 
+							<div class="cf-turnstile" data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY} data-theme="auto"></div>
+
+							<button
 								type="submit"
+								id="submit-btn"
 								class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
 							>
 								Send Message
 							</button>
+
+							<p id="form-message" class="text-sm hidden"></p>
 						</form>
 					</div>
 				</div>
@@ -159,6 +157,62 @@ import { SITE_TITLE } from '../config';
 			</section>
 		</main>
 		<Footer />
+
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+		<script>
+			const form = document.getElementById('contact-form') as HTMLFormElement;
+			const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+			const messageEl = document.getElementById('form-message') as HTMLElement;
+
+			form.addEventListener('submit', async (e) => {
+				e.preventDefault();
+
+				submitBtn.disabled = true;
+				submitBtn.textContent = 'Sending...';
+				messageEl.classList.add('hidden');
+
+				const formData = new FormData(form);
+
+				try {
+					const turnstileResponse = formData.get('cf-turnstile-response');
+					if (!turnstileResponse) {
+						throw new Error('Please complete the captcha');
+					}
+
+					const response = await fetch('/api/contact', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({
+							name: formData.get('name'),
+							email: formData.get('email'),
+							subject: formData.get('subject'),
+							message: formData.get('message'),
+							turnstileToken: turnstileResponse
+						})
+					});
+
+					const data = await response.json();
+
+					messageEl.classList.remove('hidden', 'text-red-500', 'text-green-500');
+					if (response.ok) {
+						messageEl.classList.add('text-green-500');
+						messageEl.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+						form.reset();
+					} else {
+						messageEl.classList.add('text-red-500');
+						messageEl.textContent = data.error || 'Something went wrong. Please try again.';
+					}
+				} catch (error) {
+					messageEl.classList.remove('hidden');
+					messageEl.classList.add('text-red-500');
+					messageEl.textContent = 'Something went wrong. Please try again.';
+				} finally {
+					submitBtn.disabled = false;
+					submitBtn.textContent = 'Send Message';
+				}
+			});
+		</script>
 	</body>
 </html>
 
