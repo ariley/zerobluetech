@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 html {
-    background-color: #f9fafb;
+    background-color: #fafaf9; /* stone-50 */
 }
 
 html.dark {
-    background-color: #111827;
+    background-color: #1c1917; /* stone-900 */
     color: #fff;
 }
 
