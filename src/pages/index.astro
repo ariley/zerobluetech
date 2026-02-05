@@ -51,7 +51,7 @@ const hasMorePosts = posts.length > PAGE_SIZE
 						</div>
 						<div class="text-center">
 							<p class="text-4xl font-bold text-gray-900 dark:text-white mb-2">Expert</p>
-							<p class="text-gray-600 dark:text-gray-300">US-Based Support</p>
+							<p class="text-gray-600 dark:text-gray-300">US-Based Developers</p>
 						</div>
 					</div>
 				</div>
@@ -187,26 +187,6 @@ const hasMorePosts = posts.length > PAGE_SIZE
 						"Process analysis." "Workflow." "Integrated solutions." These are common phrases used by any organization offering custom FileMaker development. While we do use them too, here are some others that we hold dear to our hearts as benchmarks of quality, that we mercilessly measure our work against: <span class="font-bold text-primary">"efficient and scalable"</span>; <span class="font-bold text-primary">"flexible and elegant"</span>; <span class="font-bold text-primary">"beautiful and clean."</span>
 					</p>
 				</div>
-			</div>
-		</section>
-
-		<!-- Recent Blog Posts -->
-		<section class="max-w-6xl mx-auto px-4 py-20">
-			<div class="text-center mb-12">
-				<h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Recent Blog Posts</h2>
-				<p class="text-xl text-gray-600 dark:text-gray-400">
-					Tips, tricks, and insights from our FileMaker experts
-				</p>
-			</div>
-			<div class="flex flex-col gap-8">
-				{posts.slice(0, 5).map((post: any) => (
-					<WPArticleSummary page={post} maxWords={30} />
-				))}
-			</div>
-			<div class="text-center mt-12">
-				<a href="/blog/" class="inline-block bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
-					View All Posts →
-				</a>
 			</div>
 		</section>
 
