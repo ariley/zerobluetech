@@ -3,7 +3,7 @@ title: "Coding Principles And How They Apply In FileMaker"
 description: "When I dabbled in development first time I had no idea I actually was developing. I was just adding a few fields here and there. Mostly I just wanted a way to record information on tracking film…"
 pubDate: "2015-04-07T11:00:46+00:00"
 updatedDate: "2015-06-08T16:23:33+00:00"
-heroImage: "/wp-content/uploads/2015/03/clean-field-script-300x245.png"
+heroImage: "/images/2015/03/clean-field-script-300x245.png"
 author: "Agnes Riley"
 tags: ["Advanced", "Beginner", "Developer", "General", "Skill Set"]
 permalink: /coding-principles-and-how-they-apply-in-filemaker/
@@ -43,7 +43,7 @@ When FileMaker gave us variables, it became possible to start writing universal 
   
 
 
-[![clean-field-script](/wp-content/uploads/2015/03/clean-field-script-300x245.png)](/wp-content/uploads/2015/03/clean-field-script.png)
+[![clean-field-script](/images/2015/03/clean-field-script-300x245.png)](/images/2015/03/clean-field-script.png)
 
 Clean Field Universal Script
 

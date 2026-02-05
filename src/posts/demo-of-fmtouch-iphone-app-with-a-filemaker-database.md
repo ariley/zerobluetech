@@ -3,13 +3,13 @@ title: "Demo of the FMTouch iPhone App with a FileMaker database"
 description: "Photo by Sandy Hechtman December 11, 2008: Agnes Riley presented a FileMaker-made-mobile solution to the members of the New York Motion Picture Collective and the New York FileMaker Developer Group."
 pubDate: "2008-12-31T08:29:26+00:00"
 updatedDate: "2015-06-08T15:35:41+00:00"
-heroImage: "/wp-content/uploads/2008/12/agnes-riley-fmtouch-presentation-300x228.png"
+heroImage: "/images/2008/12/agnes-riley-fmtouch-presentation-300x228.png"
 author: "Agnes Riley"
 tags: ["Blog", "General"]
 permalink: /demo-of-fmtouch-iphone-app-with-a-filemaker-database/
 ---
 
-[![](/wp-content/uploads/2008/12/agnes-riley-fmtouch-presentation-300x228.png)](/wp-content/uploads/2008/12/agnes-riley-fmtouch-presentation.png)
+[![](/images/2008/12/agnes-riley-fmtouch-presentation-300x228.png)](/images/2008/12/agnes-riley-fmtouch-presentation.png)
 
 Photo by [Sandy Hechtman](https://www.sandyhechtman.com)
 
@@ -17,15 +17,15 @@ Photo by [Sandy Hechtman](https://www.sandyhechtman.com)
 
 Click the images below to get a closer look:
 
-[![](/wp-content/uploads/2008/12/picture-1.png)](/wp-content/uploads/2008/12/picture-1.png)
+[![](/images/2008/12/picture-1.png)](/images/2008/12/picture-1.png)
 
-[![](/wp-content/uploads/2008/12/picture-2.png)](/wp-content/uploads/2008/12/picture-2.png)
+[![](/images/2008/12/picture-2.png)](/images/2008/12/picture-2.png)
 
-[![](/wp-content/uploads/2008/12/picture-3.png)](/wp-content/uploads/2008/12/picture-3.png)
+[![](/images/2008/12/picture-3.png)](/images/2008/12/picture-3.png)
 
-[![](/wp-content/uploads/2008/12/picture-4.png)](/wp-content/uploads/2008/12/picture-4.png)
+[![](/images/2008/12/picture-4.png)](/images/2008/12/picture-4.png)
 
-[![](/wp-content/uploads/2008/12/picture-5.png)](/wp-content/uploads/2008/12/picture-5.png)
+[![](/images/2008/12/picture-5.png)](/images/2008/12/picture-5.png)
 
 Click the image below to see the video:
 
@@ -104,6 +104,6 @@ You can use the following script steps attached to a button on a layout:
 Special thanks to Christina Tsao for her help with the database layouts.
 
 [Downnload the instructions (PDF)  
-](/wp-content/uploads/2008/12/filemaker-and-fmtouch.pdf)
+](/images/2008/12/filemaker-and-fmtouch.pdf)
 
 I hope this has been helpful.

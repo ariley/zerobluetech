@@ -1,13 +1,13 @@
 ---
 title: "Jacques Vincilione"
 description: "[onefourth] Follow @jvincilione [/onefourth] [threefourths] Growing up, Jacques always enjoyed working with computers, and started doing graphic design when he was 16. From there he began web…"
-heroImage: "/wp-content/uploads/2014/01/jack.jpg"
+heroImage: "/images/2014/01/jack.jpg"
 author: "ZeroBlue"
 permalink: /jacques-vincilione/
 ---
 
 [onefourth]  
-![Picture of Jacques Vincilione](/wp-content/uploads/2014/01/jack.jpg)
+![Picture of Jacques Vincilione](/images/2014/01/jack.jpg)
 
 [Follow @jvincilione](https://twitter.com/jvincilione)
 

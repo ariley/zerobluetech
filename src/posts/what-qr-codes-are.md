@@ -52,7 +52,7 @@ A great feature of QR-Codes is that you do not need to scan them from one partic
 
 There are a number of [web sites](https://www.google.com/search?aq=f&sourceid=chrome&ie=UTF-8&q=generate+qr+code) for generating QR codes and most services they offer for free. You can also generate QR Codes with Google Charts or right in a FileMaker database, which we will demo at [Devcon](https://zerobluetech.com/news/come-to-booth-28-to-get-your-vcard-qr-code-label/). The demo database uses the ScriptMaster plug-in from [360 Works](https://www.360works.com/ScriptMaster) and some java goodies put to use by Scott Shackelford at [AEON Development Group](https://www.aeonmedia.com/).
 
-[![](/wp-content/uploads/2011/07/QR-Code-Printing.png)](/wp-content/uploads/2011/07/QR-Code-Printing.png)
+[![](/images/2011/07/QR-Code-Printing.png)](/images/2011/07/QR-Code-Printing.png)
 
 ### 
 
@@ -66,7 +66,7 @@ There are a number of [web sites](https://www.google.com/search?aq=f&sourceid=ch
 
 Here’s a great article from [Mashable](https://mashable.com/2011/04/18/qr-code-design-tips/) on how you can make your QR codes more appealing like this. Make sure you pay attention that your code is still readable.
 
-![blue qr image](https://5.mshcdn.com/wp-content/uploads/2011/04/630QR-Code3.jpg)
+![blue qr image](https://5.mshcdn.com/images/2011/04/630QR-Code3.jpg)
 
 ### Uses for QR Codes
 

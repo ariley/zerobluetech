@@ -3,7 +3,7 @@ title: "Differences Between FileMaker And Excel"
 description: "Everyone I know is familiar with Microsoft Excel to some extent. Some people are more well-versed than others and can do complex data management. Not long ago I met with a consulting company who is…"
 pubDate: "2012-03-26T18:45:48+00:00"
 updatedDate: "2015-06-05T16:11:42+00:00"
-heroImage: "/wp-content/uploads/2012/03/1332787688_application-vnd.ms-excel.png"
+heroImage: "/images/2012/03/1332787688_application-vnd.ms-excel.png"
 author: "Agnes Riley"
 tags: ["Blog", "General", "Skill Set", "Tips & Tricks"]
 permalink: /filemaker-vs-excel/
@@ -11,7 +11,7 @@ permalink: /filemaker-vs-excel/
 
 Everyone I know is familiar with Microsoft Excel to some extent. Some people are more well-versed than others and can do complex data management. Not long ago I met with a consulting company who is working with one of the largest companies in the country to install hardware nation-wide.
 
-[![](/wp-content/uploads/2012/03/1332787688_application-vnd.ms-excel.png)](/wp-content/uploads/2012/03/1332787688_application-vnd.ms-excel.png)
+[![](/images/2012/03/1332787688_application-vnd.ms-excel.png)](/images/2012/03/1332787688_application-vnd.ms-excel.png)
 
 The original process is so cumbersome that they now have a lot of things fall through the crack. By the time an order goes through the myriads of departments and processes, the requirements change and the parts required, as well. But the warehouse doesn’t know how to handle that. So they called in a consultant to help. The consultant doesn’t know FileMaker, so they created a giant web of Excel sheets that actually do a really nice job at filling in the gaps and getting the orders straightened out. FileMaker could’ve given them reports and live dashboard so they can see which orders have mismatched elements or which orders need to be fulfilled in the near future. But at this point they invested quite a lot in Excel, so I doubt they will have the time and energy to redo it in FileMaker.
 

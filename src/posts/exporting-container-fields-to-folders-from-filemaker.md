@@ -10,7 +10,7 @@ permalink: /exporting-container-fields-to-folders-from-filemaker/
 
 Someone asked me today to help export container field contents. The additional requirement was to store the images in unique folders (because the container field contents might not have unique file names). I have created a short video to share the process with people:
 
-[Click here to watch this video in high resolution.](/wp-content/uploads/2010/07/Container_Export.mov)
+[Click here to watch this video in high resolution.](/images/2010/07/Container_Export.mov)
 
 I highly recommend replacing your old method of storing images in container fields with a new method: [SuperContainer](https://www.360works.com/SuperContainer) from 360 Works. It has a lot of advantages, one of them is reducing the file size tremendously. I use SuperContainer in almost every solution I build.
 

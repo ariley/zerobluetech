@@ -3,7 +3,7 @@ title: "Getting Data From WordPress To FileMaker II"
 description: "In my previous post, Getting Data from a WordPress to FileMaker I detailed how you can get mySQL data (that perhaps comes from a WordPress form submission) into FileMaker. This time I’ll write about…"
 pubDate: "2015-04-16T12:00:03+00:00"
 updatedDate: "2015-07-15T20:14:42+00:00"
-heroImage: "/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-6.45.02-PM-300x24.png"
+heroImage: "/images/2015/04/Screen-Shot-2015-04-15-at-6.45.02-PM-300x24.png"
 author: "Agnes Riley"
 tags: ["Advanced", "Developer", "Skill Set", "Tips & Tricks"]
 permalink: /getting-data-from-wordpress-to-filemaker-ii/
@@ -37,7 +37,7 @@ I added two calculations:
   
 
 
-[![Screen Shot 2015-04-15 at 6.45.02 PM](/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-6.45.02-PM-300x24.png)](/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-6.45.02-PM.png)
+[![Screen Shot 2015-04-15 at 6.45.02 PM](/images/2015/04/Screen-Shot-2015-04-15-at-6.45.02-PM-300x24.png)](/images/2015/04/Screen-Shot-2015-04-15-at-6.45.02-PM.png)
 
   
   
@@ -55,7 +55,7 @@ I have already converted my SQL TimeStamp to a FileMaker readable timestamp, but
   
 
 
-[![Screen Shot 2015-04-15 at 7.07.08 PM](/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-7.07.08-PM-300x241.png)](/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-7.07.08-PM.png)  
+[![Screen Shot 2015-04-15 at 7.07.08 PM](/images/2015/04/Screen-Shot-2015-04-15-at-7.07.08-PM-300x241.png)](/images/2015/04/Screen-Shot-2015-04-15-at-7.07.08-PM.png)  
   
   
 
@@ -71,7 +71,7 @@ The first step is to refresh the data from the mySQL database, because unless yo
   
 
 
-[![Screen Shot 2015-04-15 at 7.10.51 PM](/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-7.10.51-PM-300x215.png)](/wp-content/uploads/2015/04/Screen-Shot-2015-04-15-at-7.10.51-PM.png)
+[![Screen Shot 2015-04-15 at 7.10.51 PM](/images/2015/04/Screen-Shot-2015-04-15-at-7.10.51-PM-300x215.png)](/images/2015/04/Screen-Shot-2015-04-15-at-7.10.51-PM.png)
 
   
   

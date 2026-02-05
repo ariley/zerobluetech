@@ -3,7 +3,7 @@ title: "Adding Weather and Air Quality Data in FileMaker"
 description: "With the current COVID-19 epidemic, life as we knew it has changed. You know what that means for you. Some inconvenient but some changes are probably good and maybe they are here to stay."
 pubDate: "2020-10-08T11:30:00+00:00"
 updatedDate: "2020-10-08T03:42:57+00:00"
-heroImage: "/wp-content/uploads/2020/10/Screen-Shot-2020-10-07-at-2.10.17-PM.png"
+heroImage: "/images/2020/10/Screen-Shot-2020-10-07-at-2.10.17-PM.png"
 author: "Agnes Riley"
 tags: ["Blog"]
 permalink: /adding-weather-and-air-quality-data-in-filemaker/
@@ -15,7 +15,7 @@ Also, in California, we have been weathering fires ignited by dry-lightning and 
 
 I thought it would be apropos to add some data to our splash page. Luckily www.purpleair.com provides all of what I needed, and it was super easy to implement.
 
-[![](/wp-content/uploads/2020/10/Screen-Shot-2020-10-07-at-2.10.17-PM.png)](/wp-content/uploads/2020/10/Screen-Shot-2020-10-07-at-2.10.17-PM.png)
+[![](/images/2020/10/Screen-Shot-2020-10-07-at-2.10.17-PM.png)](/images/2020/10/Screen-Shot-2020-10-07-at-2.10.17-PM.png)
 
 If you go to their website (https://www.purpleair.com/map), you need to find the closest sensor to your location. If you click on “Get this widget” you can get the sensor’s ID number. Then you go to https://www.purpleair.com/json?show= and append the aforementioned ID. It should load the JSON with the data relevant to that particular sensor.
 

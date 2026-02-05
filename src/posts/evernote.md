@@ -3,7 +3,7 @@ title: "Evernote"
 description: "This is exactly how I envisioned my application over a year ago, when I started working on it with some developer friends, except one or two EXTRA features, which I am not going to elaborate on."
 pubDate: "2008-09-17T09:04:16+00:00"
 updatedDate: "2013-01-22T16:58:24+00:00"
-heroImage: "/wp-content/uploads/2008/09/evernote-1024x711.png"
+heroImage: "/images/2008/09/evernote-1024x711.png"
 author: "Agnes Riley"
 tags: ["Blog", "General"]
 permalink: /evernote/
@@ -15,7 +15,7 @@ This is exactly how I envisioned my application over a year ago, when I started 
 
 In the image below you can see my collection of FileMaker-related notes:
 
-[![](/wp-content/uploads/2008/09/evernote-1024x711.png)](/wp-content/uploads/2008/09/evernote.png)
+[![](/images/2008/09/evernote-1024x711.png)](/images/2008/09/evernote.png)
 
 [cta title=”Get Custom Development” btnurl=”/contact” btntext=”Contact Us” btncolor=”blue”]
 

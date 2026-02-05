@@ -17,13 +17,13 @@ We could discuss at length what we should and what we should not do while writin
 
 The script below uses functions from the [24U SimpleDialog](https://24usoftware.com/SimpleDialog "SimpleDialog") Plug-in, which I use often to produce dialogs, because it extends dialog capabilities in FileMaker beyond the basics. First and foremost, pay attention to the first couple of lines. For your own, but especially for other developer’s sake, use some space at the top to introduce your script and let people know who wrote it and when. If you make significant cahnges later, it might help to fill out the “modified by” section, as well. I capture the errors, so in case I need to do some error logging, I can do that. I perhaps will talk in anther post about error logging. Every section in the script has a note on it, so I can tell later what exactly each section is for. This is not a crazy long script. I’ve seen scripts that took literally so long to debug that I forgot what it did by the time I got to the end. BAD, BAD, BAD. Ok, so I’ll let you read through the script and see you when you’re done. (It’s only 4 pages; hopefully it won’t take you too long.)
 
-  * ![](/wp-content/uploads/2013/01/script_example_tfi2.jpg)
+  * ![](/images/2013/01/script_example_tfi2.jpg)
 
-  * ![](/wp-content/uploads/2013/01/script_example_tfi.jpg)
+  * ![](/images/2013/01/script_example_tfi.jpg)
 
-  * ![](/wp-content/uploads/2013/01/script_example_tfi3.jpg)
+  * ![](/images/2013/01/script_example_tfi3.jpg)
 
-  * ![](/wp-content/uploads/2013/01/script_example_tfi4.jpg)
+  * ![](/images/2013/01/script_example_tfi4.jpg)
 
 
 

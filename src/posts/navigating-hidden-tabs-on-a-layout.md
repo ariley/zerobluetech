@@ -3,7 +3,7 @@ title: "Navigating Hidden Tabs On A Layout Via Drop-Down Menu (with demo file)"
 description: "This post contains a free demo file that will show you how to use hidden tab controls and navigate them dynamically via a drop-down menu. The menu automatically gets generated based on the tabs on the…"
 pubDate: "2010-11-10T04:38:32+00:00"
 updatedDate: "2015-06-08T15:25:45+00:00"
-heroImage: "/wp-content/uploads/2010/11/Screen-shot-2010-11-09-at-1.37.03-PM-300x246.png"
+heroImage: "/images/2010/11/Screen-shot-2010-11-09-at-1.37.03-PM-300x246.png"
 author: "Agnes Riley"
 tags: ["Blog", "Developer", "General"]
 permalink: /navigating-hidden-tabs-on-a-layout/
@@ -11,15 +11,15 @@ permalink: /navigating-hidden-tabs-on-a-layout/
 
 FileMaker 8 gave us tab controls. Tabs can replace a set of layouts to save you time as a developer (eg. fewer layouts to maintain) and give your user a more streamlined solution. If you already use tabs, you may have layouts that look like the one below with lots of tabs or with multiple set s of tabs. That can get quite cumbersome to navigate or to even look at.
 
-![](/wp-content/uploads/2010/11/Screen-shot-2010-11-09-at-1.37.03-PM-300x246.png)
+![](/images/2010/11/Screen-shot-2010-11-09-at-1.37.03-PM-300x246.png)
 
 I designed the layout on the left over 4 years ago with the skill set I possessed and the capabilities FileMaker had at the time. You can clearly see we had a lot of tabs and several of them even have enclosing tabs.
 
-[![](/wp-content/uploads/2010/11/Reel-Scurity-300x211.png)](/wp-content/uploads/2010/11/Reel-Scurity.png)
+[![](/images/2010/11/Reel-Scurity-300x211.png)](/images/2010/11/Reel-Scurity.png)
 
 If you are interested in designing your layout to look similar to this one without tabs (FOCUS Framework showed here courtesy of Vince Menanno) read on. This layout includes tabs, they are just not visible in browse mode or even to the untrained eye in layout mode.
 
-![](/wp-content/uploads/2010/11/Screen-shot-2010-11-09-at-11.58.16-PM-300x229.png)
+![](/images/2010/11/Screen-shot-2010-11-09-at-11.58.16-PM-300x229.png)
 
 When you add tabs to a layout, your layout looks like the one on the left. This—in its original form—is not a pretty sight. You can change the color for each tab but as time goes by you will have more and more tabs, and at some point you’ll run out of real estate. This post is about removing the clutter and navigating hidden tab controls via a drop-down menu.
 

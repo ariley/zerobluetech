@@ -1,13 +1,13 @@
 ---
 title: "Robert Kapas"
 description: "[onefourth] Follow @robikapas [/onefourth] [threefourths] A native and resident of Hungary, Robert has applied his talent in many professions, from printing to journalism, from event organizing and…"
-heroImage: "/wp-content/uploads/2012/07/Robert-Kapas.jpg"
+heroImage: "/images/2012/07/Robert-Kapas.jpg"
 author: "ZeroBlue"
 permalink: /robert-kapas/
 ---
 
 [onefourth]  
-![](/wp-content/uploads/2012/07/Robert-Kapas.jpg)  
+![](/images/2012/07/Robert-Kapas.jpg)  
 [Follow @robikapas](https://twitter.com/robikapas)
 
 [![](https://www.socialmediabuttons.com/images/facebook1.gif)](https://facebook.com/robert.kapas)  

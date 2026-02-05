@@ -3,7 +3,7 @@ title: "Clean Data in FileMaker"
 description: "This is something I’ve bee dealing with for years. It hit me like a large hammer in the chest when one of my users replaced the contents of one field in about 5000 records with HTML she copied from…"
 pubDate: "2015-03-31T12:00:08+00:00"
 updatedDate: "2015-08-23T15:57:48+00:00"
-heroImage: "/wp-content/uploads/2015/03/03-27-2015-exhibit-a-300x242.png"
+heroImage: "/images/2015/03/03-27-2015-exhibit-a-300x242.png"
 author: "Agnes Riley"
 tags: ["Blog"]
 permalink: /clean-data-in-filemaker/
@@ -39,19 +39,19 @@ When you create a custom menu name it appropriately so you know what it is for.
 
 
 
-[![03-27-2015-exhibit-a](/wp-content/uploads/2015/03/03-27-2015-exhibit-a-300x242.png)](/wp-content/uploads/2015/03/03-27-2015-exhibit-a.png)
+[![03-27-2015-exhibit-a](/images/2015/03/03-27-2015-exhibit-a-300x242.png)](/images/2015/03/03-27-2015-exhibit-a.png)
 
 Exhibit A
 
-[![03-27-2015-exhibit-b](/wp-content/uploads/2015/03/03-27-2015-exhibit-b-300x250.png)](/wp-content/uploads/2015/03/03-27-2015-exhibit-b.png)
+[![03-27-2015-exhibit-b](/images/2015/03/03-27-2015-exhibit-b-300x250.png)](/images/2015/03/03-27-2015-exhibit-b.png)
 
 Exhibit B
 
-[![03-27-2015-exhibit-c](/wp-content/uploads/2015/03/03-27-2015-exhibit-c-300x250.png)](/wp-content/uploads/2015/03/03-27-2015-exhibit-c.png)
+[![03-27-2015-exhibit-c](/images/2015/03/03-27-2015-exhibit-c-300x250.png)](/images/2015/03/03-27-2015-exhibit-c.png)
 
 Exhibit C
 
-[![03-27-2015-exhibit-d](/wp-content/uploads/2015/03/03-27-2015-exhibit-d-300x279.png)](/wp-content/uploads/2015/03/03-27-2015-exhibit-d.png)
+[![03-27-2015-exhibit-d](/images/2015/03/03-27-2015-exhibit-d-300x279.png)](/images/2015/03/03-27-2015-exhibit-d.png)
 
 Exhibit D
 

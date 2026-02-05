@@ -25,7 +25,7 @@ We all had users call us and say “I’ve been entering records and now they’
 
 Place text “You are in FIND MODE” in the same color as your background. Formula: Get ( WindowMode ); set the color to bright orange or red. Get ( WindowMode ) window modes: 0 for Browse mode 1 for Find mode 2 for Preview mode 3 if printing is in progress.
 
-![](/wp-content/uploads/2012/02/Find-Mode.png)
+![](/images/2012/02/Find-Mode.png)
 
 ### The Problem
 
@@ -35,7 +35,7 @@ User cannot easily identify which field they clicked in.
 
 Simply use “1” as a formula (assign the color white to it). I normally set the field to a light yellow fill color on the layout.
 
-![](/wp-content/uploads/2012/02/Tab.png)
+![](/images/2012/02/Tab.png)
 
 ### The Problem
 
@@ -45,7 +45,7 @@ A selected portal row needs to be visually differentiated from the other portal 
 
 Place a text object over your fields. Make sure it matches the edges of the row by pixel, then send it backward until all of your fields are in the front. Apply conditional formatting to it so when that row is selected your objects gets a darker fill color color (however your row is selected depends on your database rules). Now do the same for your text fields, making sure your text gets white (or contrasting light color) when the same condition applies.
 
-![](/wp-content/uploads/2012/02/Portal.png)
+![](/images/2012/02/Portal.png)
 
 ### The Problem
 
@@ -55,7 +55,7 @@ Information in a field needs to be highlighted based on action. In the example b
 
 Apply conditional formatting to a field or a set of fields. The condition in my case is Paid = 1, then assign color green to my field.
 
-![](/wp-content/uploads/2012/02/Portal.png)
+![](/images/2012/02/Portal.png)
 
 ### The Problem
 
@@ -65,7 +65,7 @@ Users need to be reminded to fill out certain fields on a layout.
 
 When the field is empty [IsEmpty (field)] set the fill color to red and the text white (again, contrasting colors). Also, make the text size 500 points. You could make it 1, too, but then you’s see a spec of white, and that’s not pretty.
 
-![](/wp-content/uploads/2012/02/Sheet.png)
+![](/images/2012/02/Sheet.png)
 
 ### The Problem
 
@@ -84,7 +84,7 @@ Apply conditional formatting formula to the text size in the following manner:
 
 Depending on your real estate on the layout you’ll need to choose the appropriate length and font size.
 
-![](/wp-content/uploads/2012/02/Portal3.png)
+![](/images/2012/02/Portal3.png)
 
 #### 
 
