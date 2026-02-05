@@ -28,5 +28,8 @@
     "remark-gfm": "4.0.0",
     "tailwindcss": "4.1.18",
     "theme-change": "2.5.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "23.15.1"
   }
 }
