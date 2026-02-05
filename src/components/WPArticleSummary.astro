@@ -10,14 +10,14 @@ const formattedDate = new Date(postDate).toLocaleDateString(undefined, { year: '
 
 ---
 
-<article class="post type-post status-publish format-standard hentry">
-  <header class="entry-header">
-    <h2 class="entry-title">
-      <a href={permalink} title={`Permalink to ${title}`} rel="bookmark">{title}</a>
+<article class="border-b border-gray-200 dark:border-gray-700 pb-8 last:border-b-0">
+  <header>
+    <h2 class="text-2xl font-semibold mb-2">
+      <a href={permalink} class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors no-underline" title={`Permalink to ${title}`} rel="bookmark">{title}</a>
     </h2>
     {showDate && postDate && (
-      <div class="entry-meta">
-        <time class="entry-date" datetime={postDate}>{formattedDate}</time>
+      <div class="text-sm text-gray-600 dark:text-gray-400">
+        <time datetime={postDate}>{formattedDate}</time>
       </div>
     )}
   </header>

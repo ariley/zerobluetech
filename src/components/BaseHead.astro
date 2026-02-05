@@ -41,3 +41,28 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Dark Mode Flash Prevention - Must run before body renders -->
+<script is:inline>
+	// Check for dark mode preference and apply class immediately
+	if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		document.documentElement.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+	}
+</script>
+
+<style is:global>
+	html {
+		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Raleway', sans-serif !important;
+	}
+
+	body {
+		margin: 0;
+	}
+</style>
