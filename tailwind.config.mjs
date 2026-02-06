@@ -22,7 +22,6 @@ export default {
                     900: '#1c1917',
                     950: '#0c0a09',
                 },
-                accent: '#f87171', // red-400
             },
             fontFamily: {
                 sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
