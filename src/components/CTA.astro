@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	buttonText: string;
+	buttonHref: string;
+}
+
+const { title, description, buttonText, buttonHref } = Astro.props;
+---
+
+<section class="bg-gradient-to-r from-stone-500 via-stone-600 via-stone-700 via-stone-600 to-stone-500 rounded-lg shadow-xl p-12 text-center text-stone-300">
+	<h2 class="text-3xl font-bold mb-4">{title}</h2>
+	<p class="text-xl mb-8">{description}</p>
+	<a 
+		href={buttonHref} 
+		class="inline-block bg-stone-50 text-stone-700 px-8 py-3 rounded-lg font-semibold hover:bg-stone-100 hover:scale-105 hover:shadow-lg transition-all duration-300"
+	>
+		{buttonText}
+	</a>
+</section>
+
