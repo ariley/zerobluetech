@@ -13,7 +13,7 @@ const formattedDate = new Date(postDate).toLocaleDateString(undefined, { year: '
 <article class="border-b border-gray-200 dark:border-gray-700 pb-8 last:border-b-0">
   <header>
     <h2 class="text-2xl font-semibold mb-2">
-      <a href={permalink} class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors no-underline" title={`Permalink to ${title}`} rel="bookmark">{title}</a>
+      <a href={permalink} class="text-gray-900 dark:text-stone-300 hover:text-primary dark:hover:text-primary transition-colors no-underline" title={`Permalink to ${title}`} rel="bookmark">{title}</a>
     </h2>
     {showDate && postDate && (
       <div class="text-sm text-gray-600 dark:text-gray-400">

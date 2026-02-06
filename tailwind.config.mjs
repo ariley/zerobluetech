@@ -9,7 +9,7 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: '#292524', // stone-800
+                    DEFAULT: '#78716c', // stone-500 - mid-tone that works on both light and dark
                     50: '#fafaf9',
                     100: '#f5f5f4',
                     200: '#e7e5e4',
@@ -21,6 +21,9 @@ export default {
                     800: '#292524',
                     900: '#1c1917',
                     950: '#0c0a09',
+                },
+                sky: {
+                    200: '#bae6fd',
                 },
             },
             fontFamily: {
