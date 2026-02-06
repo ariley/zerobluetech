@@ -8,8 +8,8 @@ const isActive = href === Astro.url.pathname.replace(/\/$/, '');
 <a
 	href={href}
 	class:list={[
-		'text-stone-700 dark:text-stone-300 hover:text-primary dark:hover:text-primary transition-colors',
-		{ 'font-bold text-primary dark:text-primary': isActive },
+		'text-stone-700 dark:text-stone-200 hover:text-stone-900 dark:hover:text-white transition-colors',
+		{ 'font-bold text-stone-900 dark:text-white': isActive },
 		className
 	]}
 	{...props}
