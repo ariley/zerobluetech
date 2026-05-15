@@ -3,22 +3,44 @@ import PostFooter from "@/components/PostFooter.astro"
 import { stripHTML, urlifyToken } from '@/js/util.js'
 
 const { page, maxWords = 46, showFooter = false, articlePreview = false, showDate = true } = Astro.props
-const { title, author, date, pubDate, permalink, tags, categories } = page.frontmatter
+const { title, author, date, pubDate, permalink, tags, categories, description } = page.frontmatter
 // Use pubDate if available, otherwise fall back to date
 const postDate = pubDate || date
 const formattedDate = new Date(postDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })
 
+// Get category - use first category if multiple exist
+const category = categories && categories.length > 0 ? categories[0] : null
+
 ---
 
-<article class="border-b border-gray-200 dark:border-gray-700 pb-8 last:border-b-0">
-  <header>
-    <h2 class="text-2xl font-semibold mb-2">
-      <a href={permalink} class="text-gray-900 dark:text-stone-300 hover:text-primary dark:hover:text-primary transition-colors no-underline" title={`Permalink to ${title}`} rel="bookmark">{title}</a>
-    </h2>
-    {showDate && postDate && (
-      <div class="text-sm text-gray-600 dark:text-gray-400">
-        <time datetime={postDate}>{formattedDate}</time>
-      </div>
+<article class="surface-card surface-card-hover group overflow-hidden">
+  <div class="color-strip"></div>
+  <div class="p-7 sm:p-8">
+  <div class="mb-4 flex flex-wrap items-center gap-3">
+    {category && (
+      <a href={`/category/${urlifyToken(category)}/`} class="rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-700 transition hover:bg-sky-200 dark:bg-sky-500/15 dark:text-sky-200">{category}</a>
     )}
-  </header>
+    {showDate && postDate && (
+      <>
+        {category && <span class="text-slate-300 dark:text-slate-600">•</span>}
+        <time datetime={postDate} class="text-sm font-medium text-slate-500 dark:text-slate-400">{formattedDate}</time>
+      </>
+    )}
+  </div>
+
+  <h2 class="mb-3 text-2xl font-bold leading-tight tracking-tight">
+    <a href={permalink} class="text-slate-950 no-underline transition-colors hover:text-sky-600 dark:text-white dark:hover:text-sky-300" title={`Permalink to ${title}`} rel="bookmark">{title}</a>
+  </h2>
+
+  {description && (
+    <p class="mb-5 leading-7 text-slate-600 dark:text-slate-300">{description}</p>
+  )}
+
+  <a href={permalink} class="accent-link inline-flex items-center gap-2 font-semibold">
+    Read more
+    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+  </a>
+  </div>
 </article>

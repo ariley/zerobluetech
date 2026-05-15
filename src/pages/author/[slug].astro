@@ -2,9 +2,8 @@
 import BaseHead from '@/components/BaseHead.astro'
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
-import WPArticleSummary from '@/components/WPArticleSummary.astro'
+import BlogArchive from '@/components/BlogArchive.astro'
 import { urlifyToken, sortedPosts } from '@/js/util.js'
-import { Debug } from 'astro/components'
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/config.ts'
 
 export async function getStaticPaths() {
@@ -28,27 +27,24 @@ export async function getStaticPaths() {
 ---
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" class="scroll-smooth">
   <head>
     <BaseHead title={`${Astro.props.author} » ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
   </head>
-  <body class="archive author">
-    <div id="page" class="hfeed site">
-      <Header />
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content">
-          <div id="content" role="main">
-            <header class="page-header">
-              <h1 class="page-title">Author Archives: <span class="vcard">{Astro.props.author}</span></h1>
-            </header>
-            {Astro.props.posts.map(page =>
-              <WPArticleSummary page={page} />
-            )}
-          </div>
+  <body class="site-body">
+    <Header />
+    <section class="hero-panel">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="h-2 w-2 rounded-full bg-teal-400"></span>Author archive</div>
+          <h1 class="hero-title">{Astro.props.author}</h1>
+          <p class="hero-subtitle">Articles by {Astro.props.author}.</p>
         </div>
-        <div class="clear-fix"></div>
       </div>
-    </div>
+    </section>
+    <main class="site-main pt-12">
+      <BlogArchive posts={Astro.props.posts} />
+    </main>
     <Footer />
   </body>
 </html>

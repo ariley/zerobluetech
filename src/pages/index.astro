@@ -16,173 +16,361 @@ const hasMorePosts = posts.length > PAGE_SIZE
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-stone-50 dark:bg-stone-900">
+	<body class="site-body">
 		<Header title={SITE_TITLE} />
 
-		<!-- Hero Section with Simple Gradient Background -->
-		<div class="relative overflow-hidden bg-gradient-to-br from-stone-100 to-white dark:from-stone-800 dark:to-stone-900 py-20 sm:py-24">
-
-			<div class="relative max-w-7xl mx-auto px-4">
-				<div class="text-center">
-					<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-stone-700 dark:text-stone-300 mb-6">
-						Custom <span class="bg-gradient-to-r from-primary via-stone-600 to-stone-500 bg-clip-text text-transparent">FileMaker Solutions</span>
+		<!-- Hero Section -->
+		<div class="hero-panel min-h-[calc(100vh-4.5rem)] flex items-center">
+			<div class="relative max-w-7xl mx-auto px-4 text-center w-full">
+				<div>
+					<div class="eyebrow mx-auto">
+						<span class="h-2 w-2 rounded-full bg-teal-400"></span>
+						Custom business systems
+					</div>
+					<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-950 dark:text-white mb-6 tracking-tight">
+						Custom <span class="bg-gradient-to-r from-sky-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent">FileMaker</span> Development
 					</h1>
-					<p class="text-xl md:text-2xl text-stone-700 dark:text-stone-200 max-w-3xl mx-auto mb-8">
-						We build solutions that do exactly what you need them to do, designed with an unwavering focus on ease of use paired with crisp interfaces.
+					<p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+						We build custom FileMaker solutions that automate the boring stuff so your team can focus on what actually matters.
 					</p>
-					<div class="flex flex-wrap justify-center gap-4 mb-12">
-						<a href="https://calendly.com/agnesriley" target="_blank" rel="noopener noreferrer" class="bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-300 border-2 border-stone-900 dark:border-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 shadow-md">
-							Book a Meeting
+					<div class="flex flex-wrap gap-4 mb-12 justify-center">
+						<a href="https://calendly.com/agnesriley" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
+							Let's Talk
 						</a>
 					</div>
 
-					<!-- Stats Grid -->
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-12 border-t border-stone-300 dark:border-stone-600">
-						<div class="text-center">
-							<p class="text-4xl font-bold text-stone-700 dark:text-stone-300 mb-2">20+</p>
-							<p class="text-stone-600 dark:text-stone-400">Years Experience</p>
+					<!-- Quick Stats Cards -->
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+						<div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10">
+							<div class="text-2xl font-bold text-sky-500 mb-2">Our Approach</div>
+							<div class="text-sm text-zinc-600 dark:text-zinc-400">We analyze your business process to find black holes and make recommendations before we build a solution.</div>
 						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-stone-700 dark:text-stone-300 mb-2">100%</p>
-							<p class="text-stone-600 dark:text-stone-400">Client Satisfaction</p>
+						<div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10">
+							<div class="text-2xl font-bold text-sky-500 mb-2">What Makes Us Different</div>
+							<div class="text-sm text-zinc-600 dark:text-zinc-400">We know what users want. We build the kind of apps that matter to users.</div>
 						</div>
-						<div class="text-center">
-							<p class="text-4xl font-bold text-stone-700 dark:text-stone-300 mb-2">Expert</p>
-							<p class="text-stone-600 dark:text-stone-400">US-Based Developers</p>
+						<div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10">
+							<div class="text-2xl font-bold text-sky-500 mb-2">How We Work</div>
+							<div class="text-sm text-zinc-600 dark:text-zinc-400">We work in phases giving you what you need when you need it. We'll talk you out of unnecessary and bloated features.</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- What We Do Section -->
-		<section class="max-w-7xl mx-auto px-4 py-20">
-			<div class="text-center mb-16">
-				<h2 class="text-4xl md:text-5xl font-bold text-stone-700 dark:text-stone-300 mb-4">What We Do</h2>
-				<p class="text-xl text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
-					Comprehensive solutions tailored to your business needs
-				</p>
-			</div>
+		<!-- FM Dojo Feature -->
+		<section class="py-16">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div class="surface-card relative isolate overflow-hidden">
+					<div class="absolute inset-0 bg-[linear-gradient(120deg,rgba(14,165,233,0.16),rgba(20,184,166,0.12)_45%,rgba(245,158,11,0.14)),radial-gradient(circle_at_85%_15%,rgba(251,146,60,0.20),transparent_18rem)] dark:bg-[linear-gradient(120deg,rgba(14,165,233,0.20),rgba(20,184,166,0.14)_45%,rgba(245,158,11,0.16)),radial-gradient(circle_at_85%_15%,rgba(251,146,60,0.18),transparent_18rem)]"></div>
+					<div class="absolute inset-0 opacity-40 dark:opacity-25" style="background-image: radial-gradient(circle at 1px 1px, rgba(14,165,233,.45) 1px, transparent 0); background-size: 24px 24px;"></div>
+					<div class="relative grid gap-8 p-5 sm:p-8 xl:grid-cols-[0.92fr_1.08fr] lg:p-10">
+						<div class="flex flex-col justify-center">
+							<div class="eyebrow w-fit">
+								<span class="h-2 w-2 rounded-full bg-orange-400"></span>
+								New FileMaker ecosystem
+							</div>
+							<h2 class="text-4xl font-bold tracking-tight text-slate-950 dark:text-white md:text-5xl">
+								Introducing <span class="rounded-xl bg-gradient-to-r from-sky-500/15 via-teal-500/15 to-orange-500/15 px-2 text-sky-700 ring-1 ring-sky-300/50 dark:bg-gradient-to-r dark:from-sky-400/20 dark:via-teal-300/20 dark:to-orange-300/20 dark:text-sky-100 dark:ring-sky-300/30">FM Dojo</span>
+							</h2>
+							<p class="mt-5 max-w-xl text-lg leading-8 text-slate-700 dark:text-slate-300">
+								The FileMaker ecosystem for builders who want cleaner scripts, sharper insight, and faster client delivery.
+							</p>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<div class="group p-8 rounded-3xl bg-stone-50 border border-stone-100 dark:shadow-none dark:border-stone-700 dark:bg-stone-800 shadow-2xl shadow-stone-600/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50">
-					<div class="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-2xl transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3 mb-6">
-						<svg class="w-8 h-8 text-primary transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold mb-3 text-center text-stone-700 dark:text-stone-300 transition-colors duration-300">Custom FileMaker Databases</h3>
-					<p class="text-stone-600 dark:text-stone-400 text-center">We create taylor-made systems for your individual needs.</p>
-				</div>
+							<div class="mt-7 grid gap-3 sm:grid-cols-2">
+								<div class="rounded-2xl border border-sky-200 bg-sky-50/95 p-4 shadow-lg shadow-sky-900/10 backdrop-blur dark:border-sky-300/40 dark:bg-sky-950/55 dark:shadow-sky-950/30">
+									<div class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-200">Ask</div>
+									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">AI beside your database</h3>
+								</div>
+								<div class="rounded-2xl border border-teal-200 bg-teal-50/95 p-4 shadow-lg shadow-teal-900/10 backdrop-blur dark:border-teal-300/40 dark:bg-teal-950/55 dark:shadow-teal-950/30">
+									<div class="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-200">Inspect</div>
+									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">Snapshots that explain risk</h3>
+								</div>
+								<div class="rounded-2xl border border-orange-200 bg-orange-50/95 p-4 shadow-lg shadow-orange-900/10 backdrop-blur dark:border-red-300/40 dark:bg-red-950/55 dark:shadow-red-950/30">
+									<div class="text-sm font-semibold uppercase tracking-wider text-orange-700 dark:text-red-200">Build</div>
+									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">Script workflows that ship</h3>
+								</div>
+								<div class="rounded-2xl border border-amber-200 bg-amber-50/95 p-4 shadow-lg shadow-amber-900/10 backdrop-blur dark:border-amber-300/40 dark:bg-amber-950/55 dark:shadow-amber-950/30">
+									<div class="text-sm font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-200">Deliver</div>
+									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">Client work in one place</h3>
+								</div>
+							</div>
 
-				<div class="group p-8 rounded-3xl bg-stone-50 border border-stone-100 dark:shadow-none dark:border-stone-700 dark:bg-stone-800 shadow-2xl shadow-stone-600/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50">
-					<div class="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-2xl transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3 mb-6">
-						<svg class="w-8 h-8 text-primary transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold mb-3 text-center text-stone-700 dark:text-stone-300 transition-colors duration-300 ">Barcode Scanning</h3>
-					<p class="text-stone-600 dark:text-stone-400 text-center">Scan barcodes or RFID tags right into your FileMaker fields.</p>
-				</div>
+							<div class="mt-8 flex flex-wrap gap-3">
+								<a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 via-cyan-500 to-teal-500 px-6 py-4 font-semibold leading-none text-white shadow-lg shadow-sky-900/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-teal-900/20">
+									Explore FM Dojo
+									<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7m0 0H8m9 0v9"></path>
+									</svg>
+								</a>
+								<a href="https://youtu.be/oIbXoYFjtcw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl border border-sky-300/40 bg-gradient-to-r from-sky-950 via-teal-950 to-slate-950 px-6 py-4 font-semibold leading-none text-white shadow-lg shadow-sky-950/25 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-xl hover:shadow-teal-950/30">
+									Watch the demo
+								</a>
+							</div>
+						</div>
 
-				<div class="group p-8 rounded-3xl bg-stone-50 border border-stone-100 dark:shadow-none dark:border-stone-700 dark:bg-stone-800 shadow-2xl shadow-stone-600/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50">
-					<div class="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-2xl transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3 mb-6">
-						<svg class="w-8 h-8 text-primary transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-						</svg>
+						<div>
+							<div class="relative mx-auto max-w-4xl xl:max-w-none">
+								<div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-sky-400/25 via-teal-300/20 to-orange-300/25 blur-2xl"></div>
+								<a
+									href="https://youtu.be/oIbXoYFjtcw"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group relative block overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-sky-900/15 transition hover:-translate-y-1 hover:shadow-teal-900/20 dark:border-slate-700 dark:bg-slate-950"
+									aria-label="Watch Introducing FM Dojo on YouTube"
+								>
+									<img
+										src="https://img.youtube.com/vi/oIbXoYFjtcw/maxresdefault.jpg"
+										alt="FM Dojo AI Assistant video preview"
+										class="aspect-video w-full object-cover"
+										loading="lazy"
+									>
+									<div class="absolute inset-0 bg-gradient-to-tr from-slate-950/65 via-slate-950/5 to-sky-500/20"></div>
+									<div class="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg backdrop-blur">
+										Latest video
+									</div>
+									<div class="absolute inset-0 grid place-items-center">
+										<div class="grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-sky-400 via-teal-400 to-orange-400 text-white shadow-2xl shadow-sky-950/40 transition group-hover:scale-110">
+											<svg class="ml-1 h-9 w-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+												<path d="M8 5v14l11-7z"></path>
+											</svg>
+										</div>
+									</div>
+									<div class="absolute bottom-0 left-0 right-0 p-5">
+										<div class="max-w-md rounded-2xl bg-white/90 p-4 shadow-lg backdrop-blur dark:bg-slate-950/85">
+											<div class="text-sm font-bold uppercase tracking-wider text-sky-700 dark:text-sky-200">FM Dojo AI Assistant</div>
+											<div class="mt-1 text-lg font-bold text-slate-950 dark:text-white">Everywhere you click</div>
+										</div>
+									</div>
+								</a>
+								<div class="mt-4 grid grid-cols-3 gap-3 text-center">
+									<div class="rounded-2xl border border-sky-200 bg-white/90 px-3 py-4 shadow-lg shadow-sky-900/10 backdrop-blur dark:border-sky-300/50 dark:bg-slate-950/75 dark:shadow-sky-950/30">
+										<div class="text-2xl font-bold text-sky-700 dark:text-sky-100">AI</div>
+										<div class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-sky-100/80">answers</div>
+									</div>
+									<div class="rounded-2xl border border-teal-200 bg-white/90 px-3 py-4 shadow-lg shadow-teal-900/10 backdrop-blur dark:border-teal-300/50 dark:bg-slate-950/75 dark:shadow-teal-950/30">
+										<div class="text-2xl font-bold text-teal-700 dark:text-teal-100">XML</div>
+										<div class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-teal-100/80">snapshots</div>
+									</div>
+									<div class="rounded-2xl border border-orange-200 bg-white/90 px-3 py-4 shadow-lg shadow-orange-900/10 backdrop-blur dark:border-orange-300/50 dark:bg-slate-950/75 dark:shadow-orange-950/30">
+										<div class="text-2xl font-bold text-orange-700 dark:text-orange-100">FM</div>
+										<div class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-orange-100/80">scripts</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<h3 class="text-xl font-semibold mb-3 text-center text-stone-700 dark:text-stone-300 transition-colors duration-300 ">Document Management</h3>
-					<p class="text-stone-600 dark:text-stone-400 text-center">Scan and manage your documents in your FileMaker solution.</p>
-				</div>
-
-				<div class="group p-8 rounded-3xl bg-stone-50 border border-stone-100 dark:shadow-none dark:border-stone-700 dark:bg-stone-800 shadow-2xl shadow-stone-600/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50">
-					<div class="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-2xl transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3 mb-6">
-						<svg class="w-8 h-8 text-primary transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold mb-3 text-center text-stone-700 dark:text-stone-300 transition-colors duration-300 ">Mobile Solutions</h3>
-					<p class="text-stone-600 dark:text-stone-400 text-center">We create mobile FileMaker solutions (iPad, iPhone, Android).</p>
-				</div>
-
-				<div class="group p-8 rounded-3xl bg-stone-50 border border-stone-100 dark:shadow-none dark:border-stone-700 dark:bg-stone-800 shadow-2xl shadow-stone-600/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50">
-					<div class="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-2xl transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3 mb-6">
-						<svg class="w-8 h-8 text-primary transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold mb-3 text-center text-stone-700 dark:text-stone-300 transition-colors duration-300 ">Responsive Web Development</h3>
-					<p class="text-stone-600 dark:text-stone-400 text-center">We create responsive websites.</p>
-				</div>
-
-				<div class="group p-8 rounded-3xl bg-stone-50 border border-stone-100 dark:shadow-none dark:border-stone-700 dark:bg-stone-800 shadow-2xl shadow-stone-600/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50">
-					<div class="flex items-center justify-center w-16 h-16 mx-auto bg-primary/10 rounded-2xl transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-3 mb-6">
-						<svg class="w-8 h-8 text-primary transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-						</svg>
-					</div>
-					<h3 class="text-xl font-semibold mb-3 text-center text-stone-700 dark:text-stone-300 transition-colors duration-300 ">FileMaker Hosting</h3>
-					<p class="text-stone-600 dark:text-stone-400 text-center">Cloud hosting at <a href="https://radfm.cloud" class="text-stone-700 dark:text-stone-300 hover:text-primary dark:hover:text-primary hover:underline">radfm.cloud</a> is the most cost-effective way.</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Mission Statement -->
-		<section class="max-w-6xl mx-auto px-4 py-16">
-			<div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-700 p-12 text-center shadow-2xl">
-				<div class="relative z-10">
-					<h2 class="text-3xl md:text-4xl font-bold text-stone-300 leading-relaxed mb-4">Our Mission</h2>
-					<p class="text-xl text-stone-300/90">Make your working days more productive and less repetitive</p>
-				</div>
-				<!-- Decorative elements -->
-				<div class="absolute top-0 right-0 w-64 h-64 bg-stone-50/10 rounded-full blur-3xl"></div>
-				<div class="absolute bottom-0 left-0 w-64 h-64 bg-stone-50/20 rounded-full blur-3xl"></div>
-			</div>
-		</section>
-
-		<!-- Who/What/How Section -->
-		<section class="max-w-7xl mx-auto px-4 py-20">
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-				<div class="text-center">
-					<div class="flex items-center justify-center w-20 h-20 mx-auto bg-primary/10 rounded-full mb-6">
-						<svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-						</svg>
-					</div>
-					<h3 class="text-2xl font-bold mb-4 text-stone-700 dark:text-stone-300">Who We Are</h3>
-					<p class="text-stone-600 dark:text-stone-400 leading-relaxed">We are the people who can help you run your business better. We will analyze your business process to find black holes and make recommendations before we build a solution.</p>
-				</div>
-				<div class="text-center">
-					<div class="flex items-center justify-center w-20 h-20 mx-auto bg-primary/10 rounded-full mb-6">
-						<svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-						</svg>
-					</div>
-					<h3 class="text-2xl font-bold mb-4 text-stone-700 dark:text-stone-300">What We Do</h3>
-					<p class="text-stone-600 dark:text-stone-400 leading-relaxed">There are a lot of FileMaker Developers out there. What differentiates us is that we know what users want. We build the kind of apps that matter to users.</p>
-				</div>
-				<div class="text-center">
-					<div class="flex items-center justify-center w-20 h-20 mx-auto bg-primary/10 rounded-full mb-6">
-						<svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-						</svg>
-					</div>
-					<h3 class="text-2xl font-bold mb-4 text-stone-700 dark:text-stone-300">How We Work</h3>
-					<p class="text-stone-600 dark:text-stone-400 leading-relaxed">We work in phases giving you what you need when you need it. We'll talk you out of unnecessary and bloated features. We'll design a mockup before building your solution so you can see what you will be getting.</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- Quality Statement -->
-		<section class="max-w-6xl mx-auto px-4 py-16">
-			<div class="relative overflow-hidden rounded-3xl bg-stone-50 dark:bg-stone-800 border-4 border-primary p-12 shadow-2xl">
-				<div class="relative z-10 text-center">
-					<svg class="w-12 h-12 text-primary mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
-						<path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
-					</svg>
-					<p class="text-lg md:text-xl text-stone-700 dark:text-stone-400 leading-relaxed italic">
-						"Process analysis." "Workflow." "Integrated solutions." These are common phrases used by any organization offering custom FileMaker development. While we do use them too, here are some others that we hold dear to our hearts as benchmarks of quality, that we mercilessly measure our work against: <span class="font-bold text-stone-700 dark:text-stone-300">"efficient and scalable"</span>; <span class="font-bold text-stone-700 dark:text-stone-300">"flexible and elegant"</span>; <span class="font-bold text-stone-700 dark:text-stone-300">"beautiful and clean."</span>
+		<!-- What We Do -->
+		<section class="py-16">
+			<div class="max-w-4xl mx-auto px-4">
+				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center tracking-tight">What We Do</h2>
+				<div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300">
+					<p>
+						We build custom FileMaker apps—web and mobile-integrated—that eliminate manual data entry, automate workflows, and give you real-time visibility into your business.
 					</p>
+					<p>
+						Think of all the time your team spends copying data between spreadsheets, sending follow-up emails, generating reports, or tracking down information. Now imagine all of that happening automatically.
+					</p>
+					<p>
+						That's what we do.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why It Matters -->
+		<section class="py-16">
+			<div class="max-w-4xl mx-auto px-4">
+				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center tracking-tight">Why This Matters</h2>
+				<div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300">
+					<p>
+						Your team's time is expensive. Every hour spent on repetitive tasks is an hour not spent on growing your business.
+					</p>
+					<p>
+						Let's say you have 5 employees who each spend 2 hours a day on manual data entry and administrative tasks. At $50/hour, that's $500 per day. Over a year, that's <strong>$130,000</strong> in labor costs doing work a computer should be doing.
+					</p>
+					<p>
+						A custom FileMaker solution typically pays for itself in 3-6 months. After that, it's pure savings.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Real Examples -->
+		<section class="py-16">
+			<div class="max-w-4xl mx-auto px-4">
+				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-12 text-center tracking-tight">Real Numbers</h2>
+				<div class="space-y-6">
+					<div class="group p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<h3 class="text-2xl font-bold text-sky-500 mb-4">Professional Services Firm</h3>
+						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-2">
+							<strong>Before:</strong> 80 employees manually typing client documents, 2 hours/day each
+						</p>
+						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
+							<strong>After:</strong> Automated document generation with one click
+						</p>
+						<div class="flex items-center gap-3">
+							<p class="text-xl font-bold text-sky-500">
+								Savings: $2.5 million/year
+							</p>
+							<button class="info-btn relative" data-calc="calc1">
+								<svg class="w-6 h-6 text-zinc-400 hover:text-sky-500 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+								</svg>
+								<div class="hidden calc-popup absolute left-0 top-8 z-50 w-80 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-sky-500 shadow-2xl" id="calc1">
+									<p class="text-sm text-zinc-700 dark:text-zinc-300 font-semibold mb-2">How we calculated this:</p>
+									<ul class="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+										<li>• 80 employees × 2 hours/day = 160 hours/day saved</li>
+										<li>• Average salary: $130,000/year ÷ 2,080 hours = $62.50/hour</li>
+										<li>• 160 hours × $62.50 = $10,000/day</li>
+										<li>• $10,000 × 250 work days = <strong class="text-sky-500">$2,500,000/year</strong></li>
+									</ul>
+								</div>
+							</button>
+						</div>
+					</div>
+
+					<div class="group p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<h3 class="text-2xl font-bold text-sky-500 mb-4">Warehouse Operations</h3>
+						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-2">
+							<strong>Before:</strong> 10 employees printing label sheets, sorting through duplicates, fixing errors, re-labeling boxes
+						</p>
+						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
+							<strong>After:</strong> Belt-mounted Zebra printers + FileMaker integration. Scan box, print QR code on the spot from iPhone
+						</p>
+						<div class="flex items-center gap-3">
+							<p class="text-xl font-bold text-sky-500">
+								Savings: $106,000/year
+							</p>
+							<button class="info-btn relative" data-calc="calc2">
+								<svg class="w-6 h-6 text-zinc-400 hover:text-sky-500 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+								</svg>
+								<div class="hidden calc-popup absolute left-0 top-8 z-50 w-80 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-sky-500 shadow-2xl" id="calc2">
+									<p class="text-sm text-zinc-700 dark:text-zinc-300 font-semibold mb-2">How we calculated this:</p>
+									<ul class="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+										<li>• 10 employees × 1.5 hours/day = 15 hours/day saved</li>
+										<li>• Warehouse wage: $25/hour</li>
+										<li>• Labor: 15 hours × $25 × 250 days = $93,750/year</li>
+										<li>• Materials: $50/day × 250 days = $12,500/year</li>
+										<li>• Total: <strong class="text-sky-500">$106,250/year</strong></li>
+									</ul>
+								</div>
+							</button>
+						</div>
+					</div>
+
+					<div class="group p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<h3 class="text-2xl font-bold text-sky-500 mb-4">Document Processing</h3>
+						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-2">
+							<strong>Before:</strong> Manually adding cover pages, footers, headers, serial numbers to 50 PDFs/day. 20 minutes each
+						</p>
+						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
+							<strong>After:</strong> One button in FileMaker. Retrieves doc from network, adds pages, numbers it, saves it back. Done
+						</p>
+						<div class="flex items-center gap-3">
+							<p class="text-xl font-bold text-sky-500">
+								Savings: $208,000/year
+							</p>
+							<button class="info-btn relative" data-calc="calc3">
+								<svg class="w-6 h-6 text-zinc-400 hover:text-sky-500 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+								</svg>
+								<div class="hidden calc-popup absolute left-0 top-8 z-50 w-80 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-sky-500 shadow-2xl" id="calc3">
+									<p class="text-sm text-zinc-700 dark:text-zinc-300 font-semibold mb-2">How we calculated this:</p>
+									<ul class="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+										<li>• 50 documents/day × 20 minutes = 1,000 minutes = 16.67 hours/day</li>
+										<li>• Office worker wage: $50/hour</li>
+										<li>• 16.67 hours × $50 = $833/day</li>
+										<li>• $833 × 250 work days = <strong class="text-sky-500">$208,250/year</strong></li>
+									</ul>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			// Toggle calculation popups
+			document.addEventListener('DOMContentLoaded', () => {
+				const infoBtns = document.querySelectorAll('.info-btn');
+				infoBtns.forEach(btn => {
+					btn.addEventListener('click', (e) => {
+						e.preventDefault();
+						const calcId = btn.getAttribute('data-calc');
+						if (calcId) {
+							const popup = document.getElementById(calcId);
+							if (popup) {
+								popup.classList.toggle('hidden');
+							}
+						}
+					});
+				});
+			});
+		</script>
+
+		<!-- How We Do It -->
+		<section class="py-16">
+			<div class="max-w-6xl mx-auto px-4">
+				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-12 text-center tracking-tight">How We Do It</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<!-- Card 1 -->
+					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<div class="flex items-center gap-4 mb-4">
+							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-2xl font-bold text-sky-500">1</span>
+							</div>
+							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Find the Culprits</h3>
+						</div>
+						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+							I come in and learn your business processes. I find what's slowing you down—the 20-minute tasks that should take 20 seconds. I've been automating my own work since 1993. I know inefficiency when I see it.
+						</p>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<div class="flex items-center gap-4 mb-4">
+							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-2xl font-bold text-sky-500">2</span>
+							</div>
+							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Tighten Your Procedures</h3>
+						</div>
+						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+							Before writing a single line of code, I optimize your workflow. Sometimes the problem isn't the software—it's the process. I fix both.
+						</p>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<div class="flex items-center gap-4 mb-4">
+							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-2xl font-bold text-sky-500">3</span>
+							</div>
+							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Build It Fast</h3>
+						</div>
+						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+							I work with a sense of urgency. Your time is money, and I don't waste either. Clean code, beautiful design, delivered quickly.
+						</p>
+					</div>
+
+					<!-- Card 4 -->
+					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
+						<div class="flex items-center gap-4 mb-4">
+							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-2xl font-bold text-sky-500">4</span>
+							</div>
+							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Make It Beautiful</h3>
+						</div>
+						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+							What sets me apart? My design sense. Your team will actually want to use what I build. Clean interfaces. Intuitive workflows. No ugly enterprise software here.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
