@@ -3,7 +3,7 @@ title: "NJ FileMaker Developer Group Meeting Recap SoSIMPLE Calendar – 09/28/2
 description: "The September meeting was interesting from several prospectives. We had our core group of people, of which I’m still the youngest, probably by age, as well as time spent in the community."
 pubDate: "2011-10-03T16:02:39+00:00"
 updatedDate: "2015-06-05T16:44:00+00:00"
-heroImage: "/wp-content/uploads/2011/10/Screen-shot-2011-10-03-at-11.44.51-AM-300x208.png"
+heroImage: "/images/2011/10/Screen-shot-2011-10-03-at-11.44.51-AM-300x208.png"
 author: "Agnes Riley"
 tags: ["Blog"]
 permalink: /nj-filemaker-developer-group-meeting-recap-09282011/
@@ -13,7 +13,7 @@ The September meeting was interesting from several prospectives. We had our core
 
 Ken D’Oronzio from Paradise Partners presented his fairly new product: [SoSIMPLE Calendar](https://sosimplesoftware.com/products/sosimple-calendar-overview/ "SoSIMPLE Calendar"). I have four words for it: it blew my mind. He had a session for it during DevCon but I didn’t get to see it, so I was looking forward to it, especially, because I have a client who could use the calendar in his new database.
 
-[![](/wp-content/uploads/2011/10/Screen-shot-2011-10-03-at-11.44.51-AM-300x208.png)](/wp-content/uploads/2011/10/Screen-shot-2011-10-03-at-11.44.51-AM.png)
+[![](/images/2011/10/Screen-shot-2011-10-03-at-11.44.51-AM-300x208.png)](/images/2011/10/Screen-shot-2011-10-03-at-11.44.51-AM.png)
 
 It is a product of many features. SoSIMPLE Calendar takes advantage of several web technologies such as PHP and AJAX, but it is built on FileMaker. This will be a calendar solution ZeroBlue will implement in client databases, starting now.
 

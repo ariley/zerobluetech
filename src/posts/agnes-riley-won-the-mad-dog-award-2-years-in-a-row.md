@@ -11,7 +11,7 @@ permalink: /agnes-riley-won-the-mad-dog-award-2-years-in-a-row/
 
 FileMaker Public Relations awarded one of this year’s Mad Dog Awards to **Agnes Riley** of ZeroBlue at the FileMaker Developers Conference in 2012. This is the second Mad Dog Award for Agnes Riley two years in a row. The winners, representing the U.S., Europe, and Australia were acknowledged for their contributions in promoting awareness of the FileMaker name in the media and social media.
 
-![](/wp-content/uploads/2012/08/Mad-Dog-Award-1.jpeg)
+![](/images/2012/08/Mad-Dog-Award-1.jpeg)
 
 #### 
 

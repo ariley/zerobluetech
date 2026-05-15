@@ -2,7 +2,7 @@
 title: "Pause on Error Inspiration – A Mockup for Script Manager"
 pubDate: "2011-02-15T15:30:01+00:00"
 updatedDate: "2018-07-23T21:29:58+00:00"
-heroImage: "/wp-content/uploads/2011/02/Script-Manager2.jpg"
+heroImage: "/images/2011/02/Script-Manager2.jpg"
 author: "Agnes Riley"
 tags: ["Blog", "General"]
 permalink: /pause-on-error-preamble/
@@ -29,4 +29,4 @@ A little explanation of what you are seeing:
 
 
 
-[![](/wp-content/uploads/2011/02/Script-Manager2.jpg)](/wp-content/uploads/2011/02/Script-Manager2.jpg)
+[![](/images/2011/02/Script-Manager2.jpg)](/images/2011/02/Script-Manager2.jpg)

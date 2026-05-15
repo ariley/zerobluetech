@@ -30,7 +30,7 @@ A good designer always looks at the interface from the user’s standpoint, not 
 
 I just was faced with the UI below and even though I’m a designer/developer, I couldn’t figure out how to use this service. My initial thought was I must be stupid and/or getting old. Then it hit me that this experience is not my fault. A good interface is about not having to write a lengthy manual just to find the start button.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-18-at-1.09.56-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-18-at-1.09.56-PM1.png)
 
 I’d like to give some pointers to new and old developers alike on some key details to pay attention to. Your users will thank you for it.
 
@@ -38,7 +38,7 @@ I’d like to give some pointers to new and old developers alike on some key det
 
 Don’t just start plunking elements on a layout. Or even if you had to do that last week (because your boss put a gun against your head and said you will have to put 23 more buttons there), take some time this week and visualize your user interface. Think about why the user needs to be there in the first place and what they need to see. **Resource** : [https://kuler.adobe.com](https://kuler.adobe.com/) or [https://filemakerthemes.com](https://filemakerthemes.com/). Kuler even has an option to upload your image (client logo, brochure) and build your color theme from it.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-18-at-1.43.41-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-18-at-1.43.41-PM1.png)
 
 #### Design for the appropriate screen size/resolution
 
@@ -52,25 +52,25 @@ Show interface controls on demand. If there is something you can hide, hide it. 
 
 Isn’t it great that we have [www.hopstop.com](https://zerobluetech.com/wp-admin/www.hopstop.com) now with so many cities that we can choose routes with fewer transfers? Try to think of a way to get your users from point A to B in the least amount of time. Try to get as much information into one dialog as you can so they can choose what they need and move on.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-18-at-2.16.09-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-18-at-2.16.09-PM1.png)
 
 #### Don’t abuse color
 
 Choose 2-3 colors that complement each other. When in doubt, it’s always a good idea to use shades. You can never go wrong with black and white and shades of gray or another color.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-18-at-1.42.43-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-18-at-1.42.43-PM1.png)
 
 #### Draw the users’ eyes to what they need
 
 If you’ve seen heatmaps of web interfaces, you know that most people look from left to right and tend to ignore elements on the right. Try to put the most important elements on the left side. highlight the record they are viewing. Don’t reinvent the wheel, because you’ll just throw your users off and make them frustrated.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-18-at-2.34.59-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-18-at-2.34.59-PM1.png)
 
 #### Use appropriate font sizes
 
 Some things need to be in large font or bold (names, phone numbers, invoice totals). Make an executive decision and highlight the most important details.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-18-at-3.09.59-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-18-at-3.09.59-PM1.png)
 
 #### Use appropriate font faces
 

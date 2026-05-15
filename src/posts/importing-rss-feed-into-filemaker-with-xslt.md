@@ -3,7 +3,7 @@ title: "Importing RSS Feed Into FileMaker with XSLT"
 description: "Per popular request I am revisiting this article. I made some edits and also now you can download the the demo file. Someone sent an email to our FileMaker group to request information about importing…"
 pubDate: "2009-02-24T07:49:40+00:00"
 updatedDate: "2015-06-08T15:35:07+00:00"
-heroImage: "/wp-content/uploads/2009/02/rss-example-1024x595.png"
+heroImage: "/images/2009/02/rss-example-1024x595.png"
 author: "Agnes Riley"
 tags: ["Advanced", "Blog"]
 permalink: /importing-rss-feed-into-filemaker-with-xslt/
@@ -30,7 +30,7 @@ Someone sent an email to our FileMaker group to request information about import
 
 
 
-#### [![](/wp-content/uploads/2009/02/rss-example-1024x595.png)](/wp-content/uploads/2009/02/rss-example.png)
+#### [![](/images/2009/02/rss-example-1024x595.png)](/images/2009/02/rss-example.png)
 
 #### Directions
 

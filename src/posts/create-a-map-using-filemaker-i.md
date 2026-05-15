@@ -3,7 +3,7 @@ title: "Create A Map Using FileMaker I"
 description: "Today I was asked to create a map using FileMaker to show all the students that are accepted to my client’s school. The client said the Department of Education needs to map out the bus routed for the…"
 pubDate: "2015-07-15T19:51:08+00:00"
 updatedDate: "2017-01-21T15:52:20+00:00"
-heroImage: "/wp-content/uploads/2015/07/Screen-Shot-2015-07-15-at-1.12.44-PM.png"
+heroImage: "/images/2015/07/Screen-Shot-2015-07-15-at-1.12.44-PM.png"
 author: "Agnes Riley"
 tags: ["Beginner", "Blog", "Developer", "General", "Skill Set", "Tips & Tricks"]
 permalink: /create-a-map-using-filemaker-i/
@@ -24,4 +24,4 @@ So at first I thought about what software/plug-in I should use, then I realized 
 
 And here is the finished product:
 
-[![Screen Shot 2015-07-15 at 1.12.44 PM](/wp-content/uploads/2015/07/Screen-Shot-2015-07-15-at-1.12.44-PM-300x201.png)](/wp-content/uploads/2015/07/Screen-Shot-2015-07-15-at-1.12.44-PM.png)
+[![Screen Shot 2015-07-15 at 1.12.44 PM](/images/2015/07/Screen-Shot-2015-07-15-at-1.12.44-PM-300x201.png)](/images/2015/07/Screen-Shot-2015-07-15-at-1.12.44-PM.png)

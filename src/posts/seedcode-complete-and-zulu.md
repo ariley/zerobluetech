@@ -1,7 +1,7 @@
 ---
 title: "SeedCode Complete and Zulu: Calendar and Contact Syncing"
 description: "[full] [/full] [onehalf] ZeroBlue is proud to offer SeedCode Complete as our starter solution that we can build upon. If you already have a FileMaker solution, we can simply bolt on a SeedCode…"
-heroImage: "/wp-content/uploads/2010/12/seedcode.jpg"
+heroImage: "/images/2010/12/seedcode.jpg"
 author: "ZeroBlue"
 permalink: /seedcode-complete-and-zulu/
 ---
@@ -13,7 +13,7 @@ permalink: /seedcode-complete-and-zulu/
 [/full]
 
 [onehalf]  
-[![](/wp-content/uploads/2010/12/seedcode.jpg)](/wp-content/uploads/2010/12/seedcode.jpg)
+[![](/images/2010/12/seedcode.jpg)](/images/2010/12/seedcode.jpg)
 
 ZeroBlue is proud to offer **[SeedCode Complete](https://www.seedcode.com/cp-app/ste_cat/sccomplete11)** as our starter solution that we can build upon. If you already have a FileMaker solution, we can simply bolt on a **SeedCode Calendar**. [Contact us](../contact.html) for pricing.
 
@@ -53,7 +53,7 @@ Yes, SeedCode Complete has an Instant Web Publishing Module that can be purchase
 
 ##### Can I access my calendar events from iCal?
 
-![](/wp-content/uploads/2010/12/ICal_Icon-300x300.png)
+![](/images/2010/12/ICal_Icon-300x300.png)
 
 Yes, that’s where [**SeedCode****Zulu**](https://www.seedcode.com/cp-app/ste_cat/zulu) comes into play. Zulu is an extension for FileMaker Server that lets you see and manipulate your FileMaker calendar records from **iCal** , **Google Calendar** , as well as from the calendars on your **iPhone** , **iPad** , and **Android** phone.
 
@@ -63,7 +63,7 @@ Yes, that’s where [**SeedCode****Zulu**](https://www.seedcode.com/cp-app/ste_c
 
 ##### Can I access FileMaker contacts from my phone?
 
-[![FileMaker contacts on the iPhone, iPod and iPad and Android phones](/wp-content/uploads/2011/04/mac-address-book-288x300.jpg)](/wp-content/uploads/2011/04/mac-address-book.jpg)
+[![FileMaker contacts on the iPhone, iPod and iPad and Android phones](/images/2011/04/mac-address-book-288x300.jpg)](/images/2011/04/mac-address-book.jpg)
 
 Zulu Contacts lets you sync your contacts between a FileMaker database and your mobile device. This is amazing. Finally, you can share a group of contacts between a team and have all their data be stored in FileMaker, but take them on the road with your iOS device. You can edit a contact on your iPhone on the road and it will sync back to FileMaker.
 

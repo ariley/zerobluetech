@@ -19,6 +19,6 @@ There are [other options ](https://filemaker-plugins.com/compare/email-plugins/ 
 
 I think, at the end I accomplished creating an interface that acts and looks like an email client. I am using the webviewer to show the message as HTML. Attachments show up, and you have two options: 1. you can hold down the option key to view them in a new window or you can download them. Attachments are NOT stored in the database. Attachment handling is accomplished with [SuperContainer](https://www.360works.com/SuperContainer) by 360 Works.
 
-![](/wp-content/uploads/2011/12/email_view-1024x6851.png)
+![](/images/2011/12/email_view-1024x6851.png)
 
 Of course, email receiving will be accomplished from the server side. It will run at a 5-minutes interval, just as if you had it in an email client.

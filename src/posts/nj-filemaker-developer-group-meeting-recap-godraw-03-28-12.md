@@ -15,7 +15,7 @@ Todd always blows me away. He is unbelievably smart with a keen eye to design pr
 
 The brand new solution, GoDraw enables users to draw on an image in FileMaker Go. It is amazing and we’ve long waited for such a solution.
 
-![](/wp-content/uploads/2012/03/20120329-1904011.jpg)
+![](/images/2012/03/20120329-1904011.jpg)
 
 The use cases are endless:
 
@@ -27,7 +27,7 @@ The use cases are endless:
 
 mazing and we’ve long waited for such a solution.
 
-![](/wp-content/uploads/2012/03/20120329-1328451.jpg)
+![](/images/2012/03/20120329-1328451.jpg)
 
 You can draw on a plain canvas of different colors or use an image (from camera or gallery) and draw on it with different colors and stroke sizes. You can even switch modes to erase part of your drawing. Once you save it, it will be accessible from FileMaker Pro on a desktop. You just can’t modify it from the desktop and re-save it. You can however, always make changes from FileMaker Go at a later time. The image and the doodle are saved as separate layers.
 
@@ -43,4 +43,4 @@ We learned from Todd yesterday that you can import a whole table from one FileMa
 
 Todd will be giving two great sessions at the upcoming FileMaker Developer Conference: one about writing portable code (one of my favorite topics) and another one about useful techniques such as using unique IDs, how to give users access to their own data only, etc.
 
-![](/wp-content/uploads/2012/03/Screen-Shot-2012-03-29-at-1.21.59-PM1.png)
+![](/images/2012/03/Screen-Shot-2012-03-29-at-1.21.59-PM1.png)
