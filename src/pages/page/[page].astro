@@ -2,8 +2,7 @@
 import BaseHead from '@/components/BaseHead.astro'
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
-// import Sidebar from '@/components/Sidebar.astro'
-import WPArticleSummary from '@/components/WPArticleSummary.astro'
+import BlogArchive from '@/components/BlogArchive.astro'
 import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE } from '@/config.ts'
 import { sortedPosts } from '@/js/util.js'
 
@@ -15,37 +14,42 @@ export async function getStaticPaths({ paginate }) {
 ---
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" class="scroll-smooth">
   <head>
     <BaseHead title={`${SITE_TITLE} » Page ${Astro.props.page.currentPage}`} description={SITE_DESCRIPTION} />
   </head>
-  <body class="home blog paged">
-    <div id="page" class="hfeed site">
-      <Header />
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content">
-          <div id="content" role="main">
-            {Astro.props.page.data.map(page =>
-              <WPArticleSummary page={page} articlePreview={true} />
-            )}
-            <nav id="nav-below" class="navigation nav-below" role="navigation">
-              <h3 class="assistive-text">Post navigation</h3>
-              {Astro.props.page.url.prev &&
-                <div class="nav-next alignleft">
-                  <a href={Astro.props.page.url.prev}><span class="meta-nav">&larr;</span> Newer</a>
-                </div>}
-              {Astro.props.page.url.next &&
-                <div class="nav-previous alignright">
-                  <a href={Astro.props.page.url.next}>Older <span class="meta-nav">&rarr;</span></a>
-                </div>}
-              <div class="clear-fix"></div>
-            </nav>
+  <body class="site-body">
+    <Header />
+    <section class="hero-panel">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="h-2 w-2 rounded-full bg-teal-400"></span>
+            Blog archive
+          </div>
+          <h1 class="hero-title">FileMaker Development Blog</h1>
+          <p class="hero-subtitle">
+            Page {Astro.props.page.currentPage} of practical ZeroBlue articles, examples, and implementation notes.
+          </p>
+        </div>
+        <div class="hidden lg:block">
+          <div class="surface-card p-6">
+            <div class="color-strip mb-5"></div>
+            <div class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Archive page</div>
+            <div class="mt-3 text-5xl font-bold text-slate-950 dark:text-white">{Astro.props.page.currentPage}</div>
+            <div class="mt-5 grid grid-cols-3 gap-3">
+              <div class="h-16 rounded-xl bg-sky-100 dark:bg-sky-500/15"></div>
+              <div class="h-16 rounded-xl bg-teal-100 dark:bg-teal-500/15"></div>
+              <div class="h-16 rounded-xl bg-amber-100 dark:bg-amber-500/15"></div>
+            </div>
           </div>
         </div>
-        {/*<Sidebar />*/}
-        <div class="clear-fix"></div>
       </div>
-      <Footer />
-    </div>
+    </section>
+
+    <main class="site-main pt-12">
+      <BlogArchive posts={Astro.props.page.data} page={Astro.props.page} />
+    </main>
+    <Footer />
   </body>
 </html>

@@ -2,15 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    background-color: #fafaf9; /* stone-50 */
+@layer base {
+    :root {
+        color-scheme: light;
+    }
+
+    html {
+        background-color: #f8fafc;
+    }
+
+    html.dark {
+        color-scheme: dark;
+        background-color: #08111f;
+        color: #f8fafc;
+    }
+
+    body {
+        min-height: 100vh;
+        background:
+            linear-gradient(135deg, rgba(14, 165, 233, 0.10), transparent 28rem),
+            linear-gradient(315deg, rgba(16, 185, 129, 0.10), transparent 24rem),
+            #f8fafc;
+    }
+
+    html.dark body {
+        background:
+            linear-gradient(135deg, rgba(14, 165, 233, 0.16), transparent 30rem),
+            linear-gradient(315deg, rgba(20, 184, 166, 0.12), transparent 26rem),
+            #08111f;
+    }
 }
 
-html.dark {
-    background-color: #1c1917; /* stone-900 */
-    color: #fff;
-}
+@layer components {
+    .site-body {
+        @apply min-h-screen bg-transparent text-slate-900 dark:text-slate-100;
+    }
 
-.dark .nav-links a {
-    color: #fff;
+    .site-main {
+        @apply mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8;
+    }
+
+    .hero-panel {
+        @apply relative isolate overflow-hidden border-b border-sky-100/80 py-20 dark:border-slate-800 sm:py-24;
+        background:
+            linear-gradient(120deg, rgba(14, 165, 233, 0.16), rgba(20, 184, 166, 0.10) 48%, rgba(245, 158, 11, 0.12)),
+            radial-gradient(circle at 1px 1px, rgba(14, 165, 233, 0.22) 1px, transparent 0);
+        background-size: auto, 28px 28px;
+    }
+
+    .dark .hero-panel {
+        background:
+            linear-gradient(120deg, rgba(14, 165, 233, 0.20), rgba(20, 184, 166, 0.12) 48%, rgba(245, 158, 11, 0.10)),
+            radial-gradient(circle at 1px 1px, rgba(125, 211, 252, 0.16) 1px, transparent 0);
+        background-size: auto, 28px 28px;
+    }
+
+    .hero-panel::after {
+        content: "";
+        @apply pointer-events-none absolute inset-x-0 bottom-0 h-24;
+        background: linear-gradient(to top, rgba(248, 250, 252, 1), rgba(248, 250, 252, 0));
+    }
+
+    .dark .hero-panel::after {
+        background: linear-gradient(to top, rgba(8, 17, 31, 1), rgba(8, 17, 31, 0));
+    }
+
+    .hero-grid {
+        @apply relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8;
+    }
+
+    .hero-title {
+        @apply text-balance text-5xl font-bold tracking-tight text-slate-950 dark:text-white md:text-6xl;
+    }
+
+    .hero-subtitle {
+        @apply mt-6 max-w-3xl text-xl leading-8 text-slate-700 dark:text-slate-300 md:text-2xl;
+    }
+
+    .eyebrow {
+        @apply mb-5 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm shadow-sky-900/5 backdrop-blur dark:border-sky-400/20 dark:bg-slate-950/60 dark:text-sky-200;
+    }
+
+    .surface-card {
+        @apply rounded-2xl border border-slate-200 bg-white/90 shadow-lg shadow-slate-900/5 backdrop-blur transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/85 dark:shadow-black/20;
+    }
+
+    .surface-card-hover {
+        @apply hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-900/10 dark:hover:border-sky-500/60;
+    }
+
+    .accent-link {
+        @apply text-sky-600 transition-colors hover:text-teal-600 dark:text-sky-300 dark:hover:text-teal-200;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 via-cyan-500 to-teal-500 px-6 py-3 font-semibold text-white shadow-lg shadow-sky-900/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-teal-900/20;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/85 px-6 py-3 font-semibold text-slate-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-sky-700 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100 dark:hover:border-sky-500 dark:hover:text-sky-200;
+    }
+
+    .color-strip {
+        @apply h-1 w-full rounded-full bg-gradient-to-r from-sky-400 via-teal-400 to-amber-300;
+    }
 }

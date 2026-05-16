@@ -2,8 +2,8 @@
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import WPArticleSummary from '../components/WPArticleSummary.astro'
-import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE } from '../config'
+import BlogArchive from '../components/BlogArchive.astro'
+import { PAGE_SIZE } from '../config'
 import { sortedPosts } from '@/js/util.js'
 
 // Use import.meta.glob() to fetch all posts, and then sort them by date.
@@ -17,23 +17,45 @@ const hasMorePosts = posts.length > PAGE_SIZE
 	<head>
 		<BaseHead title="Blog - ZeroBlue" description="FileMaker development tips, tricks, and news from ZeroBlue" />
 	</head>
-	<body class="bg-gray-50 dark:bg-gray-900">
+	<body class="site-body">
 		<Header />
-		<main class="max-w-4xl mx-auto px-4 py-8">
-			<h1 class="text-4xl font-bold mb-8 text-gray-900 dark:text-stone-300">Blog</h1>
-			<div class="flex flex-col gap-8">
-				{posts.slice(0, PAGE_SIZE).map((post: any) => (
-					<WPArticleSummary page={post} maxWords={50} />
-				))}
+
+		<section class="hero-panel">
+			<div class="hero-grid">
+				<div>
+					<div class="eyebrow">
+						<span class="h-2 w-2 rounded-full bg-teal-400"></span>
+						Field notes and build notes
+					</div>
+					<h1 class="hero-title">FileMaker Development Blog</h1>
+					<p class="hero-subtitle">
+						Practical notes on FileMaker systems, business automation, web integration, and the decisions that keep custom software useful.
+					</p>
+				</div>
+				<div class="hidden lg:block">
+					<div class="surface-card p-6">
+						<div class="color-strip mb-5"></div>
+						<div class="space-y-4">
+							<div class="rounded-xl bg-sky-100 p-4 dark:bg-sky-500/15">
+								<div class="text-sm font-semibold text-sky-700 dark:text-sky-200">Latest articles</div>
+								<div class="mt-2 h-2 w-5/6 rounded-full bg-sky-200 dark:bg-sky-400/30"></div>
+							</div>
+							<div class="rounded-xl bg-teal-100 p-4 dark:bg-teal-500/15">
+								<div class="text-sm font-semibold text-teal-700 dark:text-teal-200">Implementation details</div>
+								<div class="mt-2 h-2 w-2/3 rounded-full bg-teal-200 dark:bg-teal-400/30"></div>
+							</div>
+							<div class="rounded-xl bg-amber-100 p-4 dark:bg-amber-500/15">
+								<div class="text-sm font-semibold text-amber-800 dark:text-amber-200">Client lessons</div>
+								<div class="mt-2 h-2 w-3/4 rounded-full bg-amber-200 dark:bg-amber-400/30"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			{hasMorePosts &&
-			  <nav id="nav-below" class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700" role="navigation">
-			    <h3 class="sr-only">Post navigation</h3>
-			    <div class="flex justify-between">
-			      <div></div>
-			      <a href="/page/2/" class="text-primary hover:text-purple-600 dark:text-primary dark:hover:text-purple-400 font-semibold">Older Posts &rarr;</a>
-			    </div>
-			  </nav>}
+		</section>
+
+		<main class="site-main pt-12">
+			<BlogArchive posts={posts.slice(0, PAGE_SIZE)} hasMorePosts={hasMorePosts} />
 		</main>
 		<Footer />
 	</body>
