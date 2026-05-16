@@ -19,13 +19,13 @@ import HeaderLink from './HeaderLink.astro';
 
 				<!-- Services Dropdown -->
 				<div class="relative group py-2 md:py-0">
-					<a href="/services" class="flex items-center gap-1 text-slate-700 transition-colors hover:text-sky-600 dark:text-slate-300 dark:hover:text-sky-300">
+					<a id="services-menu-trigger" href="/services" class="flex items-center justify-between gap-1 rounded-lg py-2 text-slate-700 transition-colors hover:text-sky-600 dark:text-slate-300 dark:hover:text-sky-300 md:justify-start md:py-0" aria-expanded="false">
 						Services
-						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg id="services-menu-icon" class="w-4 h-4 transition-transform md:group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 						</svg>
 					</a>
-					<div class="mt-3 w-full rounded-xl border border-slate-200 bg-slate-50 shadow-lg shadow-slate-900/5 transition-all duration-200 dark:border-slate-700 dark:bg-slate-900 md:absolute md:left-0 md:mt-2 md:w-64 md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible md:z-50">
+					<div id="services-submenu" class="mt-3 hidden w-full rounded-xl border border-slate-200 bg-slate-50 shadow-lg shadow-slate-900/5 transition-all duration-200 dark:border-slate-700 dark:bg-slate-900 md:absolute md:left-0 md:mt-2 md:block md:w-64 md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible md:z-50">
 						<div class="py-2">
 							<!-- FileMaker Submenu -->
 							<div class="px-4 py-2">
@@ -78,6 +78,20 @@ import HeaderLink from './HeaderLink.astro';
 	const lightIcon = document.getElementById('theme-toggle-light-icon');
 	const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 	const siteNav = document.getElementById('site-nav');
+	const servicesMenuTrigger = document.getElementById('services-menu-trigger');
+	const servicesSubmenu = document.getElementById('services-submenu');
+	const servicesMenuIcon = document.getElementById('services-menu-icon');
+
+	const isDesktopNav = () => window.matchMedia('(min-width: 768px)').matches;
+
+	const closeMobileNav = () => {
+		if (isDesktopNav()) return;
+		siteNav?.classList.add('hidden');
+		servicesSubmenu?.classList.add('hidden');
+		servicesMenuIcon?.classList.remove('rotate-180');
+		mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+		servicesMenuTrigger?.setAttribute('aria-expanded', 'false');
+	};
 
 	// Check current state (already set by BaseHead script)
 	if (document.documentElement.classList.contains('dark')) {
@@ -105,5 +119,40 @@ import HeaderLink from './HeaderLink.astro';
 		const isOpen = !siteNav?.classList.contains('hidden');
 		siteNav?.classList.toggle('hidden');
 		mobileMenuToggle.setAttribute('aria-expanded', String(!isOpen));
+		if (isOpen) {
+			servicesSubmenu?.classList.add('hidden');
+			servicesMenuIcon?.classList.remove('rotate-180');
+			servicesMenuTrigger?.setAttribute('aria-expanded', 'false');
+		}
+	});
+
+	servicesMenuTrigger?.addEventListener('click', (event) => {
+		if (isDesktopNav()) return;
+		event.preventDefault();
+		const isOpen = !servicesSubmenu?.classList.contains('hidden');
+		servicesSubmenu?.classList.toggle('hidden');
+		servicesMenuIcon?.classList.toggle('rotate-180', !isOpen);
+		servicesMenuTrigger.setAttribute('aria-expanded', String(!isOpen));
+	});
+
+	siteNav?.querySelectorAll('a').forEach((link) => {
+		if (link === servicesMenuTrigger) return;
+		link.addEventListener('click', closeMobileNav);
+	});
+
+	document.addEventListener('click', (event) => {
+		if (isDesktopNav()) return;
+		const target = event.target;
+		if (!(target instanceof Node)) return;
+		if (siteNav?.contains(target) || mobileMenuToggle?.contains(target)) return;
+		closeMobileNav();
+	});
+
+	window.addEventListener('resize', () => {
+		if (!isDesktopNav()) return;
+		siteNav?.classList.add('hidden');
+		servicesSubmenu?.classList.add('hidden');
+		servicesMenuIcon?.classList.remove('rotate-180');
+		servicesMenuTrigger?.setAttribute('aria-expanded', 'false');
 	});
 </script>
