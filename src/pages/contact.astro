@@ -1,7 +1,8 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import { BUY_HOURS_URL } from '../config';
 
-const buyHoursUrl = import.meta.env.PUBLIC_STRIPE_BUY_HOURS_URL || '/contact';
+const buyHoursUrl = BUY_HOURS_URL;
 const buyHoursIsExternal = buyHoursUrl.startsWith('http');
 ---
 
