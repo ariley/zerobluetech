@@ -206,7 +206,7 @@
     }
 
     .btn-secondary {
-        @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/85 px-6 py-3 font-semibold text-slate-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-sky-700 dark:border-slate-700 dark:bg-slate-950/70 dark:text-slate-100 dark:hover:border-sky-500 dark:hover:text-sky-200;
+        @apply inline-flex items-center justify-center rounded-xl border border-sky-500 bg-sky-600 px-6 py-3 font-semibold text-white shadow-sm shadow-sky-900/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-700 dark:border-sky-400 dark:bg-sky-500 dark:text-white dark:hover:bg-sky-600;
     }
 
     .color-strip {
