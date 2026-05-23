@@ -69,6 +69,7 @@ I recorded a quick walkthrough showing this setup with Claude, including how it 
 
 <a href="https://youtu.be/jdPd_RxSDEY?si=fZ0foJKNolJ9_O6d" target="_blank" rel="noopener noreferrer">Watch the walkthrough on YouTube</a>.
 
+
 The implications are significant. An organization running decades of operational data in FileMaker can now give an AI agent like Claude access to that data in a controlled, auditable, permission-aware way. As a developer, I can ask: "Which customers haven't placed an order this year?" and receive an answer pulled from live FileMaker data. A manager can say: "Show me all overdue invoices, then for anything older than 30 days, mark them as high priority and notify the billing team" — and watch it happen, step by step, using existing FileMaker scripts and business logic that the organization has already validated.
 
 Crucially, MCP doesn't bypass FileMaker's security model. AI access is granted through standard FileMaker accounts with their existing privilege sets. The AI can only interact with tables and fields that account can access. All actions are logged through FileMaker Server's standard audit trail. This matters enormously for regulated industries and compliance-conscious organizations.
