@@ -66,4 +66,4 @@ Now, of course when you’re dealing with data you’ll have to put in some chec
 
 I think this is a pretty simple and easy way to get data into FileMaker from a WordPress site.
 
-Update: We’ve published a follow-up article, you can read here: [](../getting-data-from-wordpress-to-filemaker-ii/index.html "Getting Data From WordPress To FileMaker II")
+Update: We’ve published a follow-up article: [Getting Data From WordPress To FileMaker II](/getting-data-from-wordpress-to-filemaker-ii/ "Getting Data From WordPress To FileMaker II")

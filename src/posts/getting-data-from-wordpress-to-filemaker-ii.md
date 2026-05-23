@@ -9,7 +9,7 @@ tags: ["Advanced", "Developer", "Skill Set", "Tips & Tricks"]
 permalink: /getting-data-from-wordpress-to-filemaker-ii/
 ---
 
-In my previous post, [Getting Data from a WordPress to FileMaker](../getting-data-from-wordpress-to-filemaker/index.html "Getting Data from WordPress to FileMaker") I detailed how you can get mySQL data (that perhaps comes from a WordPress form submission) into FileMaker.
+In my previous post, [Getting Data from a WordPress to FileMaker](/getting-data-from-wordpress-to-filemaker/ "Getting Data from WordPress to FileMaker") I detailed how you can get mySQL data (that perhaps comes from a WordPress form submission) into FileMaker.
 
   
   
