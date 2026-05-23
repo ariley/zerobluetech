@@ -42,6 +42,44 @@
         @apply mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8;
     }
 
+    .home-body {
+        background:
+            linear-gradient(135deg, rgba(14, 165, 233, 0.08), transparent 30rem),
+            linear-gradient(315deg, rgba(20, 184, 166, 0.08), transparent 28rem),
+            #f8fafc !important;
+        color: #0f172a;
+    }
+
+    .dark .home-body {
+        color: #0f172a;
+    }
+
+    .home-body header {
+        border-color: rgba(226, 232, 240, 0.9) !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05) !important;
+    }
+
+    .home-body header nav,
+    .home-body header a,
+    .home-body header button {
+        color: #334155 !important;
+    }
+
+    .home-body footer {
+        border-color: rgb(226, 232, 240) !important;
+        background: rgba(255, 255, 255, 0.82) !important;
+        color: #334155 !important;
+    }
+
+    .home-hero {
+        @apply relative isolate overflow-hidden border-b border-sky-100/80;
+        background:
+            linear-gradient(120deg, rgba(224, 242, 254, 0.92), rgba(240, 253, 250, 0.86) 48%, rgba(255, 251, 235, 0.82)),
+            radial-gradient(circle at 1px 1px, rgba(14, 165, 233, 0.22) 1px, transparent 0);
+        background-size: auto, 28px 28px;
+    }
+
     .hero-panel {
         @apply relative isolate overflow-hidden border-b border-sky-100/80 py-20 dark:border-slate-800 sm:py-24;
         background:
