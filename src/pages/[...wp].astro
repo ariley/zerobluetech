@@ -9,19 +9,26 @@ export async function getStaticPaths() {
   const posts = sortedPosts(Object.values(postImportResult))
   // Filter out posts without permalinks (system pages)
   const postsWithPermalinks = posts.filter(post => post.frontmatter.permalink)
-  return postsWithPermalinks.map(post => {
+  return postsWithPermalinks.map((post, index) => {
+    const nextPost = postsWithPermalinks[index - 1]?.frontmatter
+    const previousPost = postsWithPermalinks[index + 1]?.frontmatter
+
     return {
       params: {
         // these `.slice` calls are necessary and remove
         // the `/` from the beginning and end of the permalink
         wp: post.frontmatter.permalink.slice(1).slice(0, -1)
       },
-      props: post
+      props: {
+        ...post,
+        nextPost,
+        previousPost,
+      }
     }
   })
 }
 
-const { Content, frontmatter } = Astro.props
+const { Content, frontmatter, nextPost, previousPost } = Astro.props
 const { title, date, pubDate, categories } = frontmatter
 const postDate = pubDate || date
 const formattedDate = postDate && new Date(postDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })
@@ -56,6 +63,12 @@ const postCtas = [
       <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div class="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)] lg:items-start">
           <article class="surface-card overflow-hidden p-8 sm:p-10">
+            <nav aria-label="Breadcrumb" class="mb-6 flex flex-wrap items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+              <a href="/blog/" class="text-sky-700 transition hover:text-teal-700 dark:text-sky-300 dark:hover:text-teal-200">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span class="text-slate-700 dark:text-slate-300">{title}</span>
+            </nav>
+
             <div class="color-strip mb-8"></div>
             <div class="flex items-center gap-3 mb-6">
               {category && (
@@ -75,20 +88,29 @@ const postCtas = [
               <Content />
             </div>
 
+            {(previousPost || nextPost) && (
+              <nav aria-label="Post navigation" class="mt-12 grid gap-4 border-t border-slate-200 pt-8 dark:border-slate-800 sm:grid-cols-2">
+                {previousPost ? (
+                  <a href={previousPost.permalink} class="rounded-xl border border-slate-200 p-4 no-underline transition hover:border-sky-300 hover:bg-sky-50 dark:border-slate-700 dark:hover:border-sky-500 dark:hover:bg-slate-900">
+                    <span class="block text-sm font-semibold text-slate-500 dark:text-slate-400">Previous post</span>
+                    <span class="mt-1 block font-bold text-slate-950 dark:text-white">{previousPost.title}</span>
+                  </a>
+                ) : (
+                  <span></span>
+                )}
+
+                {nextPost && (
+                  <a href={nextPost.permalink} class="rounded-xl border border-slate-200 p-4 text-left no-underline transition hover:border-sky-300 hover:bg-sky-50 dark:border-slate-700 dark:hover:border-sky-500 dark:hover:bg-slate-900 sm:text-right">
+                    <span class="block text-sm font-semibold text-slate-500 dark:text-slate-400">Next post</span>
+                    <span class="mt-1 block font-bold text-slate-950 dark:text-white">{nextPost.title}</span>
+                  </a>
+                )}
+              </nav>
+            )}
+
           </article>
 
           <aside class="space-y-5 lg:sticky lg:top-6">
-            <section class="rounded-xl bg-slate-950 p-6 text-white shadow-lg dark:bg-sky-950">
-              <p class="text-xs font-semibold uppercase tracking-wider text-teal-300">FileMaker-specific AI</p>
-              <h2 class="mt-3 text-xl font-bold tracking-tight">Try FM Dojo for FileMaker development work.</h2>
-              <p class="mt-4 text-sm leading-6 text-slate-300">
-                FileMaker-aware AI chat, script help, SQL testing, schema analysis, AI data access, and practical developer workflows.
-              </p>
-              <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center justify-center rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-50">
-                Visit FM Dojo
-              </a>
-            </section>
-
             {postCtas.map((cta) => (
               <section class="surface-card p-6">
                 <div class="color-strip mb-5"></div>
@@ -106,6 +128,17 @@ const postCtas = [
                 </a>
               </section>
             ))}
+
+            <section class="rounded-xl bg-slate-950 p-6 text-white shadow-lg dark:bg-sky-950">
+              <p class="text-xs font-semibold uppercase tracking-wider text-teal-300">FileMaker-specific AI</p>
+              <h2 class="mt-3 text-xl font-bold tracking-tight">Try FM Dojo for FileMaker development work.</h2>
+              <p class="mt-4 text-sm leading-6 text-slate-300">
+                FileMaker-aware AI chat, script help, SQL testing, schema analysis, AI data access, and practical developer workflows.
+              </p>
+              <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center justify-center rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-50">
+                Visit FM Dojo
+              </a>
+            </section>
           </aside>
         </div>
       </main>
