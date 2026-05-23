@@ -84,6 +84,39 @@ const evidence = [
 	},
 ];
 
+const clientStories = [
+	{
+		title: 'Sterilization company QR code workflow',
+		context:
+			'The team was pre-generating QR code records in FileMaker, pre-printing sheets, labeling boxes, and then dealing with duplicates, missing barcodes, and avoidable handling errors.',
+		work:
+			'ZeroBlue assessed the full procedure, found the process holes, and redesigned the workflow around workers using iPhones and Zebra barcode printers to print QR codes on demand as boxes were labeled.',
+		result:
+			'The new procedure reduced manual handling, duplicate labels, missing codes, and time spent fixing barcode problems after the fact.',
+		tags: ['Process audit', 'QR codes', 'Mobile workflow', 'Zebra printers'],
+	},
+	{
+		title: 'Overnight script reduced to a 30-minute parallel process',
+		context:
+			'An office supplies and hardware company had a FileMaker script that could not finish overnight while processing a large set of related business records.',
+		work:
+			'ZeroBlue reworked the job into six parallel scripts so the workload could be split, processed, and updated without waiting on one long serial run.',
+		result:
+			'The revised process finished in about 30 minutes while handling more than 70,000 primary records plus dependent tables and child records.',
+		tags: ['Performance', 'Parallel scripts', '70K+ records', 'Related data'],
+	},
+	{
+		title: 'Live scoring systems for projected events',
+		context:
+			'Live math competition scoring and charter school registration workflows in New York City were projected on large screens in front of participants and families, so delays and scoring errors were highly visible.',
+		work:
+			'ZeroBlue built FileMaker systems for live use, focusing on clean data entry, dependable scoring, and display-ready output for the room.',
+		result:
+			'The systems supported live event operations where accuracy, timing, and confidence mattered in front of an audience.',
+		tags: ['Live systems', 'Scoring', 'Registration', 'Projected displays'],
+	},
+];
+
 const engagements = [
 	{
 		title: 'When the file is slow',
@@ -122,6 +155,52 @@ const engagements = [
 						)}
 					</h2>
 					<p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{proof.body}</p>
+				</article>
+			))}
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Anonymized client stories</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+				Real FileMaker work, client names withheld.
+			</h2>
+			<p class="mt-4 text-lg leading-8 text-slate-700 dark:text-slate-300">
+				These are real consulting stories with identifying details removed. The useful part is the shape of the problem:
+				find the weak points, fix the workflow, and make the operation easier to trust.
+			</p>
+		</div>
+
+		<div class="mt-10 space-y-6">
+			{clientStories.map((story) => (
+				<article class="surface-card surface-card-hover p-7 lg:p-8">
+					<div class="grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
+						<div>
+							<h3 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">{story.title}</h3>
+							<div class="mt-5 flex flex-wrap gap-2">
+								{story.tags.map((tag) => (
+									<span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/15 dark:text-sky-200">
+										{tag}
+									</span>
+								))}
+							</div>
+						</div>
+						<div class="grid gap-4 md:grid-cols-3">
+							<div>
+								<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Situation</p>
+								<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{story.context}</p>
+							</div>
+							<div>
+								<p class="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300">Work</p>
+								<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{story.work}</p>
+							</div>
+							<div>
+								<p class="text-sm font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300">Outcome</p>
+								<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{story.result}</p>
+							</div>
+						</div>
+					</div>
 				</article>
 			))}
 		</div>
