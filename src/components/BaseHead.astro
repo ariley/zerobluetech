@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config';
 
 export interface Props {
 	title: string;
@@ -10,13 +11,74 @@ export interface Props {
 }
 
 const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const socialImageUrl = new URL(image, Astro.site ?? Astro.url).toString();
+const organizationId = 'https://zerobluetech.com/#organization';
+const websiteId = 'https://zerobluetech.com/#website';
+const pageId = `${canonicalUrl}#webpage`;
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'ProfessionalService',
+			'@id': organizationId,
+			name: 'ZeroBlue Technology Solutions',
+			alternateName: 'ZeroBlue',
+			url: 'https://zerobluetech.com/',
+			logo: new URL('/favicon.svg', Astro.site ?? Astro.url).toString(),
+			description: SITE_DESCRIPTION,
+			areaServed: 'United States',
+			serviceType: [
+				'FileMaker consulting',
+				'FileMaker system audits',
+				'FileMaker AI integration',
+				'FileMaker Server setup and optimization',
+				'Modern web application development',
+				'Business system modernization',
+			],
+			knowsAbout: [
+				'Claris FileMaker',
+				'FileMaker Server',
+				'FileMaker AI integration',
+				'Next.js',
+				'Astro',
+				'React',
+				'Database-backed web applications',
+				'Business process automation',
+			],
+		},
+		{
+			'@type': 'WebSite',
+			'@id': websiteId,
+			url: 'https://zerobluetech.com/',
+			name: SITE_TITLE,
+			description: SITE_DESCRIPTION,
+			publisher: { '@id': organizationId },
+			inLanguage: 'en-US',
+		},
+		{
+			'@type': 'WebPage',
+			'@id': pageId,
+			url: canonicalUrl,
+			name: title,
+			description,
+			isPartOf: { '@id': websiteId },
+			about: { '@id': organizationId },
+			inLanguage: 'en-US',
+		},
+	],
+};
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href={canonicalUrl} />
 <meta name="generator" content={Astro.generator} />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
 
 <!-- Google Fonts - Preload to prevent flash -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,20 +89,25 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content="FileMaker consulting, FileMaker audit, FileMaker AI integration, FileMaker Server setup, FileMaker performance consulting, FMDojo monitoring, Next.js development, Astro development, React development, database-backed web applications" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content="ZeroBlue" />
+<meta property="og:url" content={canonicalUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={socialImageUrl} />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={canonicalUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={socialImageUrl} />
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
 <!-- Dark Mode Flash Prevention - Must run before body renders -->
 <script is:inline>
