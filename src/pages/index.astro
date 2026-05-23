@@ -21,84 +21,71 @@ const hasMorePosts = posts.length > PAGE_SIZE
 
 		<!-- Hero Section -->
 		<div class="home-hero">
-			<div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:py-24 xl:grid-cols-[1.03fr_0.97fr]">
-				<div>
-					<div class="eyebrow">
-						<span class="h-2 w-2 rounded-full bg-teal-500"></span>
-						FileMaker experts since 1993
-					</div>
-					<h1 class="max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl xl:text-6xl">
-						Senior FileMaker Consulting for Systems That Matter
-					</h1>
-					<p class="mt-6 max-w-3xl text-xl leading-8 text-slate-700 md:text-2xl">
-						ZeroBlue audits, modernizes, AI-enables, and stabilizes FileMaker systems without guessing what is broken.
-					</p>
-					<div class="mt-9 flex flex-wrap gap-4">
-						<a href="https://calendly.com/agnesriley" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
-							Schedule a Consultation
-						</a>
-						<a href="/services" class="btn-secondary text-lg">
-							View Services
-						</a>
+			<div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
+				<div class="max-w-4xl">
+					<div class="mb-6 border-l-2 border-teal-500 pl-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">FileMaker experts since 1993</div>
+					<h1 class="text-4xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">Senior FileMaker Consulting for Systems That Matter</h1>
+					<p class="mt-6 max-w-3xl text-xl leading-8 text-slate-700">ZeroBlue audits, modernizes, AI-enables, and stabilizes FileMaker systems without guessing what is broken.</p>
+					<div class="mt-8 flex flex-wrap gap-3">
+						<a href="https://calendly.com/agnesriley" target="_blank" rel="noopener noreferrer" class="btn-primary">Schedule a Consultation</a>
+						<a href="/services" class="btn-secondary">View Services</a>
 					</div>
 
-					<div class="mt-10 flex flex-wrap gap-3">
-						<div class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
-							<span class="text-xl font-bold text-sky-700">33</span>
-							<span class="text-sm font-semibold text-slate-600">years FileMaker experience</span>
+					<div class="mt-10 grid max-w-3xl grid-cols-3 gap-5 border-t border-slate-200 pt-6">
+						<div>
+							<div class="text-xl font-bold text-slate-950">33 years</div>
+							<div class="mt-1 text-sm font-medium text-slate-600">FileMaker experience</div>
 						</div>
-						<div class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
-							<span class="text-xl font-bold text-teal-700">AI</span>
-							<span class="text-sm font-semibold text-slate-600">integration and automation</span>
+						<div>
+							<div class="text-xl font-bold text-slate-950">AI + data</div>
+							<div class="mt-1 text-sm font-medium text-slate-600">practical integration</div>
 						</div>
-						<div class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
-							<span class="text-xl font-bold text-amber-700">FM</span>
-							<span class="text-sm font-semibold text-slate-600">server and monitoring</span>
+						<div>
+							<div class="text-xl font-bold text-slate-950">Server health</div>
+							<div class="mt-1 text-sm font-medium text-slate-600">setup and monitoring</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="relative hidden xl:block">
-					<div class="surface-card overflow-hidden bg-white p-6 shadow-xl shadow-slate-900/10">
-						<div class="color-strip mb-6"></div>
-						<div class="flex items-center justify-between border-b border-slate-200 pb-5">
+				<div class="relative mt-12">
+					<div class="home-panel overflow-hidden">
+						<div class="home-rule"></div>
+						<div class="flex items-center justify-between border-b border-slate-200 px-6 py-5">
 							<div>
-								<p class="text-sm font-semibold uppercase tracking-wider text-sky-700">ZeroBlue Consulting</p>
-								<h2 class="mt-1 text-2xl font-bold text-slate-950">System health review</h2>
+								<p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">ZeroBlue consulting</p>
+								<h2 class="mt-1 text-xl font-bold text-slate-950">FileMaker system review</h2>
 							</div>
-							<div class="rounded-full bg-teal-100 px-3 py-1 text-sm font-bold text-teal-800">Senior</div>
+							<div class="hidden rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 sm:block">Senior review</div>
 						</div>
-						<div class="mt-6 space-y-4">
-							<div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-								<div class="flex items-center justify-between gap-4">
-									<h3 class="font-bold text-slate-950">Audit findings</h3>
-									<span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-800">Prioritized</span>
-								</div>
-								<p class="mt-2 text-sm leading-6 text-slate-600">Schema, scripts, layouts, security, integrations, and performance risks.</p>
+						<div class="grid gap-4 p-6">
+							<div class="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:grid-cols-[10rem_1fr]">
+								<h3 class="font-semibold text-slate-950">Audit scope</h3>
+								<p class="text-sm leading-6 text-slate-600">Schema, scripts, layouts, security, integrations, and performance risks.</p>
 							</div>
-							<div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-								<div class="flex items-center justify-between gap-4">
-									<h3 class="font-bold text-slate-950">AI integration</h3>
-									<span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-bold text-teal-800">Practical</span>
-								</div>
-								<p class="mt-2 text-sm leading-6 text-slate-600">Search, summaries, automation, analysis, and FileMaker-aware data access.</p>
+							<div class="grid gap-3 rounded-lg border border-slate-200 bg-white p-4 sm:grid-cols-[10rem_1fr]">
+								<h3 class="font-semibold text-slate-950">AI integration</h3>
+								<p class="text-sm leading-6 text-slate-600">Search, summaries, automation, analysis, and controlled FileMaker data access.</p>
 							</div>
-							<div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-								<div class="flex items-center justify-between gap-4">
-									<h3 class="font-bold text-slate-950">Server reliability</h3>
-									<span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">Monitored</span>
-								</div>
-								<p class="mt-2 text-sm leading-6 text-slate-600">Backups, SSL, schedules, logs, performance, and FMDojo visibility.</p>
+							<div class="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:grid-cols-[10rem_1fr]">
+								<h3 class="font-semibold text-slate-950">Reliability</h3>
+								<p class="text-sm leading-6 text-slate-600">Backups, SSL, schedules, logs, performance, and monitoring through <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-sky-700 underline underline-offset-4">FM Dojo</a>.</p>
 							</div>
 						</div>
-						<div class="home-inverse mt-6 rounded-xl p-5 text-white">
-							<p class="text-sm font-semibold uppercase tracking-wider text-teal-300">Related platform</p>
-							<p class="mt-2 text-lg font-bold text-white">
-								<a href="https://radfm.cloud" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-sky-300/70 underline-offset-4 transition hover:text-sky-100">RadFM</a>
-								hosting and
-								<a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-teal-300/70 underline-offset-4 transition hover:text-teal-100">FM Dojo</a>
-								monitoring stay in the same FileMaker ecosystem.
-							</p>
+						<div class="border-t border-slate-200 bg-slate-950 px-6 py-5">
+							<div class="grid gap-4 sm:grid-cols-3">
+								<div>
+									<div class="text-sm font-semibold text-slate-400">Primary work</div>
+									<div class="mt-1 font-bold text-white">Audits</div>
+								</div>
+								<div>
+									<div class="text-sm font-semibold text-slate-400">Platform</div>
+									<div class="mt-1 font-bold text-white">FileMaker</div>
+								</div>
+								<div>
+									<div class="text-sm font-semibold text-slate-400">Related hosting</div>
+									<a href="https://radfm.cloud" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex font-bold text-white underline decoration-sky-300/70 underline-offset-4">RadFM</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
