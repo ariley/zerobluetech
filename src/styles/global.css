@@ -5,16 +5,38 @@
 @layer base {
     :root {
         color-scheme: light;
+        --zb-page: #f8fafc;
+        --zb-text: #0f172a;
+        --zb-text-muted: #334155;
+        --zb-surface: rgba(255, 255, 255, 0.92);
+        --zb-surface-border: rgba(203, 213, 225, 0.95);
+        --zb-surface-strong: #ffffff;
+        --zb-card-accent: #0ea5e9;
+        --zb-accent-start: #0284c7;
+        --zb-accent-mid: #0891b2;
+        --zb-accent-end: #0f766e;
+        --zb-accent-text: #ffffff;
     }
 
     html {
-        background-color: #f8fafc;
+        background-color: var(--zb-page);
     }
 
     html.dark {
         color-scheme: dark;
-        background-color: #08111f;
-        color: #f8fafc;
+        --zb-page: #08111f;
+        --zb-text: #f8fafc;
+        --zb-text-muted: #cbd5e1;
+        --zb-surface: rgba(15, 34, 56, 0.96);
+        --zb-surface-border: rgba(56, 189, 248, 0.30);
+        --zb-surface-strong: #102033;
+        --zb-card-accent: #38bdf8;
+        --zb-accent-start: #075985;
+        --zb-accent-mid: #155e75;
+        --zb-accent-end: #115e59;
+        --zb-accent-text: #ffffff;
+        background-color: var(--zb-page);
+        color: var(--zb-text);
     }
 
     body {
@@ -85,6 +107,90 @@
 
     .surface-card {
         @apply rounded-2xl border border-slate-200 bg-white/90 shadow-lg shadow-slate-900/5 backdrop-blur transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/85 dark:shadow-black/20;
+    }
+
+    .theme-title {
+        color: #0f172a;
+        color: var(--zb-text);
+    }
+
+    .theme-copy {
+        color: #334155;
+        color: var(--zb-text-muted);
+    }
+
+    .theme-surface {
+        @apply relative overflow-hidden rounded-2xl border p-8 shadow-lg backdrop-blur transition-all duration-300;
+        background-color: rgba(255, 255, 255, 0.92);
+        background-color: var(--zb-surface);
+        border-color: rgba(203, 213, 225, 0.95);
+        border-color: var(--zb-surface-border);
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    .theme-surface::before {
+        content: "";
+        @apply absolute inset-x-0 top-0 h-1;
+        background: linear-gradient(90deg, var(--zb-card-accent), var(--zb-accent-end));
+    }
+
+    .dark .theme-title {
+        color: #f8fafc;
+    }
+
+    .dark .theme-copy {
+        color: #cbd5e1;
+    }
+
+    .dark .theme-surface {
+        background-color: rgba(15, 34, 56, 0.96);
+        border-color: rgba(56, 189, 248, 0.30);
+        box-shadow: 0 22px 52px rgba(0, 0, 0, 0.38);
+    }
+
+    .theme-icon-chip {
+        @apply mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl text-lg font-bold;
+        background-color: color-mix(in srgb, var(--zb-card-accent) 14%, var(--zb-surface-strong));
+        color: var(--zb-card-accent);
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--zb-card-accent) 24%, transparent);
+    }
+
+    .theme-check-list {
+        @apply space-y-3;
+        color: var(--zb-text-muted);
+    }
+
+    .theme-check-list li {
+        @apply flex gap-3 leading-7;
+    }
+
+    .theme-check-list li::before {
+        content: "✓";
+        @apply mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold;
+        background-color: color-mix(in srgb, var(--zb-card-accent) 14%, transparent);
+        color: var(--zb-card-accent);
+    }
+
+    .theme-accent-panel {
+        @apply relative overflow-hidden rounded-2xl p-8 shadow-xl;
+        background: linear-gradient(120deg, #0284c7, #0891b2, #0f766e);
+        background: linear-gradient(120deg, var(--zb-accent-start), var(--zb-accent-mid), var(--zb-accent-end));
+        color: #ffffff;
+        color: var(--zb-accent-text);
+        box-shadow: 0 22px 50px rgba(14, 116, 144, 0.22);
+    }
+
+    .theme-accent-panel::after {
+        content: "";
+        @apply pointer-events-none absolute inset-y-0 right-0 w-1/2 opacity-20;
+        background:
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.95), transparent 8rem),
+            radial-gradient(circle at 65% 80%, rgba(255, 255, 255, 0.70), transparent 10rem);
+    }
+
+    .dark .theme-accent-panel {
+        background: linear-gradient(120deg, #075985, #155e75, #115e59);
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
     }
 
     .surface-card-hover {

@@ -49,6 +49,44 @@ const stories = [
 	heroSubtitle="ZeroBlue audits, modernizes, AI-enables, and stabilizes FileMaker systems without guessing what is broken."
 	heroEyebrow="FileMaker experts since 1993"
 >
+	<Fragment slot="heroVisual">
+		<div class="surface-card p-6">
+			<div class="color-strip mb-5"></div>
+			<div class="space-y-4">
+				<a
+					href="/blog/#latest-articles"
+					class="group block rounded-xl bg-sky-100 p-4 transition hover:-translate-y-0.5 hover:bg-sky-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:bg-sky-500/15 dark:hover:bg-sky-500/25"
+				>
+					<div class="flex items-center justify-between gap-4">
+						<div class="text-sm font-semibold text-sky-700 dark:text-sky-200">Latest articles</div>
+						<span class="text-sm font-semibold text-sky-600 transition group-hover:translate-x-1 dark:text-sky-200">→</span>
+					</div>
+					<p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Read the newest FileMaker notes.</p>
+				</a>
+				<a
+					href="/tag/developer/"
+					class="group block rounded-xl bg-teal-100 p-4 transition hover:-translate-y-0.5 hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:bg-teal-500/15 dark:hover:bg-teal-500/25"
+				>
+					<div class="flex items-center justify-between gap-4">
+						<div class="text-sm font-semibold text-teal-700 dark:text-teal-200">Implementation details</div>
+						<span class="text-sm font-semibold text-teal-600 transition group-hover:translate-x-1 dark:text-teal-200">→</span>
+					</div>
+					<p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Browse developer-focused build notes.</p>
+				</a>
+				<a
+					href="/portfolio/"
+					class="group block rounded-xl bg-amber-100 p-4 transition hover:-translate-y-0.5 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 dark:bg-amber-500/15 dark:hover:bg-amber-500/25"
+				>
+					<div class="flex items-center justify-between gap-4">
+						<div class="text-sm font-semibold text-amber-800 dark:text-amber-200">Client lessons</div>
+						<span class="text-sm font-semibold text-amber-700 transition group-hover:translate-x-1 dark:text-amber-200">→</span>
+					</div>
+					<p class="mt-2 text-sm text-slate-700 dark:text-slate-300">See what changed in real projects.</p>
+				</a>
+			</div>
+		</div>
+	</Fragment>
+
 	<section class="py-12 lg:py-16">
 		<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
 			<div class="surface-card p-8 lg:p-10">
@@ -161,16 +199,16 @@ const stories = [
 		</div>
 	</section>
 
-	<section class="rounded-2xl bg-slate-950 p-8 text-white shadow-xl shadow-slate-900/20 dark:bg-sky-950 lg:p-12">
+	<section class="surface-card overflow-hidden p-8 lg:p-10">
 		<div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
 			<div>
-				<p class="text-sm font-semibold uppercase tracking-wider text-teal-300">Start with the real problem</p>
-				<h2 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Need a FileMaker audit, AI plan, or server review?</h2>
-				<p class="mt-4 max-w-3xl leading-7 text-slate-300">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Start with the real problem</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">Need a FileMaker audit, AI plan, or server review?</h2>
+				<p class="mt-4 max-w-3xl leading-7 text-slate-700 dark:text-slate-300">
 					Bring the symptoms, goals, or system history. ZeroBlue can help decide what is worth fixing first.
 				</p>
 			</div>
-			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-slate-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-50">
+			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-sky-600 px-6 py-3 font-semibold text-white shadow-lg shadow-sky-900/15 transition hover:-translate-y-0.5 hover:bg-sky-700 dark:bg-sky-500 dark:text-slate-950 dark:hover:bg-sky-400">
 				Schedule a Consultation
 			</a>
 		</div>

@@ -2,7 +2,6 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE } from '../config';
 ---
 
 <!DOCTYPE html>
@@ -15,8 +14,8 @@ import { SITE_TITLE } from '../config';
 		<main class="max-w-7xl mx-auto px-4 py-12">
 			<!-- Hero Section -->
 			<div class="text-center mb-16">
-				<h1 class="text-4xl md:text-5xl font-bold mb-4 text-zinc-700 dark:text-zinc-300">FileMaker Licensing</h1>
-				<p class="text-xl text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto">
+				<h1 class="theme-title text-4xl md:text-5xl font-bold mb-4">FileMaker Licensing</h1>
+				<p class="theme-copy text-xl max-w-3xl mx-auto">
 					As a member of the FileMaker Business Alliance, ZeroBlue can offer significant discounts on licensing for 5 or more copies.
 				</p>
 			</div>
@@ -25,58 +24,62 @@ import { SITE_TITLE } from '../config';
 			<section class="mb-16">
 				<div class="grid md:grid-cols-2 gap-8">
 					<!-- Security & Compliance -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-8">
-						<h2 class="text-2xl font-bold mb-4 text-zinc-700 dark:text-zinc-300">Security & Compliance</h2>
-						<p class="text-zinc-700 dark:text-zinc-400 mb-4">
+					<div class="theme-surface">
+						<div class="theme-icon-chip">S</div>
+						<h2 class="theme-title text-2xl font-bold mb-4">Security & Compliance</h2>
+						<p class="theme-copy mb-4">
 							Staying current with FileMaker licensing ensures you have the latest security patches and compliance features to protect your business data.
 						</p>
-						<ul class="space-y-2 text-zinc-700 dark:text-zinc-400">
-							<li>✓ Latest security updates</li>
-							<li>✓ Compliance with data protection regulations</li>
-							<li>✓ Protection against vulnerabilities</li>
-							<li>✓ Peace of mind for your business</li>
+						<ul class="theme-check-list">
+							<li>Latest security updates</li>
+							<li>Compliance with data protection regulations</li>
+							<li>Protection against vulnerabilities</li>
+							<li>Peace of mind for your business</li>
 						</ul>
 					</div>
 
 					<!-- New Features & Performance -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-8">
-						<h2 class="text-2xl font-bold mb-4 text-zinc-700 dark:text-zinc-300">New Features & Performance</h2>
-						<p class="text-zinc-700 dark:text-zinc-400 mb-4">
+					<div class="theme-surface">
+						<div class="theme-icon-chip">P</div>
+						<h2 class="theme-title text-2xl font-bold mb-4">New Features & Performance</h2>
+						<p class="theme-copy mb-4">
 							Each FileMaker update brings performance improvements and new capabilities that help your team work more efficiently.
 						</p>
-						<ul class="space-y-2 text-zinc-700 dark:text-zinc-400">
-							<li>✓ Faster performance and reliability</li>
-							<li>✓ New features and integrations</li>
-							<li>✓ Improved mobile experience</li>
-							<li>✓ Better compatibility with modern systems</li>
+						<ul class="theme-check-list">
+							<li>Faster performance and reliability</li>
+							<li>New features and integrations</li>
+							<li>Improved mobile experience</li>
+							<li>Better compatibility with modern systems</li>
 						</ul>
 					</div>
 
 					<!-- Support & Compatibility -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-8">
-						<h2 class="text-2xl font-bold mb-4 text-zinc-700 dark:text-zinc-300">Ongoing Support</h2>
-						<p class="text-zinc-700 dark:text-zinc-400 mb-4">
+					<div class="theme-surface">
+						<div class="theme-icon-chip">O</div>
+						<h2 class="theme-title text-2xl font-bold mb-4">Ongoing Support</h2>
+						<p class="theme-copy mb-4">
 							Current licenses ensure you receive technical support and maintain compatibility with the latest operating systems and devices.
 						</p>
-						<ul class="space-y-2 text-zinc-700 dark:text-zinc-400">
-							<li>✓ Access to technical support</li>
-							<li>✓ Compatibility with latest OS versions</li>
-							<li>✓ Regular updates and patches</li>
-							<li>✓ Future-proof your investment</li>
+						<ul class="theme-check-list">
+							<li>Access to technical support</li>
+							<li>Compatibility with latest OS versions</li>
+							<li>Regular updates and patches</li>
+							<li>Future-proof your investment</li>
 						</ul>
 					</div>
 
 					<!-- Cost Efficiency -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-8">
-						<h2 class="text-2xl font-bold mb-4 text-zinc-700 dark:text-zinc-300">Cost Efficiency</h2>
-						<p class="text-zinc-700 dark:text-zinc-400 mb-4">
+					<div class="theme-surface">
+						<div class="theme-icon-chip">C</div>
+						<h2 class="theme-title text-2xl font-bold mb-4">Cost Efficiency</h2>
+						<p class="theme-copy mb-4">
 							Volume licensing through our Business Alliance partnership provides significant savings for growing teams.
 						</p>
-						<ul class="space-y-2 text-zinc-700 dark:text-zinc-400">
-							<li>✓ Volume discounts for 5+ licenses</li>
-							<li>✓ Predictable annual costs</li>
-							<li>✓ Avoid costly emergency upgrades</li>
-							<li>✓ Maximize your software investment</li>
+						<ul class="theme-check-list">
+							<li>Volume discounts for 5+ licenses</li>
+							<li>Predictable annual costs</li>
+							<li>Avoid costly emergency upgrades</li>
+							<li>Maximize your software investment</li>
 						</ul>
 					</div>
 				</div>
@@ -84,27 +87,30 @@ import { SITE_TITLE } from '../config';
 
 			<!-- Volume Licensing -->
 			<section class="mb-16">
-				<div class="bg-gradient-to-r from-sky-400 via-blue-400 to-sky-400 dark:from-sky-500 dark:via-blue-500 dark:to-sky-500 rounded-lg shadow-xl p-8 text-zinc-300">
-					<h2 class="text-3xl font-bold mb-4">Volume Licensing Discounts</h2>
-					<p class="text-lg mb-6">
-						Purchase 5 or more licenses and save! As a FileMaker Business Alliance member, we can provide:
-					</p>
-					<ul class="space-y-2 text-lg">
-						<li>✓ Significant volume discounts</li>
-						<li>✓ Flexible licensing options</li>
-						<li>✓ Expert guidance on the right solution</li>
-						<li>✓ Ongoing support and training</li>
-					</ul>
+				<div class="theme-accent-panel">
+					<div class="relative z-10 max-w-3xl">
+						<p class="mb-3 text-sm font-semibold uppercase tracking-wider text-sky-100/90">5 or more licenses</p>
+						<h2 class="text-3xl font-bold mb-4">Volume Licensing Discounts</h2>
+						<p class="text-lg mb-6 text-sky-50/90">
+							Purchase 5 or more licenses and save. As a FileMaker Business Alliance member, we can provide:
+						</p>
+						<ul class="grid gap-3 text-lg sm:grid-cols-2">
+							<li class="rounded-xl bg-white/12 px-4 py-3 ring-1 ring-white/20">Significant volume discounts</li>
+							<li class="rounded-xl bg-white/12 px-4 py-3 ring-1 ring-white/20">Flexible licensing options</li>
+							<li class="rounded-xl bg-white/12 px-4 py-3 ring-1 ring-white/20">Expert guidance on the right solution</li>
+							<li class="rounded-xl bg-white/12 px-4 py-3 ring-1 ring-white/20">Ongoing support and training</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
 			<!-- CTA Section -->
-			<section class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-12 text-center">
-				<h2 class="text-3xl font-bold mb-4 text-zinc-700 dark:text-zinc-300">Request a Quote</h2>
-				<p class="text-xl text-zinc-600 dark:text-zinc-300 mb-8">
+			<section class="theme-surface p-12 text-center">
+				<h2 class="theme-title text-3xl font-bold mb-4">Request a Quote</h2>
+				<p class="theme-copy text-xl mb-8">
 					Contact us today to discuss your licensing needs and get a custom quote.
 				</p>
-				<a href="/contact" class="inline-block bg-sky-400 text-zinc-800 px-8 py-3 rounded-lg font-semibold hover:bg-sky-500 transition-colors">
+				<a href="/contact" class="btn-primary">
 					Get a Quote
 				</a>
 			</section>
@@ -113,3 +119,114 @@ import { SITE_TITLE } from '../config';
 	</body>
 </html>
 
+<style is:global>
+	.theme-title {
+		color: var(--zb-text, #0f172a);
+	}
+
+	.theme-copy {
+		color: var(--zb-text-muted, #334155);
+	}
+
+	.theme-surface {
+		position: relative;
+		overflow: hidden;
+		border: 1px solid var(--zb-surface-border, rgba(203, 213, 225, 0.95));
+		border-radius: 1rem;
+		background: var(--zb-surface, rgba(255, 255, 255, 0.92));
+		padding: 2rem;
+		box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+		backdrop-filter: blur(8px);
+	}
+
+	.theme-surface::before {
+		content: "";
+		position: absolute;
+		inset: 0 0 auto;
+		height: 4px;
+		background: linear-gradient(90deg, var(--zb-card-accent, #0ea5e9), var(--zb-accent-end, #0f766e));
+	}
+
+	.dark .theme-title {
+		color: #f8fafc;
+	}
+
+	.dark .theme-copy {
+		color: #cbd5e1;
+	}
+
+	.dark .theme-surface {
+		background: var(--zb-surface, rgba(15, 34, 56, 0.96));
+		border-color: var(--zb-surface-border, rgba(56, 189, 248, 0.30));
+		box-shadow: 0 22px 52px rgba(0, 0, 0, 0.38);
+	}
+
+	.theme-icon-chip {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		margin-bottom: 1.25rem;
+		border-radius: 0.75rem;
+		background: color-mix(in srgb, var(--zb-card-accent, #0ea5e9) 14%, var(--zb-surface-strong, #ffffff));
+		box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--zb-card-accent, #0ea5e9) 24%, transparent);
+		color: var(--zb-card-accent, #0ea5e9);
+		font-size: 1.125rem;
+		font-weight: 700;
+	}
+
+	.theme-check-list {
+		display: grid;
+		gap: 0.75rem;
+		color: var(--zb-text-muted, #334155);
+	}
+
+	.theme-check-list li {
+		display: flex;
+		gap: 0.75rem;
+		line-height: 1.75;
+	}
+
+	.theme-check-list li::before {
+		content: "✓";
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 1.25rem;
+		width: 1.25rem;
+		height: 1.25rem;
+		margin-top: 0.125rem;
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--zb-card-accent, #0ea5e9) 14%, transparent);
+		color: var(--zb-card-accent, #0ea5e9);
+		font-size: 0.75rem;
+		font-weight: 700;
+	}
+
+	.theme-accent-panel {
+		position: relative;
+		overflow: hidden;
+		border-radius: 1rem;
+		background: linear-gradient(120deg, var(--zb-accent-start, #0284c7), var(--zb-accent-mid, #0891b2), var(--zb-accent-end, #0f766e));
+		padding: 2rem;
+		color: var(--zb-accent-text, #ffffff);
+		box-shadow: 0 22px 50px rgba(14, 116, 144, 0.22);
+	}
+
+	.theme-accent-panel::after {
+		content: "";
+		position: absolute;
+		inset: 0 0 0 auto;
+		width: 50%;
+		pointer-events: none;
+		opacity: 0.2;
+		background:
+			radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.95), transparent 8rem),
+			radial-gradient(circle at 65% 80%, rgba(255, 255, 255, 0.70), transparent 10rem);
+	}
+
+	.dark .theme-accent-panel {
+		box-shadow: 0 22px 50px rgba(0, 0, 0, 0.34);
+	}
+</style>
