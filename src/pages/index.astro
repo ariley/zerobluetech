@@ -1,414 +1,178 @@
 ---
-import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import WPArticleSummary from '../components/WPArticleSummary.astro'
-import { SITE_TITLE, SITE_DESCRIPTION, PAGE_SIZE } from '../config.ts'
-import { sortedPosts } from '@/js/util.js'
-// Use import.meta.glob() to fetch all posts, and then sort them by date.
-const postImportResult = import.meta.glob('../posts/*.{md,mdx}', { eager: true })
-const posts = sortedPosts(Object.values(postImportResult))
-const hasMorePosts = posts.length > PAGE_SIZE
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config.ts';
+
+const consultationUrl = 'https://calendly.com/agnesriley';
+
+const focusAreas = [
+	{
+		title: 'Audit the system',
+		body: 'Review schema, scripts, layouts, security, integrations, server configuration, and performance risks before deciding what to fix.',
+	},
+	{
+		title: 'Modernize the workflow',
+		body: 'Clean up processes, reduce manual work, improve reliability, and make FileMaker easier for the team to trust and use.',
+	},
+	{
+		title: 'Add AI carefully',
+		body: 'Connect FileMaker to practical AI workflows for search, summaries, automation, analysis, and controlled data access.',
+	},
+];
+
+const proofPoints = [
+	{ label: '33 years FileMaker experience' },
+	{ label: 'Former senior product manager for the FileMaker platform' },
+	{ label: 'FileMaker infrastructure, AI, and product strategy experience' },
+	{ label: 'Creator of FMDojo', href: 'https://fmdojo.com' },
+];
+
+const stories = [
+	{
+		title: 'Sterilization workflow and QR code labeling',
+		body: 'Reviewed a barcode process, found duplicate and missing-code risks, and redesigned the flow around iPhones, on-demand Zebra printing, and better FileMaker records.',
+	},
+	{
+		title: 'Overnight batch reduced to 30 minutes',
+		body: 'Reworked a long-running FileMaker process into parallel scripts that processed and updated more than 70K parent records with dependent child data.',
+	},
+	{
+		title: 'Live scoring systems where accuracy mattered',
+		body: 'Built FileMaker systems for live projected math competition scoring and school registration workflows where the results had to be right in real time.',
+	},
+];
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="site-body home-body">
-		<Header title={SITE_TITLE} />
-
-		<!-- Hero Section -->
-		<div class="home-hero">
-			<div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
-				<div class="max-w-4xl">
-					<div class="mb-6 border-l-2 border-teal-500 pl-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">FileMaker experts since 1993</div>
-					<h1 class="text-4xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">Senior FileMaker Consulting for Systems That Matter</h1>
-					<p class="mt-6 max-w-3xl text-xl leading-8 text-slate-700">ZeroBlue audits, modernizes, AI-enables, and stabilizes FileMaker systems without guessing what is broken.</p>
-					<div class="mt-8 flex flex-wrap gap-3">
-						<a href="https://calendly.com/agnesriley" target="_blank" rel="noopener noreferrer" class="btn-primary">Schedule a Consultation</a>
-						<a href="/services" class="btn-secondary">View Services</a>
-					</div>
-
-					<div class="mt-10 grid max-w-3xl grid-cols-3 gap-5 border-t border-slate-200 pt-6">
-						<div>
-							<div class="text-xl font-bold text-slate-950">33 years</div>
-							<div class="mt-1 text-sm font-medium text-slate-600">FileMaker experience</div>
-						</div>
-						<div>
-							<div class="text-xl font-bold text-slate-950">AI + data</div>
-							<div class="mt-1 text-sm font-medium text-slate-600">practical integration</div>
-						</div>
-						<div>
-							<div class="text-xl font-bold text-slate-950">Server health</div>
-							<div class="mt-1 text-sm font-medium text-slate-600">setup and monitoring</div>
-						</div>
-					</div>
+<PageLayout
+	title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
+	heroTitle="Senior FileMaker Consulting for Systems That Matter"
+	heroSubtitle="ZeroBlue audits, modernizes, AI-enables, and stabilizes FileMaker systems without guessing what is broken."
+	heroEyebrow="FileMaker experts since 1993"
+>
+	<section class="py-12 lg:py-16">
+		<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+			<div class="surface-card p-8 lg:p-10">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Senior diagnosis, practical execution</p>
+				<h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+					Bring the system that matters. Get a clear read on what is actually wrong.
+				</h2>
+				<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+					ZeroBlue focuses on FileMaker systems that already carry business responsibility: production apps,
+					older databases, unstable servers, AI-ready workflows, and architecture that needs senior judgment.
+				</p>
+				<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+					<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+						Schedule a Consultation
+					</a>
+					<a href="/services" class="btn-secondary">
+						View Services
+					</a>
 				</div>
+			</div>
 
-				<div class="relative mt-12">
-					<div class="home-panel overflow-hidden">
-						<div class="home-rule"></div>
-						<div class="flex items-center justify-between border-b border-slate-200 px-6 py-5">
-							<div>
-								<p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">ZeroBlue consulting</p>
-								<h2 class="mt-1 text-xl font-bold text-slate-950">FileMaker system review</h2>
+			<div class="surface-card overflow-hidden">
+				<div class="color-strip"></div>
+				<div class="p-8 lg:p-10">
+					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Credibility</p>
+					<h2 class="mt-3 text-2xl font-bold tracking-tight text-slate-950 dark:text-white">FileMaker work with product, server, and business context.</h2>
+					<div class="mt-6 grid gap-3">
+						{proofPoints.map((point) => (
+							<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200">
+								{point.href ? (
+									<a href={point.href} target="_blank" rel="noopener noreferrer" class="accent-link">
+										{point.label}
+									</a>
+								) : (
+									point.label
+								)}
 							</div>
-							<div class="hidden rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-700 sm:block">Senior review</div>
-						</div>
-						<div class="grid gap-4 p-6">
-							<div class="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:grid-cols-[10rem_1fr]">
-								<h3 class="font-semibold text-slate-950">Audit scope</h3>
-								<p class="text-sm leading-6 text-slate-600">Schema, scripts, layouts, security, integrations, and performance risks.</p>
-							</div>
-							<div class="grid gap-3 rounded-lg border border-slate-200 bg-white p-4 sm:grid-cols-[10rem_1fr]">
-								<h3 class="font-semibold text-slate-950">AI integration</h3>
-								<p class="text-sm leading-6 text-slate-600">Search, summaries, automation, analysis, and controlled FileMaker data access.</p>
-							</div>
-							<div class="grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:grid-cols-[10rem_1fr]">
-								<h3 class="font-semibold text-slate-950">Reliability</h3>
-								<p class="text-sm leading-6 text-slate-600">Backups, SSL, schedules, logs, performance, and monitoring through <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-sky-700 underline underline-offset-4">FM Dojo</a>.</p>
-							</div>
-						</div>
-						<div class="border-t border-slate-200 bg-slate-950 px-6 py-5">
-							<div class="grid gap-4 sm:grid-cols-3">
-								<div>
-									<div class="text-sm font-semibold text-slate-400">Primary work</div>
-									<div class="mt-1 font-bold text-white">Audits</div>
-								</div>
-								<div>
-									<div class="text-sm font-semibold text-slate-400">Platform</div>
-									<div class="mt-1 font-bold text-white">FileMaker</div>
-								</div>
-								<div>
-									<div class="text-sm font-semibold text-slate-400">Related hosting</div>
-									<a href="https://radfm.cloud" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex font-bold text-white underline decoration-sky-300/70 underline-offset-4">RadFM</a>
-								</div>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<!-- FM Dojo Feature -->
-		<section class="py-16">
-			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div class="surface-card relative isolate overflow-hidden">
-					<div class="absolute inset-0 bg-[linear-gradient(120deg,rgba(14,165,233,0.16),rgba(20,184,166,0.12)_45%,rgba(245,158,11,0.14)),radial-gradient(circle_at_85%_15%,rgba(251,146,60,0.20),transparent_18rem)] dark:bg-[linear-gradient(120deg,rgba(14,165,233,0.20),rgba(20,184,166,0.14)_45%,rgba(245,158,11,0.16)),radial-gradient(circle_at_85%_15%,rgba(251,146,60,0.18),transparent_18rem)]"></div>
-					<div class="absolute inset-0 opacity-40 dark:opacity-25" style="background-image: radial-gradient(circle at 1px 1px, rgba(14,165,233,.45) 1px, transparent 0); background-size: 24px 24px;"></div>
-					<div class="relative grid gap-8 p-5 sm:p-8 xl:grid-cols-[0.92fr_1.08fr] lg:p-10">
-						<div class="flex flex-col justify-center">
-							<div class="eyebrow w-fit">
-								<span class="h-2 w-2 rounded-full bg-orange-400"></span>
-								New FileMaker ecosystem
-							</div>
-							<h2 class="text-4xl font-bold tracking-tight text-slate-950 dark:text-white md:text-5xl">
-								Introducing <span class="rounded-xl bg-gradient-to-r from-sky-500/15 via-teal-500/15 to-orange-500/15 px-2 text-sky-700 ring-1 ring-sky-300/50 dark:bg-gradient-to-r dark:from-sky-400/20 dark:via-teal-300/20 dark:to-orange-300/20 dark:text-sky-100 dark:ring-sky-300/30">FM Dojo</span>
-							</h2>
-							<p class="mt-5 max-w-xl text-lg leading-8 text-slate-700 dark:text-slate-300">
-								The FileMaker ecosystem for builders who want cleaner scripts, sharper insight, and faster client delivery.
-							</p>
+	<section class="py-12 lg:py-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">How ZeroBlue helps</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+				Consulting for FileMaker systems that need more than hourly help.
+			</h2>
+		</div>
 
-							<div class="mt-7 grid gap-3 sm:grid-cols-2">
-								<div class="rounded-2xl border border-sky-200 bg-sky-50/95 p-4 shadow-lg shadow-sky-900/10 backdrop-blur dark:border-sky-300/40 dark:bg-sky-950/55 dark:shadow-sky-950/30">
-									<div class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-200">Ask</div>
-									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">AI beside your database</h3>
-								</div>
-								<div class="rounded-2xl border border-teal-200 bg-teal-50/95 p-4 shadow-lg shadow-teal-900/10 backdrop-blur dark:border-teal-300/40 dark:bg-teal-950/55 dark:shadow-teal-950/30">
-									<div class="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-200">Inspect</div>
-									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">Snapshots that explain risk</h3>
-								</div>
-								<div class="rounded-2xl border border-orange-200 bg-orange-50/95 p-4 shadow-lg shadow-orange-900/10 backdrop-blur dark:border-red-300/40 dark:bg-red-950/55 dark:shadow-red-950/30">
-									<div class="text-sm font-semibold uppercase tracking-wider text-orange-700 dark:text-red-200">Build</div>
-									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">Script workflows that ship</h3>
-								</div>
-								<div class="rounded-2xl border border-amber-200 bg-amber-50/95 p-4 shadow-lg shadow-amber-900/10 backdrop-blur dark:border-amber-300/40 dark:bg-amber-950/55 dark:shadow-amber-950/30">
-									<div class="text-sm font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-200">Deliver</div>
-									<h3 class="mt-1 font-bold text-slate-950 dark:text-white">Client work in one place</h3>
-								</div>
-							</div>
-
-							<div class="mt-8 flex flex-wrap gap-3">
-								<a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 via-cyan-500 to-teal-500 px-6 py-4 font-semibold leading-none text-white shadow-lg shadow-sky-900/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-teal-900/20">
-									Explore FM Dojo
-									<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7m0 0H8m9 0v9"></path>
-									</svg>
-								</a>
-								<a href="https://youtu.be/oIbXoYFjtcw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl border border-sky-300/40 bg-gradient-to-r from-sky-950 via-teal-950 to-slate-950 px-6 py-4 font-semibold leading-none text-white shadow-lg shadow-sky-950/25 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-xl hover:shadow-teal-950/30">
-									Watch the demo
-								</a>
-							</div>
-						</div>
-
-						<div>
-							<div class="relative mx-auto max-w-4xl xl:max-w-none">
-								<div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-sky-400/25 via-teal-300/20 to-orange-300/25 blur-2xl"></div>
-								<a
-									href="https://youtu.be/oIbXoYFjtcw"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="group relative block overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-sky-900/15 transition hover:-translate-y-1 hover:shadow-teal-900/20 dark:border-slate-700 dark:bg-slate-950"
-									aria-label="Watch Introducing FM Dojo on YouTube"
-								>
-									<img
-										src="https://img.youtube.com/vi/oIbXoYFjtcw/maxresdefault.jpg"
-										alt="FM Dojo AI Assistant video preview"
-										class="aspect-video w-full object-cover"
-										loading="lazy"
-									>
-									<div class="absolute inset-0 bg-gradient-to-tr from-slate-950/65 via-slate-950/5 to-sky-500/20"></div>
-									<div class="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg backdrop-blur">
-										Latest video
-									</div>
-									<div class="absolute inset-0 grid place-items-center">
-										<div class="grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-sky-400 via-teal-400 to-orange-400 text-white shadow-2xl shadow-sky-950/40 transition group-hover:scale-110">
-											<svg class="ml-1 h-9 w-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-												<path d="M8 5v14l11-7z"></path>
-											</svg>
-										</div>
-									</div>
-									<div class="absolute bottom-0 left-0 right-0 p-5">
-										<div class="max-w-md rounded-2xl bg-white/90 p-4 shadow-lg backdrop-blur dark:bg-slate-950/85">
-											<div class="text-sm font-bold uppercase tracking-wider text-sky-700 dark:text-sky-200">FM Dojo AI Assistant</div>
-											<div class="mt-1 text-lg font-bold text-slate-950 dark:text-white">Everywhere you click</div>
-										</div>
-									</div>
-								</a>
-								<div class="mt-4 grid grid-cols-3 gap-3 text-center">
-									<div class="rounded-2xl border border-sky-200 bg-white/90 px-3 py-4 shadow-lg shadow-sky-900/10 backdrop-blur dark:border-sky-300/50 dark:bg-slate-950/75 dark:shadow-sky-950/30">
-										<div class="text-2xl font-bold text-sky-700 dark:text-sky-100">AI</div>
-										<div class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-sky-100/80">answers</div>
-									</div>
-									<div class="rounded-2xl border border-teal-200 bg-white/90 px-3 py-4 shadow-lg shadow-teal-900/10 backdrop-blur dark:border-teal-300/50 dark:bg-slate-950/75 dark:shadow-teal-950/30">
-										<div class="text-2xl font-bold text-teal-700 dark:text-teal-100">XML</div>
-										<div class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-teal-100/80">snapshots</div>
-									</div>
-									<div class="rounded-2xl border border-orange-200 bg-white/90 px-3 py-4 shadow-lg shadow-orange-900/10 backdrop-blur dark:border-orange-300/50 dark:bg-slate-950/75 dark:shadow-orange-950/30">
-										<div class="text-2xl font-bold text-orange-700 dark:text-orange-100">FM</div>
-										<div class="mt-1 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-orange-100/80">scripts</div>
-									</div>
-								</div>
-							</div>
-						</div>
+		<div class="mt-10 grid gap-6 lg:grid-cols-3">
+			{focusAreas.map((area, index) => (
+				<article class="surface-card surface-card-hover p-7">
+					<div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-100 text-lg font-bold text-sky-700 dark:bg-sky-500/15 dark:text-sky-200">
+						{index + 1}
 					</div>
-				</div>
-			</div>
-		</section>
+					<h3 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">{area.title}</h3>
+					<p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{area.body}</p>
+				</article>
+			))}
+		</div>
+	</section>
 
-		<!-- What We Do -->
-		<section class="py-16">
-			<div class="max-w-4xl mx-auto px-4">
-				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center tracking-tight">What We Do</h2>
-				<div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300">
-					<p>
-						We build custom FileMaker apps—web and mobile-integrated—that eliminate manual data entry, automate workflows, and give you real-time visibility into your business.
-					</p>
-					<p>
-						Think of all the time your team spends copying data between spreadsheets, sending follow-up emails, generating reports, or tracking down information. Now imagine all of that happening automatically.
-					</p>
-					<p>
-						That's what we do.
+	<section class="py-12 lg:py-16">
+		<div class="surface-card overflow-hidden">
+			<div class="color-strip"></div>
+			<div class="grid gap-8 p-8 lg:grid-cols-[0.8fr_1.2fr] lg:p-10">
+				<div>
+					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Real work, client names withheld</p>
+					<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white">Practical FileMaker outcomes.</h2>
+					<p class="mt-5 leading-7 text-slate-700 dark:text-slate-300">
+						The work is usually not glamorous at first. It is business process, risk, performance, correctness,
+						server health, and the details that keep people from fighting the system every day.
 					</p>
 				</div>
-			</div>
-		</section>
-
-		<!-- Why It Matters -->
-		<section class="py-16">
-			<div class="max-w-4xl mx-auto px-4">
-				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-8 text-center tracking-tight">Why This Matters</h2>
-				<div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300">
-					<p>
-						Your team's time is expensive. Every hour spent on repetitive tasks is an hour not spent on growing your business.
-					</p>
-					<p>
-						Let's say you have 5 employees who each spend 2 hours a day on manual data entry and administrative tasks. At $50/hour, that's $500 per day. Over a year, that's <strong>$130,000</strong> in labor costs doing work a computer should be doing.
-					</p>
-					<p>
-						A custom FileMaker solution typically pays for itself in 3-6 months. After that, it's pure savings.
-					</p>
+				<div class="grid gap-4">
+					{stories.map((story) => (
+						<article class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-900/70">
+							<h3 class="font-bold text-slate-950 dark:text-white">{story.title}</h3>
+							<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{story.body}</p>
+						</article>
+					))}
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Real Examples -->
-		<section class="py-16">
-			<div class="max-w-4xl mx-auto px-4">
-				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-12 text-center tracking-tight">Real Numbers</h2>
-				<div class="space-y-6">
-					<div class="group p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<h3 class="text-2xl font-bold text-sky-500 mb-4">Professional Services Firm</h3>
-						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-2">
-							<strong>Before:</strong> 80 employees manually typing client documents, 2 hours/day each
-						</p>
-						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
-							<strong>After:</strong> Automated document generation with one click
-						</p>
-						<div class="flex items-center gap-3">
-							<p class="text-xl font-bold text-sky-500">
-								Savings: $2.5 million/year
-							</p>
-							<button class="info-btn relative" data-calc="calc1">
-								<svg class="w-6 h-6 text-zinc-400 hover:text-sky-500 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-								</svg>
-								<div class="hidden calc-popup absolute left-0 top-8 z-50 w-80 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-sky-500 shadow-2xl" id="calc1">
-									<p class="text-sm text-zinc-700 dark:text-zinc-300 font-semibold mb-2">How we calculated this:</p>
-									<ul class="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-										<li>• 80 employees × 2 hours/day = 160 hours/day saved</li>
-										<li>• Average salary: $130,000/year ÷ 2,080 hours = $62.50/hour</li>
-										<li>• 160 hours × $62.50 = $10,000/day</li>
-										<li>• $10,000 × 250 work days = <strong class="text-sky-500">$2,500,000/year</strong></li>
-									</ul>
-								</div>
-							</button>
-						</div>
-					</div>
-
-					<div class="group p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<h3 class="text-2xl font-bold text-sky-500 mb-4">Warehouse Operations</h3>
-						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-2">
-							<strong>Before:</strong> 10 employees printing label sheets, sorting through duplicates, fixing errors, re-labeling boxes
-						</p>
-						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
-							<strong>After:</strong> Belt-mounted Zebra printers + FileMaker integration. Scan box, print QR code on the spot from iPhone
-						</p>
-						<div class="flex items-center gap-3">
-							<p class="text-xl font-bold text-sky-500">
-								Savings: $106,000/year
-							</p>
-							<button class="info-btn relative" data-calc="calc2">
-								<svg class="w-6 h-6 text-zinc-400 hover:text-sky-500 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-								</svg>
-								<div class="hidden calc-popup absolute left-0 top-8 z-50 w-80 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-sky-500 shadow-2xl" id="calc2">
-									<p class="text-sm text-zinc-700 dark:text-zinc-300 font-semibold mb-2">How we calculated this:</p>
-									<ul class="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-										<li>• 10 employees × 1.5 hours/day = 15 hours/day saved</li>
-										<li>• Warehouse wage: $25/hour</li>
-										<li>• Labor: 15 hours × $25 × 250 days = $93,750/year</li>
-										<li>• Materials: $50/day × 250 days = $12,500/year</li>
-										<li>• Total: <strong class="text-sky-500">$106,250/year</strong></li>
-									</ul>
-								</div>
-							</button>
-						</div>
-					</div>
-
-					<div class="group p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<h3 class="text-2xl font-bold text-sky-500 mb-4">Document Processing</h3>
-						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-2">
-							<strong>Before:</strong> Manually adding cover pages, footers, headers, serial numbers to 50 PDFs/day. 20 minutes each
-						</p>
-						<p class="text-lg text-zinc-700 dark:text-zinc-300 mb-4">
-							<strong>After:</strong> One button in FileMaker. Retrieves doc from network, adds pages, numbers it, saves it back. Done
-						</p>
-						<div class="flex items-center gap-3">
-							<p class="text-xl font-bold text-sky-500">
-								Savings: $208,000/year
-							</p>
-							<button class="info-btn relative" data-calc="calc3">
-								<svg class="w-6 h-6 text-zinc-400 hover:text-sky-500 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-								</svg>
-								<div class="hidden calc-popup absolute left-0 top-8 z-50 w-80 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-sky-500 shadow-2xl" id="calc3">
-									<p class="text-sm text-zinc-700 dark:text-zinc-300 font-semibold mb-2">How we calculated this:</p>
-									<ul class="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-										<li>• 50 documents/day × 20 minutes = 1,000 minutes = 16.67 hours/day</li>
-										<li>• Office worker wage: $50/hour</li>
-										<li>• 16.67 hours × $50 = $833/day</li>
-										<li>• $833 × 250 work days = <strong class="text-sky-500">$208,250/year</strong></li>
-									</ul>
-								</div>
-							</button>
-						</div>
-					</div>
-				</div>
+	<section class="py-12 lg:py-16">
+		<div class="grid gap-6 lg:grid-cols-2">
+			<div class="surface-card p-8 lg:p-10">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">FileMaker-specific AI</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+					Explore <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="accent-link">FMDojo</a>.
+				</h2>
+				<p class="mt-5 leading-7 text-slate-700 dark:text-slate-300">
+					FMDojo is the FileMaker-focused AI and monitoring ecosystem created from the same practical consulting experience.
+				</p>
 			</div>
-		</section>
-
-		<script>
-			// Toggle calculation popups
-			document.addEventListener('DOMContentLoaded', () => {
-				const infoBtns = document.querySelectorAll('.info-btn');
-				infoBtns.forEach(btn => {
-					btn.addEventListener('click', (e) => {
-						e.preventDefault();
-						const calcId = btn.getAttribute('data-calc');
-						if (calcId) {
-							const popup = document.getElementById(calcId);
-							if (popup) {
-								popup.classList.toggle('hidden');
-							}
-						}
-					});
-				});
-			});
-		</script>
-
-		<!-- How We Do It -->
-		<section class="py-16">
-			<div class="max-w-6xl mx-auto px-4">
-				<h2 class="text-4xl font-bold text-zinc-800 dark:text-zinc-200 mb-12 text-center tracking-tight">How We Do It</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<!-- Card 1 -->
-					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-								<span class="text-2xl font-bold text-sky-500">1</span>
-							</div>
-							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Find the Culprits</h3>
-						</div>
-						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							I come in and learn your business processes. I find what's slowing you down—the 20-minute tasks that should take 20 seconds. I've been automating my own work since 1993. I know inefficiency when I see it.
-						</p>
-					</div>
-
-					<!-- Card 2 -->
-					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-								<span class="text-2xl font-bold text-sky-500">2</span>
-							</div>
-							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Tighten Your Procedures</h3>
-						</div>
-						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							Before writing a single line of code, I optimize your workflow. Sometimes the problem isn't the software—it's the process. I fix both.
-						</p>
-					</div>
-
-					<!-- Card 3 -->
-					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-								<span class="text-2xl font-bold text-sky-500">3</span>
-							</div>
-							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Build It Fast</h3>
-						</div>
-						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							I work with a sense of urgency. Your time is money, and I don't waste either. Clean code, beautiful design, delivered quickly.
-						</p>
-					</div>
-
-					<!-- Card 4 -->
-					<div class="group p-8 rounded-3xl bg-white border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 shadow-lg shadow-zinc-600/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="flex-shrink-0 w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-								<span class="text-2xl font-bold text-sky-500">4</span>
-							</div>
-							<h3 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">We Make It Beautiful</h3>
-						</div>
-						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							What sets me apart? My design sense. Your team will actually want to use what I build. Clean interfaces. Intuitive workflows. No ugly enterprise software here.
-						</p>
-					</div>
-				</div>
+			<div class="surface-card p-8 lg:p-10">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">FileMaker hosting</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+					Need infrastructure? See <a href="https://radfm.cloud" target="_blank" rel="noopener noreferrer" class="accent-link">RadFM</a>.
+				</h2>
+				<p class="mt-5 leading-7 text-slate-700 dark:text-slate-300">
+					RadFM handles FileMaker hosting while ZeroBlue focuses on consulting, system improvement, AI integration, and reliability.
+				</p>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<Footer />
-	</body>
-</html>
+	<section class="rounded-2xl bg-slate-950 p-8 text-white shadow-xl shadow-slate-900/20 dark:bg-sky-950 lg:p-12">
+		<div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-wider text-teal-300">Start with the real problem</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Need a FileMaker audit, AI plan, or server review?</h2>
+				<p class="mt-4 max-w-3xl leading-7 text-slate-300">
+					Bring the symptoms, goals, or system history. ZeroBlue can help decide what is worth fixing first.
+				</p>
+			</div>
+			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-slate-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-50">
+				Schedule a Consultation
+			</a>
+		</div>
+	</section>
+</PageLayout>
