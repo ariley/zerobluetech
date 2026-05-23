@@ -1,126 +1,209 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE } from '../config';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const consultationUrl = 'https://calendly.com/agnesriley';
+
+const services = [
+	{
+		title: 'Next.js and React Applications',
+		body: 'Build practical web applications for dashboards, portals, internal tools, data entry, reporting, and operational workflows.',
+		points: ['React interfaces for real business workflows', 'Server-side routes, APIs, auth, and database-backed features'],
+	},
+	{
+		title: 'Astro Sites and Content Systems',
+		body: 'Use Astro for fast marketing sites, documentation, product pages, and content-heavy sites that should be easy to maintain.',
+		points: ['Fast static and hybrid pages', 'Clean content structure without platform overhead'],
+	},
+	{
+		title: 'Database-Backed Web Tools',
+		body: 'Design web systems around the data model, not just the screen: Postgres, MySQL, SQLite, hosted databases, APIs, and file-backed workflows.',
+		points: ['Schema planning and data cleanup', 'Admin workflows, imports, exports, and reporting'],
+	},
+	{
+		title: 'FileMaker and Web Integration',
+		body: 'Connect FileMaker to modern web apps where a browser interface, portal, public form, or API layer makes the system more useful.',
+		points: ['FileMaker API and integration patterns', 'Web forms, portals, dashboards, and automation'],
+	},
+	{
+		title: 'AI-Enabled Web Workflows',
+		body: 'Add AI where it has a job: search, summaries, classification, analysis, drafting, workflow assistance, and controlled access to business data.',
+		points: ['AI workflows with practical guardrails', 'Data-aware tools connected to real systems'],
+	},
+	{
+		title: 'Modernization and Replacement',
+		body: 'Replace brittle legacy web pieces with maintainable code, clear deployment, better observability, and systems your team can actually operate.',
+		points: ['Audit before rebuilding', 'Incremental replacement when a full rewrite is not justified'],
+	},
+];
+
+const approach = [
+	{
+		title: 'Start with the workflow',
+		body: 'A web app should match how the business actually works: who enters data, who reviews it, who needs reports, and what has to happen next.',
+	},
+	{
+		title: 'Choose the stack for the job',
+		body: 'Next.js, Astro, React, database services, APIs, and hosting choices are selected around the project requirements, not a default platform.',
+	},
+	{
+		title: 'Keep the system maintainable',
+		body: 'The goal is clean structure, understandable deployment, practical security, and code that can be extended without guessing.',
+	},
+	{
+		title: 'Integrate with existing systems',
+		body: 'Most businesses already have data somewhere. The web layer should connect to that reality instead of creating another silo.',
+	},
+];
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-	<head>
-		<BaseHead title="Web Development - ZeroBlue" description="Custom web development solutions including WordPress, CMS, and FileMaker integration" />
-	</head>
-	<body class="site-body">
-		<Header />
-
-		<section class="hero-panel">
-			<div class="hero-grid">
-				<div>
-					<div class="eyebrow"><span class="h-2 w-2 rounded-full bg-teal-400"></span>Web apps and integrations</div>
-					<h1 class="hero-title">Web Development</h1>
-					<p class="hero-subtitle">
-					We create responsive WordPress or custom-coded CMS websites and web apps to manage all aspects of businesses.
-					</p>
+<PageLayout
+	title="Modern Web Application Development - ZeroBlue"
+	description="Modern web application and site development with Next.js, Astro, React, database back ends, AI workflows, and FileMaker integration."
+	heroTitle="Modern Web Apps for Business Systems"
+	heroSubtitle="ZeroBlue builds practical Next.js, Astro, and React systems with the database, workflow, and integration work needed behind the screen."
+	heroEyebrow="Web apps, data, and integrations"
+>
+	<Fragment slot="heroVisual">
+		<div class="surface-card p-6">
+			<div class="color-strip mb-5"></div>
+			<div class="space-y-4">
+				<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/70">
+					<div class="flex items-center justify-between gap-4">
+						<h2 class="font-semibold text-slate-950 dark:text-white">Application stack</h2>
+						<span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-800 dark:bg-sky-500/15 dark:text-sky-200">Modern</span>
+					</div>
+					<p class="mt-2 text-slate-700 dark:text-slate-300">Next.js, Astro, React, APIs, auth, hosting, and deployment.</p>
+				</div>
+				<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/70">
+					<div class="flex items-center justify-between gap-4">
+						<h2 class="font-semibold text-slate-950 dark:text-white">Data layer</h2>
+						<span class="rounded-full bg-teal-100 px-3 py-1 text-sm font-semibold text-teal-800 dark:bg-teal-500/15 dark:text-teal-200">Structured</span>
+					</div>
+					<p class="mt-2 text-slate-700 dark:text-slate-300">Postgres, MySQL, SQLite, FileMaker, APIs, and practical data modeling.</p>
+				</div>
+				<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/70">
+					<div class="flex items-center justify-between gap-4">
+						<h2 class="font-semibold text-slate-950 dark:text-white">Business workflows</h2>
+						<span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-900 dark:bg-amber-500/15 dark:text-amber-200">Useful</span>
+					</div>
+					<p class="mt-2 text-slate-700 dark:text-slate-300">Dashboards, portals, forms, reports, automation, and AI-assisted work.</p>
 				</div>
 			</div>
-		</section>
+		</div>
+	</Fragment>
 
-		<main class="site-main">
-			<!-- Services Grid -->
-			<section class="py-16">
-				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<!-- WordPress Development -->
-					<div class="group p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<h3 class="text-xl font-semibold mb-4 text-zinc-800 dark:text-zinc-200">WordPress Development</h3>
-						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							Custom WordPress themes and plugins tailored to your brand and business needs. Fully responsive and SEO-optimized.
-						</p>
-					</div>
-
-					<!-- Custom CMS -->
-					<div class="group p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-lg shadow-zinc-600/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 hover:border-sky-500/50">
-						<h3 class="text-xl font-semibold mb-4 text-zinc-800 dark:text-zinc-200">Custom CMS</h3>
-						<p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							Build custom content management systems from scratch to perfectly match your workflow and requirements.
-						</p>
-					</div>
-
-					<!-- Web Applications -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-						<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">Web Applications</h3>
-						<p class="text-zinc-700 dark:text-zinc-400">
-							Develop powerful web applications to streamline your business processes and improve efficiency.
-						</p>
-					</div>
-
-					<!-- FileMaker Integration -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-						<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">FileMaker Integration</h3>
-						<p class="text-zinc-700 dark:text-zinc-400">
-							Connect your FileMaker database to web applications for seamless data access and management online.
-						</p>
-					</div>
-
-					<!-- Responsive Design -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-						<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">Responsive Design</h3>
-						<p class="text-zinc-700 dark:text-zinc-400">
-							Mobile-first design approach ensuring your website looks great and functions perfectly on all devices.
-						</p>
-					</div>
-
-					<!-- E-Commerce -->
-					<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-						<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">E-Commerce Solutions</h3>
-						<p class="text-zinc-700 dark:text-zinc-400">
-							Build secure online stores with payment processing, inventory management, and customer accounts.
-						</p>
-					</div>
+	<section class="py-12 lg:py-16">
+		<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+			<div class="surface-card p-8 lg:p-10">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Not brochureware first</p>
+				<h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+					Build the web layer around the work it has to support.
+				</h2>
+				<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+					ZeroBlue focuses on web systems that need more than a pretty page: data entry, dashboards,
+					customer or staff portals, FileMaker integration, API work, reporting, AI workflows, and reliable deployment.
+				</p>
+				<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+					<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+						Schedule a Consultation
+					</a>
+					<a href="#web-services" class="btn-secondary">
+						Review Web Services
+					</a>
 				</div>
-			</section>
+			</div>
 
-			<!-- Features Section -->
-			<section class="mb-16">
-				<div class="bg-zinc-50 dark:bg-zinc-800 rounded-lg shadow-lg p-8">
-					<h2 class="text-3xl font-bold mb-6 text-zinc-700 dark:text-zinc-300">What We Offer</h2>
-					<div class="grid md:grid-cols-2 gap-6">
-						<div>
-							<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">Modern Technologies</h3>
-							<p class="text-zinc-700 dark:text-zinc-400">
-								We use the latest web technologies and frameworks to build fast, secure, and scalable websites.
-							</p>
+			<div class="surface-card p-8 lg:p-10">
+				<h2 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">Good fit projects</h2>
+				<ul class="mt-6 space-y-4">
+					<li class="flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-700 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>A business needs a focused web app, portal, dashboard, or operational tool.</span>
+					</li>
+					<li class="flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-700 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>A FileMaker system needs a clean web-facing layer or integration point.</span>
+					</li>
+					<li class="flex gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-700 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>A site or app needs to be rebuilt in a maintainable stack instead of patched forever.</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="web-services" class="py-12 lg:py-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">What we build</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+				Modern web development connected to real business data.
+			</h2>
+		</div>
+
+		<div class="mt-10 grid gap-6 lg:grid-cols-2">
+			{services.map((service, index) => (
+				<article class:list={[
+					'surface-card surface-card-hover p-7',
+					index === 0 ? 'lg:col-span-2 lg:grid lg:grid-cols-[0.75fr_1fr] lg:gap-8' : '',
+				]}>
+					<div>
+						<div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-100 text-lg font-bold text-sky-700 dark:bg-sky-500/15 dark:text-sky-200">
+							{index + 1}
 						</div>
-						<div>
-							<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">SEO Optimization</h3>
-							<p class="text-zinc-700 dark:text-zinc-400">
-								All our websites are built with SEO best practices to help you rank higher in search results.
-							</p>
-						</div>
-						<div>
-							<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">Ongoing Support</h3>
-							<p class="text-zinc-700 dark:text-zinc-400">
-								We provide maintenance and support to keep your website running smoothly and securely.
-							</p>
-						</div>
-						<div>
-							<h3 class="text-xl font-semibold mb-3 text-zinc-700 dark:text-zinc-300">Custom Solutions</h3>
-							<p class="text-zinc-700 dark:text-zinc-400">
-								Every project is unique. We tailor our approach to meet your specific business goals.
-							</p>
-						</div>
+						<h3 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">{service.title}</h3>
+						<p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{service.body}</p>
 					</div>
-				</div>
-			</section>
+					<ul class="mt-6 space-y-3 lg:mt-0">
+						{service.points.map((point) => (
+							<li class="flex gap-3 text-slate-700 dark:text-slate-300">
+								<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+								<span>{point}</span>
+							</li>
+						))}
+					</ul>
+				</article>
+			))}
+		</div>
+	</section>
 
-			<!-- CTA Section -->
-			<section class="bg-gradient-to-r from-sky-400 via-blue-400 to-sky-400 dark:from-sky-500 dark:via-blue-500 dark:to-sky-500 rounded-lg shadow-xl p-12 text-center text-white">
-				<h2 class="text-3xl font-bold mb-4">Ready to Build Your Website?</h2>
-				<p class="text-xl mb-8">Let's create a stunning web presence for your business.</p>
-				<a href="/contact" class="inline-block bg-zinc-50 text-primary px-8 py-3 rounded-lg font-semibold hover:bg-zinc-100 transition-colors">
-					Get Started
-				</a>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+	<section class="py-12 lg:py-16">
+		<div class="surface-card overflow-hidden">
+			<div class="color-strip"></div>
+			<div class="grid gap-8 p-8 lg:grid-cols-[0.8fr_1.2fr] lg:p-10">
+				<div>
+					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">How the work stays practical</p>
+					<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+						Good web development is system design, not just screen design.
+					</h2>
+				</div>
+				<div class="grid gap-4 sm:grid-cols-2">
+					{approach.map((item) => (
+						<div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-900/70">
+							<h3 class="font-semibold text-slate-950 dark:text-white">{item.title}</h3>
+							<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{item.body}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="surface-card overflow-hidden">
+		<div class="color-strip"></div>
+		<div class="grid gap-8 p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Need a web layer for a real system?</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">Start with the workflow and the data.</h2>
+				<p class="mt-4 max-w-3xl text-lg leading-8 text-slate-700 dark:text-slate-300">
+					Bring the current process, the data source, or the system that needs a better interface.
+					ZeroBlue can help decide whether the right answer is Astro, Next.js, React, FileMaker integration,
+					a database-backed app, or a smaller targeted fix.
+				</p>
+			</div>
+			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+				Schedule a Consultation
+			</a>
+		</div>
+	</section>
+</PageLayout>
