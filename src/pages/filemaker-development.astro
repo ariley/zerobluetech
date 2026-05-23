@@ -61,6 +61,7 @@ const consultingAreas = [
 	},
 	{
 		title: 'FMDojo Monitoring Setup',
+		href: 'https://fmdojo.com',
 		points: [
 			'Monitoring and alert configuration',
 			'Log analysis visibility',
@@ -81,7 +82,7 @@ const signals = [
 
 <PageLayout
 	title="FileMaker Consulting & System Improvement - ZeroBlue"
-	description="Senior FileMaker consulting for system audits, AI integration, server setup, performance, stability, and FMDojo monitoring."
+	description="Senior FileMaker consulting for system audits, AI integration, server setup, performance, stability, and monitoring."
 	heroTitle="FileMaker Consulting & System Improvement"
 	heroSubtitle="Audit, modernize, AI-enable, and stabilize the FileMaker systems your business depends on."
 	heroEyebrow="Senior FileMaker Consulting"
@@ -148,7 +149,15 @@ const signals = [
 					'surface-card surface-card-hover p-7',
 					index === 4 ? 'lg:col-span-2 lg:grid lg:grid-cols-[0.7fr_1fr] lg:gap-8' : '',
 				]}>
-					<h2 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">{area.title}</h2>
+					<h2 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">
+						{area.href ? (
+							<a href={area.href} target="_blank" rel="noopener noreferrer" class="accent-link">
+								{area.title}
+							</a>
+						) : (
+							area.title
+						)}
+					</h2>
 					<ul class="mt-6 grid gap-3 sm:grid-cols-2">
 						{area.points.map((point) => (
 							<li class="flex gap-3 text-slate-700 dark:text-slate-300">
