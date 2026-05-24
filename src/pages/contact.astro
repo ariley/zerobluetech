@@ -186,9 +186,7 @@ const buyHoursIsExternal = buyHoursUrl.startsWith('http');
 
 					messageEl.classList.remove('hidden', 'text-red-500', 'text-green-500');
 					if (response.ok) {
-						messageEl.classList.add('text-green-500');
-						messageEl.textContent = 'Message sent successfully! We\'ll get back to you soon.';
-						form.reset();
+						window.location.assign('/contact-thank-you/');
 					} else {
 						messageEl.classList.add('text-red-500');
 						messageEl.textContent = data.error || 'Something went wrong. Please try again.';

@@ -31,7 +31,9 @@ export default defineConfig({
   adapter: netlify(),
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.endsWith('/contact-thank-you/'),
+    }),
     tailwind({
       applyBaseStyles: false, // We'll use our own global.css
     })

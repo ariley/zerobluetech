@@ -1,0 +1,65 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const consultationUrl = 'https://calendly.com/agnesriley';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<BaseHead
+			title="Message Sent - ZeroBlue"
+			description="Thank you for contacting ZeroBlue. We received your message and will respond soon."
+			robots="noindex,follow"
+		/>
+	</head>
+	<body class="site-body">
+		<Header />
+
+		<section class="hero-panel">
+			<div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+				<div class="eyebrow"><span class="h-2 w-2 rounded-full bg-teal-400"></span>Message received</div>
+				<h1 class="hero-title">Thanks for contacting ZeroBlue.</h1>
+				<p class="hero-subtitle">
+					Your message was submitted successfully. We will review it and respond as soon as practical.
+				</p>
+			</div>
+		</section>
+
+		<main class="site-main">
+			<section class="py-12 lg:py-16">
+				<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+					<div class="surface-card p-8 lg:p-10">
+						<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">What happens next</p>
+						<h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+							We will read the details before recommending a next step.
+						</h2>
+						<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+							If your request is about a FileMaker audit, AI integration, server setup, monitoring, or a web application,
+							include any extra context in a follow-up email if it would help us understand the system.
+						</p>
+					</div>
+
+					<div class="surface-card p-8 lg:p-10">
+						<h2 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">Useful next links</h2>
+						<div class="mt-6 grid gap-3">
+							<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+								Schedule a Consultation
+							</a>
+							<a href="/services/" class="btn-secondary">
+								Review Services
+							</a>
+							<a href="/blog/" class="btn-secondary">
+								Read FileMaker Notes
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
