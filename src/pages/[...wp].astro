@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter, nextPost, previousPost } = Astro.props
-const { title, date, pubDate, categories } = frontmatter
+const { title, date, pubDate, updatedDate, categories, tags, author, heroImage } = frontmatter
 const postDate = pubDate || date
 const formattedDate = postDate && new Date(postDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })
 const category = categories && categories.length > 0 ? categories[0] : null
@@ -55,7 +55,16 @@ const postCtas = [
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <BaseHead title={title} description={frontmatter.description || title} />
+    <BaseHead
+      title={title}
+      description={frontmatter.description || title}
+      image={heroImage}
+      type="article"
+      publishedTime={postDate}
+      modifiedTime={updatedDate || postDate}
+      author={author}
+      tags={[...(categories || []), ...(tags || [])]}
+    />
   </head>
   <body class="site-body">
     <Header />

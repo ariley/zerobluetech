@@ -5,14 +5,24 @@ import Footer from "../components/Footer.astro"
 import PostFooter from "../components/PostFooter.astro"
 
 const {
-	frontmatter: { title, description, date, updatedDate, heroImage },
+	frontmatter: { title, description, date, pubDate, updatedDate, heroImage, author, tags, categories },
 } = Astro.props
+const postDate = pubDate || date
 const formattedDate = date && new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })
 ---
 
 <html lang="en" class="scroll-smooth">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead
+			title={title}
+			description={description || title}
+			image={heroImage}
+			type="article"
+			publishedTime={postDate}
+			modifiedTime={updatedDate || postDate}
+			author={author}
+			tags={[...(categories || []), ...(tags || [])]}
+		/>
 	</head>
 
 	<body class="site-body">
