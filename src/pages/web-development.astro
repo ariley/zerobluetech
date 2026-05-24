@@ -6,8 +6,13 @@ const consultationUrl = 'https://calendly.com/agnesriley';
 const services = [
 	{
 		title: 'Next.js and React Applications',
-		body: 'Build practical web applications for dashboards, portals, internal tools, data entry, reporting, and operational workflows.',
+		body: 'Build practical web applications for dashboards, portals, internal tools, data entry, reporting, responsive interfaces, and operational workflows.',
 		points: ['React interfaces for real business workflows', 'Server-side routes, APIs, auth, and database-backed features'],
+	},
+	{
+		title: 'Mobile and Responsive Development',
+		body: 'Design tablet, phone, and desktop workflows for teams that need reliable access in the office, in the field, or on the floor.',
+		points: ['Responsive Next.js, Astro, and React interfaces', 'FileMaker Go workflows for iPhone and iPad'],
 	},
 	{
 		title: 'Astro Sites and Content Systems',
@@ -21,8 +26,8 @@ const services = [
 	},
 	{
 		title: 'FileMaker and Web Integration',
-		body: 'Connect FileMaker to modern web apps where a browser interface, portal, public form, or API layer makes the system more useful.',
-		points: ['FileMaker API and integration patterns', 'Web forms, portals, dashboards, and automation'],
+		body: 'Connect FileMaker to modern web and mobile apps where a browser interface, portal, public form, FileMaker Go layout, or API layer makes the system more useful.',
+		points: ['FileMaker API and integration patterns', 'Web forms, mobile workflows, portals, dashboards, and automation'],
 	},
 	{
 		title: 'AI-Enabled Web Workflows',
@@ -39,7 +44,7 @@ const services = [
 const approach = [
 	{
 		title: 'Start with the workflow',
-		body: 'A web app should match how the business actually works: who enters data, who reviews it, who needs reports, and what has to happen next.',
+		body: 'An app should match how the business actually works: who enters data, who reviews it, who needs reports, which device they use, and what has to happen next.',
 	},
 	{
 		title: 'Choose the stack for the job',
@@ -54,39 +59,77 @@ const approach = [
 		body: 'Most businesses already have data somewhere. The web layer should connect to that reality instead of creating another silo.',
 	},
 ];
+
+const mobileHighlights = [
+	{
+		title: 'FileMaker Go',
+		body: 'iPhone and iPad workflows for scanning, field data capture, approvals, inspections, inventory, and operational entry screens.',
+	},
+	{
+		title: 'Responsive web',
+		body: 'Browser interfaces that hold together on desktop, tablet, and phone without hiding the fields and actions people need.',
+	},
+	{
+		title: 'Device-aware flow',
+		body: 'Layouts, touch targets, forms, and navigation planned around the worker, the setting, and the data quality risk.',
+	},
+];
 ---
 
 <PageLayout
 	title="Modern Web Application Development - ZeroBlue"
-	description="Modern web application and site development with Next.js, Astro, React, database back ends, AI workflows, and FileMaker integration."
-	heroTitle="Modern Web Apps for Business Systems"
-	heroSubtitle="ZeroBlue builds practical Next.js, Astro, and React systems with the database, workflow, and integration work needed behind the screen."
-	heroEyebrow="Web apps, data, and integrations"
+	description="Modern web and mobile application development with Next.js, Astro, React, responsive interfaces, database back ends, AI workflows, FileMaker Go, and FileMaker integration."
+	heroTitle="Modern Web and Mobile Apps for Business Systems"
+	heroSubtitle="ZeroBlue builds practical Next.js, Astro, React, and FileMaker Go workflows with the database, responsive interface, and integration work needed behind the screen."
+	heroEyebrow="Web, mobile, data, and integrations"
 >
 	<Fragment slot="heroVisual">
-		<div class="surface-card p-6">
+		<div class="surface-card overflow-hidden p-6">
 			<div class="color-strip mb-5"></div>
-			<div class="space-y-4">
-				<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/70">
-					<div class="flex items-center justify-between gap-4">
-						<h2 class="font-semibold text-slate-950 dark:text-white">Application stack</h2>
-						<span class="rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-800 dark:bg-sky-500/15 dark:text-sky-200">Modern</span>
+			<div class="relative min-h-[370px]">
+				<div class="absolute left-0 top-4 w-[82%] rounded-[1.4rem] border border-slate-300 bg-slate-900 p-3 shadow-2xl shadow-slate-900/20 dark:border-slate-700 dark:bg-slate-800">
+					<div class="rounded-[1rem] bg-white p-4 dark:bg-slate-950">
+						<div class="flex items-center justify-between border-b border-slate-200 pb-3 dark:border-slate-800">
+							<div class="h-3 w-28 rounded-full bg-sky-200 dark:bg-sky-500/30"></div>
+							<div class="flex gap-2">
+								<div class="h-3 w-3 rounded-full bg-teal-300"></div>
+								<div class="h-3 w-3 rounded-full bg-amber-300"></div>
+							</div>
+						</div>
+						<div class="mt-4 grid gap-3 sm:grid-cols-[0.85fr_1.15fr]">
+							<div class="space-y-3">
+								<div class="h-16 rounded-xl bg-sky-100 dark:bg-sky-500/15"></div>
+								<div class="h-24 rounded-xl bg-teal-100 dark:bg-teal-500/15"></div>
+							</div>
+							<div class="space-y-3">
+								<div class="h-4 w-40 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+								<div class="h-3 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+								<div class="h-3 w-4/5 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+								<div class="grid grid-cols-2 gap-3 pt-2">
+									<div class="h-20 rounded-xl bg-amber-100 dark:bg-amber-500/15"></div>
+									<div class="h-20 rounded-xl bg-slate-100 dark:bg-slate-900"></div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<p class="mt-2 text-slate-700 dark:text-slate-300">Next.js, Astro, React, APIs, auth, hosting, and deployment.</p>
 				</div>
-				<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/70">
-					<div class="flex items-center justify-between gap-4">
-						<h2 class="font-semibold text-slate-950 dark:text-white">Data layer</h2>
-						<span class="rounded-full bg-teal-100 px-3 py-1 text-sm font-semibold text-teal-800 dark:bg-teal-500/15 dark:text-teal-200">Structured</span>
+
+				<div class="absolute bottom-2 right-0 w-[31%] min-w-[150px] rounded-[2rem] border border-slate-300 bg-slate-950 p-2 shadow-2xl shadow-slate-900/25 dark:border-slate-700">
+					<div class="mx-auto mb-2 h-1.5 w-12 rounded-full bg-slate-700"></div>
+					<div class="rounded-[1.45rem] bg-white p-3 dark:bg-slate-950">
+						<div class="h-3 w-20 rounded-full bg-sky-200 dark:bg-sky-500/30"></div>
+						<div class="mt-4 space-y-2">
+							<div class="h-12 rounded-xl bg-teal-100 dark:bg-teal-500/15"></div>
+							<div class="h-12 rounded-xl bg-sky-100 dark:bg-sky-500/15"></div>
+							<div class="h-12 rounded-xl bg-amber-100 dark:bg-amber-500/15"></div>
+						</div>
+						<div class="mt-4 h-9 rounded-xl bg-slate-900 dark:bg-sky-500"></div>
 					</div>
-					<p class="mt-2 text-slate-700 dark:text-slate-300">Postgres, MySQL, SQLite, FileMaker, APIs, and practical data modeling.</p>
 				</div>
-				<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900/70">
-					<div class="flex items-center justify-between gap-4">
-						<h2 class="font-semibold text-slate-950 dark:text-white">Business workflows</h2>
-						<span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-900 dark:bg-amber-500/15 dark:text-amber-200">Useful</span>
-					</div>
-					<p class="mt-2 text-slate-700 dark:text-slate-300">Dashboards, portals, forms, reports, automation, and AI-assisted work.</p>
+
+				<div class="absolute bottom-8 left-8 max-w-[58%] rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-lg shadow-slate-900/10 dark:border-slate-700 dark:bg-slate-900/95">
+					<h2 class="font-semibold text-slate-950 dark:text-white">Responsive operations</h2>
+					<p class="mt-1 text-sm leading-6 text-slate-700 dark:text-slate-300">Web, tablet, phone, FileMaker Go, APIs, data, and AI workflows.</p>
 				</div>
 			</div>
 		</div>
@@ -101,7 +144,8 @@ const approach = [
 				</h2>
 				<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
 					ZeroBlue focuses on web systems that need more than a pretty page: data entry, dashboards,
-					customer or staff portals, FileMaker integration, API work, reporting, AI workflows, and reliable deployment.
+					customer or staff portals, responsive mobile access, FileMaker Go workflows, FileMaker integration,
+					API work, reporting, AI workflows, and reliable deployment.
 				</p>
 				<div class="mt-8 flex flex-col gap-3 sm:flex-row">
 					<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
@@ -133,8 +177,75 @@ const approach = [
 		</div>
 	</section>
 
+	<section id="mobile-development" class="py-12 lg:py-16">
+		<div class="surface-card overflow-hidden">
+			<div class="color-strip"></div>
+			<div class="grid gap-10 p-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:p-10">
+				<div>
+					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Mobile development</p>
+					<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+						Tablet and phone workflows for people doing the work.
+					</h2>
+					<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+						Mobile development is not just shrinking a desktop screen. FileMaker Go, responsive web apps,
+						and tablet interfaces need clear forms, durable data flow, touch-friendly controls, and process checks
+						that reduce errors where the work happens.
+					</p>
+					<div class="mt-8 grid gap-4">
+						{mobileHighlights.map((item) => (
+							<div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-900/70">
+								<h3 class="font-semibold text-slate-950 dark:text-white">{item.title}</h3>
+								<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{item.body}</p>
+							</div>
+						))}
+					</div>
+				</div>
+
+				<div class="relative min-h-[410px]" aria-hidden="true">
+					<div class="absolute left-0 top-6 w-[76%] rounded-[1.75rem] border border-slate-300 bg-slate-900 p-3 shadow-2xl shadow-slate-900/20 dark:border-slate-700 dark:bg-slate-800">
+						<div class="rounded-[1.25rem] bg-white p-5 dark:bg-slate-950">
+							<div class="flex items-center gap-2">
+								<div class="h-3 w-3 rounded-full bg-sky-400"></div>
+								<div class="h-3 w-28 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+							</div>
+							<div class="mt-5 grid gap-4 sm:grid-cols-[0.8fr_1.2fr]">
+								<div class="space-y-3">
+									<div class="h-28 rounded-2xl bg-sky-100 dark:bg-sky-500/15"></div>
+									<div class="grid grid-cols-2 gap-3">
+										<div class="h-16 rounded-xl bg-teal-100 dark:bg-teal-500/15"></div>
+										<div class="h-16 rounded-xl bg-amber-100 dark:bg-amber-500/15"></div>
+									</div>
+								</div>
+								<div class="space-y-3">
+									<div class="h-4 w-2/3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+									<div class="h-3 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+									<div class="h-3 w-5/6 rounded-full bg-slate-200 dark:bg-slate-800"></div>
+									<div class="h-16 rounded-xl bg-slate-100 dark:bg-slate-900"></div>
+									<div class="h-10 rounded-xl bg-sky-500"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="absolute bottom-0 right-4 w-[34%] min-w-[155px] rounded-[2rem] border border-slate-300 bg-slate-950 p-2 shadow-2xl shadow-slate-900/25 dark:border-slate-700">
+						<div class="mx-auto mb-2 h-1.5 w-12 rounded-full bg-slate-700"></div>
+						<div class="rounded-[1.5rem] bg-white p-3 dark:bg-slate-950">
+							<div class="h-3 w-16 rounded-full bg-teal-200 dark:bg-teal-500/30"></div>
+							<div class="mt-4 space-y-3">
+								<div class="h-14 rounded-xl bg-sky-100 dark:bg-sky-500/15"></div>
+								<div class="h-14 rounded-xl bg-teal-100 dark:bg-teal-500/15"></div>
+								<div class="h-14 rounded-xl bg-amber-100 dark:bg-amber-500/15"></div>
+								<div class="h-10 rounded-xl bg-slate-900 dark:bg-sky-500"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section id="web-services" class="py-12 lg:py-16">
-		<div class="mx-auto max-w-3xl text-center">
+		<div class="max-w-3xl">
 			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">What we build</p>
 			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
 				Modern web development connected to real business data.
@@ -198,7 +309,7 @@ const approach = [
 				<p class="mt-4 max-w-3xl text-lg leading-8 text-slate-700 dark:text-slate-300">
 					Bring the current process, the data source, or the system that needs a better interface.
 					ZeroBlue can help decide whether the right answer is Astro, Next.js, React, FileMaker integration,
-					a database-backed app, or a smaller targeted fix.
+					a responsive mobile interface, a FileMaker Go workflow, a database-backed app, or a smaller targeted fix.
 				</p>
 			</div>
 			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
