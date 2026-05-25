@@ -6,7 +6,7 @@
     :root {
         color-scheme: light;
         --zb-page: #f8fafc;
-        --zb-text: #0f172a;
+        --zb-text: #1e293b;
         --zb-text-muted: #334155;
         --zb-surface: rgba(255, 255, 255, 0.92);
         --zb-surface-border: rgba(203, 213, 225, 0.95);
@@ -94,7 +94,7 @@
     }
 
     .hero-title {
-        @apply text-balance text-5xl font-bold leading-[1.15] tracking-tight text-slate-950 dark:text-white md:text-6xl md:leading-[1.12];
+        @apply text-balance text-5xl font-bold leading-[1.15] text-slate-800 dark:text-white md:text-6xl md:leading-[1.12];
     }
 
     .hero-subtitle {
@@ -102,15 +102,15 @@
     }
 
     .eyebrow {
-        @apply mb-5 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm shadow-sky-900/5 backdrop-blur dark:border-sky-400/20 dark:bg-slate-950/60 dark:text-sky-200;
+        @apply mb-5 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm shadow-sky-900/5 backdrop-blur dark:border-sky-400/20 dark:bg-slate-900/60 dark:text-sky-200;
     }
 
     .surface-card {
-        @apply rounded-2xl border border-slate-200 bg-white/90 shadow-lg shadow-slate-900/5 backdrop-blur transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/85 dark:shadow-black/20;
+        @apply rounded-2xl border border-slate-200 bg-white/90 shadow-lg shadow-slate-900/5 backdrop-blur transition-all duration-300 dark:border-slate-700 dark:bg-slate-900/85 dark:shadow-slate-900/20;
     }
 
     .theme-title {
-        color: #0f172a;
+        color: #1e293b;
         color: var(--zb-text);
     }
 
