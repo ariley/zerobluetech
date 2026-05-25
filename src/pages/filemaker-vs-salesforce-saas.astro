@@ -1,0 +1,310 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const consultationUrl = 'https://calendly.com/agnesriley';
+
+const platforms = [
+	{
+		name: 'Claris FileMaker',
+		bestFor: 'Custom internal systems that need to match the business process closely.',
+		strength: 'Fast custom app development, local business logic, FileMaker Pro, FileMaker Go, WebDirect, server hosting, APIs, and direct control over the data model.',
+		watch: 'Requires real architecture discipline as the system grows. Older files often need audit work before modernization.',
+	},
+	{
+		name: 'Salesforce',
+		bestFor: 'CRM-centered operations where sales, service, marketing, reporting, and enterprise governance are the core of the system.',
+		strength: 'Mature CRM platform, point-and-click page building, Flow automation, mobile support, security model, app marketplace, and large implementation ecosystem.',
+		watch: 'Excellent when the work belongs inside Salesforce. Expensive and complex when the business process is not fundamentally CRM-shaped.',
+	},
+	{
+		name: 'Microsoft Power Apps',
+		bestFor: 'Organizations already standardized on Microsoft 365, Entra ID, SharePoint, Dataverse, Teams, and Power Automate.',
+		strength: 'Strong connector ecosystem, Microsoft identity, Dataverse, canvas and model-driven apps, and deep fit with Microsoft business environments.',
+		watch: 'Licensing, environment governance, connector choices, and data design need early planning.',
+	},
+	{
+		name: 'Airtable',
+		bestFor: 'Collaborative tracking, lightweight operations, content calendars, approvals, and spreadsheet-like workflows that need better interfaces.',
+		strength: 'Fast setup, approachable data tables, interfaces, automations, and team-friendly views.',
+		watch: 'Best for lighter operational workflows. Complex permissions, transactional logic, and highly customized application behavior can outgrow it.',
+	},
+	{
+		name: 'Quickbase',
+		bestFor: 'Operational apps where teams want a web-first low-code database with forms, tables, workflow, and dashboards.',
+		strength: 'No-code and low-code app building, web access, workflow structure, reporting, and a platform designed for operational applications.',
+		watch: 'As with any platform, long-term support depends on clean data modeling, permission design, and integration planning.',
+	},
+];
+
+const decisionSignals = [
+	{
+		title: 'Choose FileMaker when the workflow is specific',
+		body: 'FileMaker is often the right fit when the business has a real operating system hiding in spreadsheets, legacy files, scripts, PDFs, barcode flows, approval steps, or specialized screens.',
+	},
+	{
+		title: 'Choose Salesforce when CRM is the center',
+		body: 'Salesforce makes the most sense when accounts, contacts, opportunities, cases, campaigns, service work, reports, and CRM governance are the primary shape of the system.',
+	},
+	{
+		title: 'Choose SaaS when the workflow already fits',
+		body: 'A SaaS app is usually better than custom development when the standard product already supports the process with only light configuration.',
+	},
+	{
+		title: 'Choose integration when the answer is not one system',
+		body: 'Many businesses do not need a replacement. They need FileMaker connected to Salesforce, a website, accounting, inventory, email, AI, or reporting so each tool stays in its lane.',
+	},
+];
+
+const comparisonRows = [
+	{
+		label: 'Primary shape',
+		filemaker: 'Custom operational database and app',
+		salesforce: 'CRM and enterprise platform',
+		saas: 'Productized workflow or low-code cloud app',
+	},
+	{
+		label: 'Best first question',
+		filemaker: 'What does our process actually require?',
+		salesforce: 'Is this primarily CRM, service, or revenue operations?',
+		saas: 'Does an existing product already do enough?',
+	},
+	{
+		label: 'Customization',
+		filemaker: 'High control over tables, scripts, layouts, integrations, and deployment choices',
+		salesforce: 'High inside Salesforce patterns, especially with objects, pages, Flow, and custom components',
+		saas: 'Varies widely; fast when within product boundaries',
+	},
+	{
+		label: 'Data ownership and access',
+		filemaker: 'Hosted database with FileMaker Server, FileMaker Cloud, APIs, ODBC/JDBC options, and integration choices',
+		salesforce: 'Cloud platform data model, APIs, security model, and Salesforce ecosystem',
+		saas: 'Usually cloud-hosted, vendor-specific data model and export/API options',
+	},
+	{
+		label: 'Mobile and web',
+		filemaker: 'FileMaker Go, WebDirect, custom web layers, and API-backed apps',
+		salesforce: 'Salesforce mobile app and Lightning Experience',
+		saas: 'Browser-first, with mobile support depending on vendor',
+	},
+	{
+		label: 'Risk',
+		filemaker: 'Poor architecture can create fragile legacy systems',
+		salesforce: 'Overcustomization and licensing complexity can create expensive operations',
+		saas: 'Vendor limits and product fit can force awkward workarounds',
+	},
+];
+
+const sourceLinks = [
+	{ label: 'Claris FileMaker low-code platform', href: 'https://www.claris.com/apps/low-code/' },
+	{ label: 'Claris FileMaker connector documentation', href: 'https://help.claris.com/en/connect-help/content/working-with-claris-filemaker.html' },
+	{ label: 'Salesforce Lightning App Builder help', href: 'https://help.salesforce.com/s/articleView?id=sf.lightning_app_builder_overview.htm&language=en_US&type=5' },
+	{ label: 'Salesforce mobile app page guidance', href: 'https://help.salesforce.com/s/articleView?id=platform.lightning_app_builder_mobile_guidance.htm&language=en_US&type=5' },
+	{ label: 'Microsoft Power Apps connectors', href: 'https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerapps-connectors' },
+	{ label: 'Airtable automations', href: 'https://www.airtable.com/product/automations' },
+	{ label: 'Quickbase app creation help', href: 'https://help.quickbase.com/docs/build-apps-creating-apps' },
+];
+---
+
+<PageLayout
+	title="FileMaker vs Salesforce vs SaaS Apps - ZeroBlue"
+	description="Compare Claris FileMaker, Salesforce, Power Apps, Airtable, Quickbase, and other SaaS apps for custom business systems, CRM, low-code workflows, and integration decisions."
+	heroTitle="FileMaker vs Salesforce vs SaaS Apps"
+	heroSubtitle="A practical decision guide for teams choosing between a custom FileMaker system, Salesforce, Microsoft Power Apps, Airtable, Quickbase, or another SaaS platform."
+	heroEyebrow="Platform Comparison"
+>
+	<section class="py-12 lg:py-16">
+		<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+			<div class="surface-card p-8 lg:p-10">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">The short version</p>
+				<h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+					The right platform depends on whether you are buying a process, building a process, or connecting processes.
+				</h2>
+				<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+					FileMaker, Salesforce, Power Apps, Airtable, Quickbase, and vertical SaaS tools can all be good choices.
+					The mistake is treating them as interchangeable. A CRM platform, a custom operational database, and a
+					spreadsheet-like workflow tool solve different problems.
+				</p>
+				<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+					<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+						Discuss Your System
+					</a>
+					<a href="#comparison" class="btn-secondary">
+						Compare Options
+					</a>
+				</div>
+			</div>
+
+			<div class="surface-card p-8 lg:p-10">
+				<h2 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">A useful rule</h2>
+				<div class="mt-6 space-y-4 text-slate-700 dark:text-slate-300">
+					<p class="leading-7">
+						If the workflow already looks like the SaaS product, buy the SaaS product.
+					</p>
+					<p class="leading-7">
+						If the workflow is a core operating advantage or has years of business-specific logic, consider FileMaker
+						or another custom system.
+					</p>
+					<p class="leading-7">
+						If the workflow is customer, opportunity, case, or service centered, Salesforce deserves serious evaluation.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="comparison" class="py-12 lg:py-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Platform fit</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+				What each option is usually best at.
+			</h2>
+		</div>
+
+		<div class="mt-10 grid gap-6 lg:grid-cols-2">
+			{platforms.map((platform, index) => (
+				<article class:list={[
+					'surface-card surface-card-hover p-7',
+					index === 0 ? 'lg:col-span-2 lg:grid lg:grid-cols-[0.65fr_1fr] lg:gap-8' : '',
+				]}>
+					<div>
+						<div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-100 text-lg font-bold text-sky-700 dark:bg-sky-500/15 dark:text-sky-200">
+							{index + 1}
+						</div>
+						<h3 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">{platform.name}</h3>
+						<p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{platform.bestFor}</p>
+					</div>
+					<div class="mt-6 space-y-4 lg:mt-0">
+						<div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-900/70">
+							<p class="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300">Strength</p>
+							<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{platform.strength}</p>
+						</div>
+						<div class="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-900/70">
+							<p class="text-sm font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300">Watch for</p>
+							<p class="mt-2 leading-7 text-slate-700 dark:text-slate-300">{platform.watch}</p>
+						</div>
+					</div>
+				</article>
+			))}
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="surface-card overflow-hidden">
+			<div class="color-strip"></div>
+			<div class="p-6 lg:p-10">
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Side-by-side</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+					FileMaker, Salesforce, and SaaS apps solve different classes of problems.
+				</h2>
+				<div class="mt-8 overflow-x-auto">
+					<table class="min-w-full divide-y divide-slate-200 text-left text-sm dark:divide-slate-700">
+						<thead>
+							<tr class="text-slate-950 dark:text-white">
+								<th scope="col" class="w-44 px-4 py-3 font-semibold">Question</th>
+								<th scope="col" class="px-4 py-3 font-semibold">FileMaker</th>
+								<th scope="col" class="px-4 py-3 font-semibold">Salesforce</th>
+								<th scope="col" class="px-4 py-3 font-semibold">Other SaaS apps</th>
+							</tr>
+						</thead>
+						<tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+							{comparisonRows.map((row) => (
+								<tr>
+									<th scope="row" class="px-4 py-4 font-semibold text-slate-950 dark:text-white">{row.label}</th>
+									<td class="px-4 py-4 leading-6 text-slate-700 dark:text-slate-300">{row.filemaker}</td>
+									<td class="px-4 py-4 leading-6 text-slate-700 dark:text-slate-300">{row.salesforce}</td>
+									<td class="px-4 py-4 leading-6 text-slate-700 dark:text-slate-300">{row.saas}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Decision signals</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+				The best choice is usually visible in the workflow.
+			</h2>
+		</div>
+		<div class="mt-10 grid gap-6 md:grid-cols-2">
+			{decisionSignals.map((signal) => (
+				<article class="surface-card surface-card-hover p-7">
+					<h3 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">{signal.title}</h3>
+					<p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{signal.body}</p>
+				</article>
+			))}
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">ZeroBlue perspective</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white md:text-4xl">
+					Do not replace a working FileMaker system just because SaaS sounds modern.
+				</h2>
+				<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
+					Also do not keep extending a FileMaker file when the business has clearly moved into a standard CRM,
+					accounting, ticketing, ecommerce, or field-service pattern. The practical answer may be an audit,
+					a replacement, or an integration plan.
+				</p>
+			</div>
+			<div class="surface-card p-8">
+				<h3 class="text-2xl font-bold tracking-tight text-slate-950 dark:text-white">Good next steps</h3>
+				<ul class="mt-6 space-y-4">
+					<li class="flex gap-3 text-slate-700 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>Map the core workflow before comparing feature checklists.</span>
+					</li>
+					<li class="flex gap-3 text-slate-700 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>Identify which data must stay authoritative and which systems only need a copy.</span>
+					</li>
+					<li class="flex gap-3 text-slate-700 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>Compare licensing, implementation, support, migration, and integration cost together.</span>
+					</li>
+					<li class="flex gap-3 text-slate-700 dark:text-slate-300">
+						<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-teal-500"></span>
+						<span>Audit existing FileMaker files before deciding they are obsolete.</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="surface-card p-8 lg:p-10">
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Reference docs</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-950 dark:text-white">Documentation used for this comparison.</h2>
+			<ul class="mt-6 grid gap-3 sm:grid-cols-2">
+				{sourceLinks.map((source) => (
+					<li>
+						<a href={source.href} target="_blank" rel="noopener noreferrer" class="accent-link">
+							{source.label}
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
+	</section>
+
+	<section class="rounded-2xl bg-slate-950 p-8 text-white shadow-xl shadow-slate-900/20 dark:bg-sky-950 lg:p-12">
+		<div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-wider text-teal-300">Need a platform decision?</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Start with the workflow, data, and support model.</h2>
+				<p class="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+					ZeroBlue can review an existing FileMaker system, compare SaaS replacement options, or design the integration
+					path that lets each system do the right job.
+				</p>
+			</div>
+			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+				Schedule a Consultation
+			</a>
+		</div>
+	</section>
+</PageLayout>
