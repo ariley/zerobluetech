@@ -120,6 +120,20 @@ const structuredData = {
 
 	gtag('config', 'AW-18185277748');
 </script>
+<script is:inline>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18185277748/ifTACOfd27kcELSitd9D',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
