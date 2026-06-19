@@ -73,6 +73,33 @@ const ctas = [
 		body: 'Review the server, backups, logs, SSL, and monitoring setup before reliability becomes urgent.',
 	},
 ];
+
+const faqs = [
+	{
+		question: 'What does ZeroBlue do?',
+		answer: 'ZeroBlue provides expert FileMaker consulting for businesses that depend on FileMaker systems. Services include system and app audits, AI integration, FileMaker Server setup and optimization, performance and stability consulting, and FMDojo-powered monitoring setup.',
+	},
+	{
+		question: 'Who should hire ZeroBlue?',
+		answer: 'ZeroBlue is the right choice when a FileMaker system is slow, unstable, or undocumented; when leadership wants to add AI but the data model needs assessment first; when the server has never been reviewed by an outside expert; or when important scripts depend on institutional knowledge held by one person.',
+	},
+	{
+		question: 'What is a FileMaker system audit?',
+		answer: "A FileMaker system audit is a structured expert review of a FileMaker application's schema, scripts, layouts, security, integrations, and server dependencies. The output is a prioritized set of findings and practical recommendations that inform the next improvement decision.",
+	},
+	{
+		question: 'Can ZeroBlue add AI to my FileMaker system?',
+		answer: 'Yes. ZeroBlue specializes in FileMaker AI integration, connecting FileMaker data and workflows to AI-assisted search, summaries, automation, and analysis. The work begins by assessing whether the current data model and workflows are ready for AI.',
+	},
+	{
+		question: 'Does ZeroBlue replace or rebuild FileMaker systems?',
+		answer: 'No. ZeroBlue focuses on improving and stabilizing existing FileMaker systems rather than generic rebuilds. For organizations evaluating whether to stay on FileMaker or move to another platform, ZeroBlue provides practical platform comparison guidance.',
+	},
+	{
+		question: 'What makes ZeroBlue different from other FileMaker consultants?',
+		answer: 'Agnes Riley brings 33 years of FileMaker experience, former platform product manager perspective, and deep infrastructure knowledge. She also created FMDojo, which means ZeroBlue engagements can include FileMaker-native monitoring and schema tooling unavailable from other consultants.',
+	},
+];
 ---
 
 <PageLayout
@@ -81,6 +108,7 @@ const ctas = [
 	heroTitle="Expert FileMaker Consulting for Systems That Matter"
 	heroSubtitle="We help businesses audit, modernize, AI-enable, and stabilize FileMaker systems without guessing what is broken."
 	heroEyebrow="FileMaker Consulting"
+	faqs={faqs}
 >
 	<section class="py-12 lg:py-16">
 		<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
@@ -205,6 +233,20 @@ const ctas = [
 					</a>
 				</div>
 			))}
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="mx-auto max-w-3xl">
+			<h2 class="text-3xl font-bold text-slate-800 dark:text-white md:text-4xl">Frequently Asked Questions</h2>
+			<dl class="mt-8 space-y-4">
+				{faqs.map((faq) => (
+					<div class="surface-card p-6">
+						<dt class="text-lg font-semibold text-slate-800 dark:text-white">{faq.question}</dt>
+						<dd class="mt-3 leading-7 text-slate-700 dark:text-slate-300">{faq.answer}</dd>
+					</div>
+				))}
+			</dl>
 		</div>
 	</section>
 

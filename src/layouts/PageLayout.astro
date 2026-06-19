@@ -9,6 +9,7 @@ interface Props {
   heroTitle: string;
   heroSubtitle?: string;
   heroEyebrow?: string;
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 const {
@@ -17,13 +18,14 @@ const {
   heroTitle,
   heroSubtitle,
   heroEyebrow = "ZeroBlue Technology Solutions",
+  faqs,
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} faqs={faqs} />
   </head>
 
   <body class="site-body">

@@ -14,6 +14,7 @@ export interface Props {
 	modifiedTime?: string | Date;
 	author?: string;
 	tags?: string[];
+	faqs?: Array<{ question: string; answer: string }>;
 }
 
 const {
@@ -26,6 +27,7 @@ const {
 	modifiedTime,
 	author,
 	tags = [],
+	faqs = [],
 } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const socialImageUrl = new URL(image, Astro.site ?? Astro.url).toString();
@@ -66,6 +68,21 @@ const pageSchema = type === 'article'
 			about: { '@id': organizationId },
 			inLanguage: 'en-US',
 		};
+const founderId = 'https://zerobluetech.com/#founder';
+const faqSchema = faqs.length > 0
+	? {
+			'@type': 'FAQPage',
+			'@id': `${canonicalUrl}#faq`,
+			mainEntity: faqs.map((faq) => ({
+				'@type': 'Question',
+				name: faq.question,
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: faq.answer,
+				},
+			})),
+		}
+	: null;
 const structuredData = {
 	'@context': 'https://schema.org',
 	'@graph': [
@@ -78,6 +95,7 @@ const structuredData = {
 			logo: new URL('/favicon.svg', Astro.site ?? Astro.url).toString(),
 			description: SITE_DESCRIPTION,
 			areaServed: 'United States',
+			founder: { '@id': founderId },
 			serviceType: [
 				'FileMaker consulting',
 				'FileMaker system audits',
@@ -98,6 +116,22 @@ const structuredData = {
 			],
 		},
 		{
+			'@type': 'Person',
+			'@id': founderId,
+			name: 'Agnes Riley',
+			jobTitle: 'Founder, FileMaker Consultant',
+			worksFor: { '@id': organizationId },
+			description: 'FileMaker expert with 33 years of experience. Former FileMaker platform product manager. Creator of FMDojo.',
+			knowsAbout: [
+				'Claris FileMaker',
+				'FileMaker Server',
+				'FileMaker AI integration',
+				'Database architecture',
+				'Business process automation',
+				'FileMaker performance and stability',
+			],
+		},
+		{
 			'@type': 'WebSite',
 			'@id': websiteId,
 			url: 'https://zerobluetech.com/',
@@ -107,6 +141,7 @@ const structuredData = {
 			inLanguage: 'en-US',
 		},
 		pageSchema,
+		...(faqSchema ? [faqSchema] : []),
 	],
 };
 ---
