@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
-import netlify from '@astrojs/netlify'
+import node from '@astrojs/node'
 import tailwind from '@astrojs/tailwind'
 import remarkBreaks from 'remark-breaks' // improves support for newlines in markdown files
 import remarkGfm from 'remark-gfm' // support rendering tables in markdown files
@@ -27,8 +27,8 @@ const remarkEmbedPlugin = [remarkEmbedder.default, {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://zerobluetech.com',
-  output: 'static', // Static mode now supports API routes with adapter
-  adapter: netlify(),
+  output: 'static',
+  adapter: node({ mode: 'standalone' }),
   integrations: [
     mdx(),
     sitemap({
