@@ -6,38 +6,62 @@ const consultationUrl = 'https://calendly.com/agnesriley';
 
 const focusAreas = [
 	{
-		title: 'Audit the system',
-		body: 'Review schema, scripts, layouts, security, integrations, server configuration, and performance risks before deciding what to fix.',
+		kicker: 'Slow file',
+		title: 'The file is slow and no one knows why',
+		body: 'I look at the schema, scripts, layouts, server, and workflow together so we can stop treating symptoms and find the real bottleneck.',
+		accent: 'bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-200',
+		lines: ['w-11/12', 'w-8/12', 'w-10/12'],
 	},
 	{
-		title: 'Modernize the workflow',
-		body: 'Clean up processes, reduce manual work, improve reliability, and make FileMaker easier for the team to trust and use.',
+		kicker: 'Daily friction',
+		title: 'The system works, but everyone works around it',
+		body: 'We clean up the parts that make daily work harder than it needs to be: brittle scripts, confusing layouts, manual handoffs, and risky habits.',
+		accent: 'bg-teal-100 text-teal-700 dark:bg-teal-500/15 dark:text-teal-200',
+		lines: ['w-8/12', 'w-11/12', 'w-7/12'],
 	},
 	{
-		title: 'Add AI carefully',
-		body: 'Connect FileMaker to practical AI workflows for search, summaries, automation, analysis, and controlled data access.',
+		kicker: 'AI readiness',
+		title: 'You want AI, but the data has to be ready first',
+		body: 'I help decide where AI can be useful, where it needs guardrails, and where the underlying FileMaker structure should be fixed first.',
+		accent: 'bg-amber-100 text-amber-800 dark:bg-amber-500/15 dark:text-amber-200',
+		lines: ['w-9/12', 'w-6/12', 'w-10/12'],
 	},
 ];
 
 const proofPoints = [
-	{ label: '33 years FileMaker experience' },
+	{ label: '33 years working with FileMaker systems' },
 	{ label: 'Former FileMaker platform product manager' },
-	{ label: 'FileMaker infrastructure, AI, and product strategy experience' },
+	{ label: 'Hands-on with apps, servers, AI, and product strategy' },
 	{ label: 'Creator of FMDojo', href: 'https://fmdojo.com' },
 ];
 
 const stories = [
 	{
 		title: 'Sterilization workflow and QR code labeling',
-		body: 'Reviewed a barcode process, found duplicate and missing-code risks, and redesigned the flow around iPhones, on-demand Zebra printing, and better FileMaker records.',
+		body: 'The team needed labels they could trust, not another workaround. We found duplicate and missing-code risks, then rebuilt the flow around iPhones, on-demand Zebra printing, and better FileMaker records.',
 	},
 	{
 		title: 'Overnight batch reduced to 30 minutes',
-		body: 'Reworked a long-running FileMaker process into parallel scripts that processed and updated more than 70K parent records with dependent child data.',
+		body: 'A nightly process had become something everyone planned around. Reworking it into parallel FileMaker scripts cut the run time to about 30 minutes across more than 70K parent records.',
 	},
 	{
 		title: 'Live scoring systems where accuracy mattered',
-		body: 'Built FileMaker systems for live projected math competition scoring and school registration workflows where the results had to be right in real time.',
+		body: 'Some systems cannot be casually wrong. I built live projected math competition scoring and school registration workflows where the results had to be right while people were watching.',
+	},
+];
+
+const workingStyles = [
+	{
+		title: 'Focused audit',
+		body: 'An outside read before touching the system.',
+	},
+	{
+		title: 'Working sessions',
+		body: 'Side-by-side time when you want to understand the tradeoffs as we go.',
+	},
+	{
+		title: 'Implementation help',
+		body: 'Hands-on work when the next step is clear and it needs to get done.',
 	},
 ];
 ---
@@ -45,65 +69,85 @@ const stories = [
 <PageLayout
 	title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
-	heroTitle="Expert FileMaker Consulting for Systems That Matter"
-	heroSubtitle="ZeroBlue audits, modernizes, AI-enables, and stabilizes FileMaker systems without guessing what is broken."
-	heroEyebrow="FileMaker experts since 1993"
+	heroTitle="FileMaker help from someone who has lived with messy systems."
+	heroSubtitle="I help small teams understand, repair, and improve the FileMaker systems they already depend on."
+	heroEyebrow="ZeroBlue Technology Solutions"
 >
 	<Fragment slot="heroVisual">
-		<div class="surface-card p-6">
-			<div class="color-strip mb-5"></div>
-			<div class="space-y-4">
-				<a
-					href="/blog/#latest-articles"
-					class="group block rounded-xl bg-sky-100 p-4 transition hover:-translate-y-0.5 hover:bg-sky-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:bg-sky-500/15 dark:hover:bg-sky-500/25"
-				>
-					<div class="flex items-center justify-between gap-4">
-						<div class="text-sm font-semibold text-sky-700 dark:text-sky-200">Latest articles</div>
-						<span class="text-sm font-semibold text-sky-600 transition group-hover:translate-x-1 dark:text-sky-200">→</span>
+		<div class="surface-card overflow-hidden">
+			<div class="relative">
+				<img
+					src="/images/site/filemaker-consulting-workspace.webp"
+					alt="Warm workspace with database diagrams and FileMaker consulting notes"
+					width="1680"
+					height="951"
+					class="aspect-[16/11] w-full object-cover"
+					loading="eager"
+				/>
+				<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 to-transparent p-5">
+					<div class="flex items-end gap-4">
+						<img
+							src="/images/2026/05/agnes-riley-headshot-300x300.jpg"
+							srcset="/images/2026/05/agnes-riley-headshot-300x300.jpg 300w, /images/2026/05/agnes-riley-headshot.jpg 1200w"
+							sizes="80px"
+							alt="Agnes Riley"
+							width="300"
+							height="300"
+							class="h-20 w-20 rounded-xl object-cover shadow-lg shadow-slate-950/40 ring-2 ring-white/70"
+						/>
+						<div>
+							<p class="text-sm font-semibold uppercase tracking-wider text-sky-100">Hi, I am Agnes.</p>
+							<p class="mt-1 max-w-sm text-sm leading-6 text-white">
+								I work with FileMaker systems that have become important, complicated, and a little too mysterious.
+							</p>
+						</div>
 					</div>
-					<p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Read the newest FileMaker notes.</p>
+				</div>
+			</div>
+			<div class="grid gap-3 p-5 sm:grid-cols-2">
+				<a href="/about/" class="group flex items-center justify-between rounded-xl bg-sky-100 p-4 transition hover:-translate-y-0.5 hover:bg-sky-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:bg-sky-500/15 dark:hover:bg-sky-500/25">
+					<span class="font-semibold text-sky-800 dark:text-sky-100">Meet ZeroBlue</span>
+					<span class="font-semibold text-sky-700 transition group-hover:translate-x-1 dark:text-sky-200">→</span>
 				</a>
-				<a
-					href="/tag/developer/"
-					class="group block rounded-xl bg-teal-100 p-4 transition hover:-translate-y-0.5 hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:bg-teal-500/15 dark:hover:bg-teal-500/25"
-				>
-					<div class="flex items-center justify-between gap-4">
-						<div class="text-sm font-semibold text-teal-700 dark:text-teal-200">Implementation details</div>
-						<span class="text-sm font-semibold text-teal-600 transition group-hover:translate-x-1 dark:text-teal-200">→</span>
-					</div>
-					<p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Browse developer-focused build notes.</p>
-				</a>
-				<a
-					href="/portfolio/"
-					class="group block rounded-xl bg-amber-100 p-4 transition hover:-translate-y-0.5 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 dark:bg-amber-500/15 dark:hover:bg-amber-500/25"
-				>
-					<div class="flex items-center justify-between gap-4">
-						<div class="text-sm font-semibold text-amber-800 dark:text-amber-200">Client lessons</div>
-						<span class="text-sm font-semibold text-amber-700 transition group-hover:translate-x-1 dark:text-amber-200">→</span>
-					</div>
-					<p class="mt-2 text-sm text-slate-700 dark:text-slate-300">See what changed in real projects.</p>
+				<a href="/portfolio/" class="group flex items-center justify-between rounded-xl bg-teal-100 p-4 transition hover:-translate-y-0.5 hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:bg-teal-500/15 dark:hover:bg-teal-500/25">
+					<span class="font-semibold text-teal-800 dark:text-teal-100">Client stories</span>
+					<span class="font-semibold text-teal-700 transition group-hover:translate-x-1 dark:text-teal-200">→</span>
 				</a>
 			</div>
 		</div>
 	</Fragment>
 
 	<section class="py-12 lg:py-16">
-		<div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+		<div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+			<div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5 dark:border-slate-700 dark:bg-slate-900">
+				<img
+					src="/images/site/filemaker-consulting-workspace.webp"
+					alt="Database planning workspace with notes and workflow diagrams"
+					width="1680"
+					height="951"
+					class="aspect-[4/3] w-full object-cover"
+					loading="lazy"
+				/>
+				<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6">
+					<p class="max-w-md text-lg font-semibold leading-7 text-white">
+						FileMaker consulting is often part technical review, part detective work, and part business process cleanup.
+					</p>
+				</div>
+			</div>
 			<div class="surface-card p-8 lg:p-10">
-				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Expert diagnosis, practical execution</p>
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Start with what is really happening</p>
 				<h2 class="mt-4 text-3xl font-bold text-slate-800 dark:text-white md:text-4xl">
-					Bring the system that matters. Get a clear read on what is actually wrong.
+					Bring the system history, the weird symptoms, and the things your team is tired of working around.
 				</h2>
 				<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
-					ZeroBlue focuses on FileMaker systems that already carry business responsibility: production apps,
-					older databases, unstable servers, AI-ready workflows, and architecture that needs expert judgment.
+					Most FileMaker work starts with a business problem, not a feature request. The useful first step is often a clear read on what the system is doing, why people do not trust it, and which fixes are worth doing first.
 				</p>
 				<div class="mt-8 flex flex-col gap-3 sm:flex-row">
 					<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
-						Schedule a Consultation
+						Tell me what is going on
 					</a>
 					<a href="/services" class="btn-secondary">
-						View Services
+						See how I can help
 					</a>
 				</div>
 			</div>
@@ -111,8 +155,8 @@ const stories = [
 			<div class="surface-card overflow-hidden">
 				<div class="color-strip"></div>
 				<div class="p-8 lg:p-10">
-					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Credibility</p>
-					<h2 class="mt-3 text-2xl font-bold text-slate-800 dark:text-white">FileMaker work with product, server, and business context.</h2>
+					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Why the context helps</p>
+					<h2 class="mt-3 text-2xl font-bold text-slate-800 dark:text-white">I have seen FileMaker from the user, developer, server, and platform sides.</h2>
 					<div class="mt-6 grid gap-3">
 						{proofPoints.map((point) => (
 							<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200">
@@ -133,17 +177,27 @@ const stories = [
 
 	<section class="py-12 lg:py-16">
 		<div class="mx-auto max-w-3xl text-center">
-			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">How ZeroBlue helps</p>
+			<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Good reasons to call</p>
 			<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white md:text-4xl">
-				Consulting for FileMaker systems that need more than hourly help.
+				You do not need to know the fix before you ask for help.
 			</h2>
 		</div>
 
 		<div class="mt-10 grid gap-6 lg:grid-cols-3">
 			{focusAreas.map((area, index) => (
 				<article class="surface-card surface-card-hover p-7">
-					<div class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-100 text-lg font-bold text-sky-700 dark:bg-sky-500/15 dark:text-sky-200">
-						{index + 1}
+					<div class:list={['mb-6 rounded-xl p-4', area.accent]}>
+						<div class="mb-4 flex items-center justify-between">
+							<span class="text-xs font-bold uppercase tracking-wider">{area.kicker}</span>
+							<span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/70 text-sm font-bold shadow-sm shadow-slate-900/5 dark:bg-slate-950/40">
+								{index + 1}
+							</span>
+						</div>
+						<div class="space-y-2">
+							{area.lines.map((line) => (
+								<div class:list={['h-2 rounded-full bg-current opacity-35', line]}></div>
+							))}
+						</div>
 					</div>
 					<h3 class="text-2xl font-bold text-slate-800 dark:text-white">{area.title}</h3>
 					<p class="mt-4 leading-7 text-slate-700 dark:text-slate-300">{area.body}</p>
@@ -157,8 +211,31 @@ const stories = [
 			<div class="color-strip"></div>
 			<div class="grid gap-8 p-8 lg:grid-cols-[0.8fr_1.2fr] lg:p-10">
 				<div>
+					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">How we can work together</p>
+					<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white">Sometimes you need a plan. Sometimes you need another brain in the room.</h2>
+				</div>
+				<ol class="relative grid gap-4 before:absolute before:left-5 before:top-6 before:hidden before:h-[calc(100%-3rem)] before:w-0.5 before:bg-gradient-to-b before:from-sky-300 before:via-teal-300 before:to-amber-300 sm:before:block">
+					{workingStyles.map((style, index) => (
+						<li class="relative grid gap-3 rounded-xl border border-slate-200 bg-slate-50 p-5 pl-16 text-slate-700 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300">
+							<span class="absolute left-3 top-5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-bold text-sky-700 shadow-md shadow-slate-900/10 ring-1 ring-slate-200 dark:bg-slate-950 dark:text-sky-200 dark:ring-slate-700">
+								{index + 1}
+							</span>
+							<span class="font-bold text-slate-800 dark:text-white">{style.title}</span>
+							<span>{style.body}</span>
+						</li>
+					))}
+				</ol>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="surface-card overflow-hidden">
+			<div class="color-strip"></div>
+			<div class="grid gap-8 p-8 lg:grid-cols-[0.8fr_1.2fr] lg:p-10">
+				<div>
 					<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Real work, client names withheld</p>
-					<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white">Practical FileMaker outcomes.</h2>
+					<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white">Real systems, real constraints, identifying details removed.</h2>
 					<p class="mt-5 leading-7 text-slate-700 dark:text-slate-300">
 						The work is usually not glamorous at first. It is business process, risk, performance, correctness,
 						server health, and the details that keep people from fighting the system every day.
@@ -181,10 +258,10 @@ const stories = [
 			<div class="surface-card p-8 lg:p-10">
 				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">FileMaker-specific AI</p>
 				<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white">
-					Explore <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="accent-link">FMDojo</a>.
+					AI is most useful after the system makes sense.
 				</h2>
 				<p class="mt-5 leading-7 text-slate-700 dark:text-slate-300">
-					FMDojo is the FileMaker-focused AI and monitoring ecosystem created from the same practical consulting experience.
+					For FileMaker-specific AI and monitoring, explore <a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="accent-link">FMDojo</a>, built from the same practical consulting experience.
 				</p>
 			</div>
 			<div class="surface-card p-8 lg:p-10">
@@ -203,13 +280,13 @@ const stories = [
 		<div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
 			<div>
 				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Start with the real problem</p>
-				<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white md:text-4xl">Need a FileMaker audit, AI plan, or server review?</h2>
+				<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white md:text-4xl">Tell me what is going on with your FileMaker system.</h2>
 				<p class="mt-4 max-w-3xl leading-7 text-slate-700 dark:text-slate-300">
-					Bring the symptoms, goals, or system history. ZeroBlue can help decide what is worth fixing first.
+					Bring the symptoms, goals, or system history. I can help decide whether the next useful step is an audit, a working session, a server review, or a targeted fix.
 				</p>
 			</div>
 			<a href={consultationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-sky-600 px-6 py-3 font-semibold text-white shadow-lg shadow-sky-900/15 transition hover:-translate-y-0.5 hover:bg-sky-700 dark:bg-sky-500 dark:text-white dark:hover:bg-sky-600">
-				Schedule a Consultation
+				Tell me what is going on
 			</a>
 		</div>
 	</section>
