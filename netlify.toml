@@ -6,6 +6,18 @@
   NODE_VERSION = "20"
 
 [[redirects]]
+  from = "/filemaker-hosting"
+  to = "https://radfm.cloud/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/filemaker-hosting/"
+  to = "https://radfm.cloud/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -33,4 +45,3 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-

@@ -23,7 +23,7 @@ Agnes Riley has 33 years of FileMaker experience, including time as a FileMaker 
 - [Services](https://zerobluetech.com/services/): Full service descriptions with FAQ on who ZeroBlue is for and what each service involves.
 - [FileMaker Consulting](https://zerobluetech.com/filemaker-development/): System audits, AI integration, server reliability, and practical implementation help.
 - [FileMaker vs Salesforce vs SaaS](https://zerobluetech.com/filemaker-vs-salesforce-saas/): Practical platform comparison guide for choosing between FileMaker, Salesforce, Power Apps, Airtable, Quickbase, and SaaS replacement options.
-- [FileMaker Hosting](https://zerobluetech.com/filemaker-hosting/): FileMaker Server hosting options and considerations.
+- [FileMaker Hosting](https://radfm.cloud/): FileMaker hosting is handled by RadFM.
 - [FileMaker Licenses](https://zerobluetech.com/filemaker-licenses/): FileMaker licensing guide and tier comparison.
 - [Web Development](https://zerobluetech.com/web-development/): Next.js, Astro, React, and database-backed web applications with FileMaker integration.
 - [Portfolio](https://zerobluetech.com/portfolio/): Real-world FileMaker consulting outcomes (clients anonymized).
