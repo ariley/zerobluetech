@@ -56,6 +56,11 @@ const workingStyles = [
 		body: 'An outside read before touching the system.',
 	},
 	{
+		title: 'Modernize or migrate',
+		body: 'Not sure whether to keep FileMaker at all? Start here.',
+		href: '/modernize-or-migrate',
+	},
+	{
 		title: 'Working sessions',
 		body: 'Side-by-side time when you want to understand the tradeoffs as we go.',
 	},
@@ -243,8 +248,20 @@ const workingStyles = [
 							<span class="absolute left-3 top-5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-bold text-sky-700 shadow-md shadow-slate-900/10 ring-1 ring-slate-200 dark:bg-slate-950 dark:text-sky-200 dark:ring-slate-700">
 								{index + 1}
 							</span>
-							<span class="font-bold text-slate-800 dark:text-white">{style.title}</span>
-							<span>{style.body}</span>
+							<span class="font-bold text-slate-800 dark:text-white">
+								{style.href ? (
+									<a href={style.href} class="accent-link">{style.title}</a>
+								) : (
+									style.title
+								)}
+							</span>
+							<span>
+								{style.href ? (
+									<a href={style.href} class="accent-link">{style.body}</a>
+								) : (
+									style.body
+								)}
+							</span>
 						</li>
 					))}
 				</ol>
