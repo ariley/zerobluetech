@@ -4,15 +4,15 @@ import PageLayout from '../layouts/PageLayout.astro';
 const consultationUrl = 'https://calendly.com/agnesriley';
 
 const assessmentChecks = [
-	'What the system actually does: schema, scripts, integrations, and the workflows your team depends on.',
-	'What is healthy and what is fragile: the parts that will cause problems whether you stay or go.',
-	'What migrates cleanly and what does not: some FileMaker logic maps easily to modern web stacks; some is deeply embedded and expensive to move.',
+	'What the system actually does: schema, scripts, integrations, and the workflows your team depends on every day.',
+	'What is worth keeping: the FileMaker decisions, shortcuts, and business rules that still fit the way your team works.',
+	'What is causing pressure: missing updates, slow screens, fragile scripts, mobile or web expectations, AI requests, and Claris roadmap concerns.',
 	'Honest cost ranges: for modernizing in place, for a partial migration, and for a full rebuild.',
 ];
 
 const deliverables = [
 	'A written report you can share with your team, your board, or another vendor.',
-	'A recommendation I will defend: modernize, migrate, or a staged path between the two.',
+	'A recommendation I will defend: keep improving FileMaker, modernize the rough spots, or plan a careful migration.',
 	'A working session to walk through it and answer questions.',
 ];
 
@@ -20,13 +20,14 @@ const proofPoints = [
 	'33 years working with FileMaker systems.',
 	'Former FileMaker platform product manager at Claris/Apple.',
 	'I also build modern web applications with Next.js, React, and cloud infrastructure.',
+	'Creator of FMDojo, a FileMaker-focused tool for understanding schema, logs, monitoring, and system risk.',
 	'Sometimes my report says "stay on FileMaker." That is the point.',
 ];
 
 const faqs = [
 	{
 		question: 'Should I migrate off FileMaker?',
-		answer: 'Not automatically. A working FileMaker system may be worth modernizing in place, migrating in stages, or keeping as-is. The right answer depends on what the system actually does, where it is fragile, and what changing it would cost.',
+		answer: 'Not automatically. Many FileMaker systems still fit the business well. The right answer depends on what you like about the system, where Claris or the current build is not keeping up, and what changing it would cost.',
 	},
 	{
 		question: 'How much does it cost to migrate from FileMaker?',
@@ -34,16 +35,16 @@ const faqs = [
 	},
 	{
 		question: 'What is a FileMaker alternative?',
-		answer: 'A FileMaker alternative might be a custom web application, a SaaS platform, or a staged approach that keeps FileMaker where it still fits. The best alternative is the one that matches the workflow without recreating old problems.',
+		answer: 'A FileMaker alternative might be a custom web application, a SaaS platform, or a hybrid approach that keeps FileMaker where it still fits. The best alternative is the one that matches the workflow without recreating old problems.',
 	},
 ];
 ---
 
 <PageLayout
 	title="Modernize or migrate? Get a straight answer about your FileMaker system | ZeroBlue"
-	description="Your FileMaker system still runs the business, but you're wondering how long that lasts. I give you an honest assessment: modernize in place, or plan a migration -- with real numbers either way."
+	description="Your FileMaker system still runs the business, but you're wondering how long that lasts. I give current FileMaker teams an honest assessment: keep improving it, modernize the rough spots, or plan a migration."
 	heroTitle="Modernize or migrate? Get a straight answer."
-	heroSubtitle="Your FileMaker system still runs the business. But the developer who built it is gone, the platform's future feels uncertain, and everyone selling you a solution has something to sell. I will give you an honest read, including 'keep it' if that is the right answer."
+	heroSubtitle="Your FileMaker system may still be the best tool your business has. It may also be showing its age: slow updates, missing web or mobile workflows, AI pressure, or frustration that Claris is not moving in the direction you need. I will give you an honest read, including 'keep FileMaker' if that is the right answer."
 	heroEyebrow="FileMaker Modernization Assessment"
 	faqs={faqs}
 >
@@ -65,7 +66,7 @@ const faqs = [
 					<p class="text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-200">Migrate</p>
 				</div>
 				<div class="rounded-xl bg-amber-100 p-4 dark:bg-amber-500/15">
-					<p class="text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-200">Stage it</p>
+					<p class="text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-200">Keep what works</p>
 				</div>
 			</div>
 		</div>
@@ -80,14 +81,15 @@ const faqs = [
 				</h2>
 				<div class="mt-5 space-y-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
 					<p>
-						A lot of businesses are sitting on FileMaker systems that work, mostly, while wondering what happens next.
-						Maybe your developer retired. Maybe licensing costs keep climbing. Maybe someone on your team keeps asking
-						why you cannot just "use AI" or "make it a web app."
+						A lot of businesses are sitting on FileMaker systems they still like. The system knows the work,
+						the team knows the screens, and replacing it casually would be expensive and disruptive. At the same time,
+						the requests keep piling up: better web access, cleaner mobile workflows, AI, integrations, reporting,
+						or changes Claris has not delivered fast enough for your business.
 					</p>
 					<p>
-						The problem is that everyone you ask has a bias. FileMaker consultants want to keep you on FileMaker.
-						Web agencies want to rebuild everything. Nobody starts with the question that matters: what does your
-						system actually do, and what would it cost to change that?
+						The problem is that everyone you ask has a bias. FileMaker consultants may want to keep you on FileMaker.
+						Web agencies may want to rebuild everything. Nobody starts with the question that matters: what does your
+						system do well, where is it holding you back, and what would it cost to change that?
 					</p>
 				</div>
 				<div class="mt-8">
@@ -106,7 +108,8 @@ const faqs = [
 					</h2>
 					<p class="mt-5 text-lg leading-8 text-slate-700 dark:text-slate-300">
 						A focused review of your FileMaker system, scoped around the size and complexity of the file. You get a
-						written report with a clear recommendation and real numbers behind it.
+						written report with a clear recommendation for a current FileMaker environment: keep investing, modernize
+						specific weak spots, or plan a migration with your eyes open.
 					</p>
 					<div class="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-900/70">
 						<p class="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300">How scoping works</p>
@@ -172,6 +175,26 @@ const faqs = [
 						</div>
 					))}
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-12 lg:py-16">
+		<div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">FileMaker visibility</p>
+				<h2 class="mt-3 text-3xl font-bold text-slate-800 dark:text-white md:text-4xl">
+					FMDojo helps make the current system less mysterious.
+				</h2>
+			</div>
+			<div class="surface-card p-8 lg:p-10">
+				<p class="text-lg leading-8 text-slate-700 dark:text-slate-300">
+					If the right answer is to keep investing in FileMaker, the next problem is usually visibility:
+					what changed, what broke, what is risky, and what the server is trying to tell you. I built{' '}
+					<a href="https://fmdojo.com" target="_blank" rel="noopener noreferrer" class="accent-link">FMDojo</a>
+					{' '}for that work: FileMaker-aware monitoring, log review, and system insight that can support the assessment
+					and the modernization work after it.
+				</p>
 			</div>
 		</div>
 	</section>
